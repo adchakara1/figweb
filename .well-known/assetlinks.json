@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.figtreeacademy.app",
+      "sha256_cert_fingerprints": [
+        "81:5E:00:BE:AF:51:53:2C:A2:3E:6F:A1:2E:0E:70:5A:EA:C9:00:57:51:29:4A:51:2F:D1:95:19:A9:1F:C7:E5"
+      ]
+    }
+  }
+]
