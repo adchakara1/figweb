@@ -4225,6 +4225,840 @@
         { id: 'v8', label: 'clustering (paragraph 10)', keys: ['gathering', 'crowding', 'massing', 'swarming', 'flocking'], constraint: () => true, answer: 'gathering / crowding' }
     ]
 }
+,
+            {
+                id: 'clever_crows',
+                type: 'long',
+                title: '19. The Cleverness of Crows',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `Scientists studying crows in laboratories and city streets discover that these supposedly ordinary birds solve puzzles, remember human faces for years, and pass on knowledge to their young.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `For centuries, people dismissed crows as scavenging pests, harbingers of bad luck that gathered around rubbish dumps and battlefields alike. Farmers shot them, gardeners hung dead ones from poles to frighten away the rest, and folk tales cast them as omens of death. Yet in laboratories and city parks around the world, scientists have begun to discover that the humble crow possesses a mind more agile than almost any other creature outside the great apes.` },
+                    { num: `Paragraph 2`, text: `The proof lies not in size but in behaviour. A crow's brain is barely the size of a walnut, yet it is packed with neurons at a density that rivals a chimpanzee's. Researchers who set crows a series of puzzles — some requiring the bending of wire into hooks, others the dropping of stones into a tube of water to raise a floating morsel of food within reach — found that many of the birds solved the problems within minutes, without any prior training.` },
+                    { num: `Paragraph 3`, text: `In the city of Sendai in Japan, drivers grew used to a peculiar sight each autumn. Crows would wait at a pedestrian crossing, place a walnut on the road in front of a stationary car, then hop back onto the pavement. When the light changed and the car drove forward, its tyres cracked the shell open. The crow would then wait patiently at the crossing for the light to turn red again before darting out to collect its prize, timing its retreat to avoid the oncoming traffic entirely.` },
+                    { num: `Paragraph 4`, text: `More unsettling to scientists was the discovery that crows can recognise individual human faces and remember them for years. In one long-running experiment, researchers wearing a single distinctive rubber mask trapped and banded a group of wild crows before releasing them unharmed. Years later, any person who wore that same mask — even a total stranger to the birds — would be swooped at, scolded and followed by outraged crows, while a different mask drew no reaction at all. The birds had not merely remembered a threat; they had apparently told others about it, since crows that had never been captured joined in the scolding.` },
+                    { num: `Paragraph 5`, text: `This capacity to share information appears to run through crow society like gossip through a village. When one crow discovers food, or spots a predator, its distinctive call brings others flocking — not only its own family, but unrelated crows from neighbouring territories who arrive to investigate. Some researchers believe this is how the mask memory spread so widely: young crows, watching their elders scold a masked stranger, learn to regard the mask as dangerous without ever having been trapped themselves.` },
+                    { num: `Paragraph 6`, text: `Perhaps strangest of all is what has come to be called the crow funeral. When a crow dies, others of its kind will often gather noisily around the corpse, calling loudly and refusing to approach directly, sometimes for the better part of an hour. Ornithologists who have studied the behaviour believe it is not sentiment but strategy: the gathering allows the living birds to establish exactly what killed their companion, whether it was a cat, a hawk, a poisoned bait or a downed power line, so that the danger can be recognised and avoided in future.` },
+                    { num: `Paragraph 7`, text: `The crow's most celebrated feat of reasoning, however, borrows its name from an ancient fable. In the story, a thirsty crow drops pebbles into a jug to raise the water level until it can drink. When researchers built a real version of the puzzle, placing a floating piece of meat inside a tall, narrow, water-filled tube just out of reach, several crows solved it unaided. They chose the heaviest available stones over lighter ones, understanding without being told that greater weight would displace more water, and dropped just enough of them to bring the food within reach of their beaks.` },
+                    { num: `Paragraph 8`, text: `Not every crow performs so flawlessly, of course, and researchers are careful to point out that intelligence, like temperament, varies between individuals. Some birds abandon the puzzle after a single failed attempt; others watch a companion solve it once and then repeat the exact sequence of actions perfectly on their first try, suggesting they had been learning simply by observation.` },
+                    { num: `Paragraph 9`, text: `What troubles — and fascinates — scientists most is what crow intelligence suggests about the nature of thought itself. Mammalian brains, including our own, rely on a layered structure called the neocortex to perform complex reasoning. Birds have no neocortex at all, yet clearly reason all the same, using a completely different arrangement of neurons that evolved on a separate branch of the tree of life more than three hundred million years ago. If intelligence can arise twice, by two such different routes, then perhaps it is not the rare accident it was once thought to be.` },
+                    { num: `Paragraph 10`, text: `For the townsfolk of Sendai, none of this makes the crows on the crossing any less exasperating; the birds still scatter walnut shells across the road and occasionally hold up traffic while waiting for the signal to change. But it has, for a good many of them, replaced irritation with something closer to respect. As one elderly resident remarked to a visiting researcher, watching a crow trot unhurriedly back to the kerb with its cracked prize, "That bird is cleverer than my nephew, and considerably more patient."` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Give ONE piece of evidence that people traditionally regarded crows with fear or dislike. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`shot`) || n.includes(`hung dead`) || n.includes(`hanging dead`) || n.includes(`pole`) || n.includes(`omen`) || n.includes(`bad luck`) || n.includes(`death`) || n.includes(`pest`) || n.includes(`scaveng`)) ? 1 : 0; },
+                      answer: `Any one: farmers shot them / dead ones were hung from poles to scare others away / folk tales cast them as omens of death / they were seen as pests.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Explain in your own words why the size of a crow's brain is misleading as a measure of its intelligence. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`small`) || n.includes(`tiny`) || n.includes(`walnut`) || n.includes(`little`)) s++;
+                        if (n.includes(`dense`) || n.includes(`packed`) || n.includes(`density`) || n.includes(`many neuron`) || n.includes(`concentrat`) || n.includes(`quality`) || n.includes(`rival`) || n.includes(`as good as`) || n.includes(`chimpanzee`)) s++;
+                        return s; },
+                      answer: `(1) Its brain is small/tiny (walnut-sized). (2) But it is densely packed with neurons/cells that rival a chimpanzee's — so it is quality, not size, that matters.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) Describe fully how the crows in Sendai used the traffic to their advantage. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`walnut`) && (n.includes(`road`) || n.includes(`front of`) || n.includes(`in the way`) || n.includes(`under`)) && (n.includes(`car`) || n.includes(`tyre`) || n.includes(`crack`) || n.includes(`crush`))) s++;
+                        if (n.includes(`red light`) || n.includes(`light`) || n.includes(`wait`) && n.includes(`retrieve`) || n.includes(`wait`) && n.includes(`collect`) || n.includes(`safely`) || n.includes(`avoid`) && n.includes(`traffic`)) s++;
+                        return s; },
+                      answer: `(1) They placed a walnut on the road in front of a car so its tyres would crack/crush the shell. (2) They waited for the light to turn red again before darting out to safely collect the cracked nut, avoiding the traffic.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) What does the mask experiment reveal about crows' memory? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`recognise`) || n.includes(`recognize`) || n.includes(`remember`) || n.includes(`memory`) || n.includes(`individual face`) || n.includes(`long time`) || n.includes(`year`)) ? 1 : 0; },
+                      answer: `Crows can recognise/remember individual human faces for a long time (years).` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) Why was it "unsettling" to scientists that crows which had never been captured also scolded the masked person? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`told`) || n.includes(`shared`) || n.includes(`passed on`) || n.includes(`taught`) || n.includes(`learnt`) || n.includes(`learned`) || n.includes(`communicat`) || n.includes(`not just`) && n.includes(`memory`) || n.includes(`spread`)) ? 1 : 0; },
+                      answer: `It meant the danger had been shared/communicated/taught to other crows, not just personally remembered by the crows that were captured.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) In your own words, explain fully why scientists believe crows gather noisily around a dead crow. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`find out`) || n.includes(`establish`) || n.includes(`work out`) || n.includes(`determine`) || n.includes(`identify`) || n.includes(`figure out`) || n.includes(`cause of death`) || n.includes(`what killed`) || n.includes(`how it died`)) s++;
+                        if (n.includes(`avoid`) || n.includes(`recognise the danger`) || n.includes(`recognize the danger`) || n.includes(`future`) || n.includes(`protect themselves`) || n.includes(`stay safe`) || n.includes(`danger again`)) s++;
+                        return s; },
+                      answer: `(1) So they can find out/establish what killed their companion. (2) So that the danger can be recognised and avoided in future. NOT because of sentiment/sadness.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) Explain the connection between the ancient fable and the real experiment described in paragraph 7. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`stone`) || n.includes(`pebble`)) && (n.includes(`water`) || n.includes(`tube`) || n.includes(`jug`)) && (n.includes(`raise`) || n.includes(`rise`) || n.includes(`level`) || n.includes(`reach`))) ? 1 : 0; },
+                      answer: `In both, a crow drops stones/pebbles into water to raise the water level so that it can reach the food/water — the real crows solved the puzzle just like the crow in the fable.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2a`, type: `text`, label: `Q2 (a) Give TWO different ways in which crows vary in how they approach the water-tube puzzle. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`give up`) || n.includes(`abandon`) || n.includes(`stop trying`) || n.includes(`quit`) || n.includes(`one failed attempt`) || n.includes(`single failed`)) s++;
+                        if (n.includes(`watch`) && (n.includes(`companion`) || n.includes(`another`) || n.includes(`other crow`)) || n.includes(`observation`) || n.includes(`copy`) || n.includes(`imitate`) || n.includes(`repeat`) && n.includes(`perfect`)) s++;
+                        return s; },
+                      answer: `(1) Some abandon/give up on the puzzle after one failed attempt. (2) Others watch a companion solve it and then repeat the exact actions perfectly (learning by observation).` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2b`, type: `text`, label: `Q2 (b) Why do scientists find it significant that birds reason well despite having no neocortex? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`different`) && (n.includes(`route`) || n.includes(`way`) || n.includes(`structure`) || n.includes(`path`)) || n.includes(`another way`) || n.includes(`not rare`) || n.includes(`not an accident`) || n.includes(`evolve`) && n.includes(`differently`) || n.includes(`more common`)) ? 1 : 0; },
+                      answer: `It suggests intelligence can evolve through a completely different route/structure, and so may not be the rare accident it was once thought to be.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) What does the writer mean by saying intelligence "can arise twice"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`independent`) || n.includes(`separate`) || n.includes(`different group`) || n.includes(`two different`) || n.includes(`on its own`) || n.includes(`evolved separately`) || n.includes(`birds and mammals`) || n.includes(`more than once`)) ? 1 : 0; },
+                      answer: `Intelligence evolved independently/separately in two very different groups of animals (birds and mammals), not just once.` },
+
+                    { section: `QUESTION 2 • From Paragraph 10`, id: `q2d`, type: `text`, label: `Q2 (d) What does the elderly resident's remark reveal about how attitudes to the crows have changed? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`respect`) || n.includes(`admir`) || n.includes(`impressed`) || n.includes(`appreciat`) || n.includes(`less annoy`) || n.includes(`no longer`) && n.includes(`irritat`) || n.includes(`changed`) && n.includes(`view`)) ? 1 : 0; },
+                      answer: `Irritation has been replaced by something closer to respect/admiration for the crow's intelligence, even though the birds are still a nuisance.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_crows`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 7`,
+                      label: `Q3. Summarise how the crows in Sendai used the traffic, and how scientists tested crows' memory and reasoning through the mask, funeral and water-tube observations. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`At`, `the`, `pedestrian`, `crossing`, `in`, `Sendai,`, `a`, `crow`, `placed`, `a`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_crows`,
+                        [`At`, `the`, `pedestrian`, `crossing`, `in`, `Sendai,`, `a`, `crow`, `placed`, `a`],
+                        [
+                          [`walnut`, `road`, `front of a car`, `in front of the car`],
+                          [`hopped back`, `pavement`, `hop back`, `moved back`],
+                          [`waited`, `car`, `crack`, `crush`, `tyre`],
+                          [`waited`, `red light`, `light changed`, `light turned red`],
+                          [`darted out`, `collect`, `retrieve`, `picked up`, `grabbed`],
+                          [`avoid`, `traffic`, `avoiding`, `safely`],
+                          [`researcher`, `mask`, `wore a mask`, `wearing a mask`],
+                          [`trapped`, `captured`, `caught`, `banded`],
+                          [`released`, `unharmed`, `let go`, `set free`],
+                          [`years later`, `same mask`, `wearing that mask`],
+                          [`swooped`, `scolded`, `followed`, `attacked`],
+                          [`different mask`, `no reaction`, `not attacked`, `left alone`],
+                          [`never captured`, `joined`, `also scolded`, `others joined in`],
+                          [`information`, `shared`, `passed on`, `told others`, `spread`],
+                          [`call`, `brings others`, `flock`, `gather`],
+                          [`unrelated crows`, `other territories`, `neighbouring`],
+                          [`young crows`, `watch`, `learn`, `without being trapped`],
+                          [`crow dies`, `gather`, `funeral`, `noisily`],
+                          [`refuse`, `approach directly`, `not approach`, `keep distance`],
+                          [`establish`, `what killed`, `cause of death`, `determine`],
+                          [`avoid`, `future`, `danger recognised`, `avoided in future`],
+                          [`fable`, `thirsty crow`, `pebbles`, `jug`],
+                          [`tube`, `water`, `floating meat`, `out of reach`],
+                          [`stones`, `dropped`, `heavier`, `heaviest`],
+                          [`water level`, `rose`, `raise`, `reach`, `within reach`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–7 only. Opens: 'At the pedestrian crossing in Sendai, a crow placed a walnut...'. Max 160 words. Cover the walnut-cracking, mask, information-sharing, funeral and water-tube points.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The birds were regarded as (harbingers/harbengers/harbinjers) of bad luck.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `harbingers` ? 1 : 0,
+                      answer: `harbingers` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: Ornithologists study the (behaviour/behavour/behaivour) of birds.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `behaviour` || normalize(inp) === `behavior` ? 1 : 0,
+                      answer: `behaviour / behavior` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: "For centuries, people DISMISSED crows as scavenging pests."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `accepted` || n === `valued` || n === `respected` || n === `welcomed`) ? 1 : 0; },
+                      answer: `accepted / valued / respected / welcomed` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: "The crow would wait PATIENTLY at the crossing for the light to turn red again."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `impatiently` || n === `restlessly` || n === `anxiously`) ? 1 : 0; },
+                      answer: `impatiently / restlessly / anxiously` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: Scientists were (fascinate) by the crow's ability to reason.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `fascinated` ? 1 : 0,
+                      answer: `fascinated` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The crow solved the puzzle with amazing (rapid).`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `rapidity` || n === `rapidness`) ? 1 : 0; },
+                      answer: `rapidity / rapidness` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'although': "The crow's brain is the size of a walnut. It is remarkably intelligent."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`although`) || n.includes(`though`)) && n.includes(`walnut`) && (n.includes(`intelligent`) || n.includes(`clever`)) ? 1 : 0; },
+                      answer: `Although the crow's brain is the size of a walnut, it is remarkably intelligent.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'since': "The crows had never been captured. They still joined in the scolding."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`since`) && n.includes(`never been captured`) && (n.includes(`joined`) || n.includes(`scolding`)) ? 1 : 0; },
+                      answer: `Since the crows had never been captured, they still joined in the scolding. / The crows joined in the scolding since they had never been captured (still accept, though less natural).` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "The crow placed a walnut on the road."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`walnut`) && n.includes(`placed`) && n.includes(`road`) && n.includes(`by the crow`) ? 1 : 0; },
+                      answer: `A walnut was placed on the road by the crow.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "Researchers built a real version of the puzzle."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`real version`) && n.includes(`puzzle`) && n.includes(`built`) && n.includes(`by`) && n.includes(`researcher`) ? 1 : 0; },
+                      answer: `A real version of the puzzle was built by researchers.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. scavenging (paragraph 1)`, keys: [`searching for scraps`, `feeding on waste`, `foraging`, `picking through rubbish`, `hunting for leftovers`, `looking for food in waste`], constraint: () => true, answer: `searching for scraps / feeding on waste / foraging / picking through rubbish` },
+                    { id: `v2`, label: `2. agile (paragraph 1)`, keys: [`quick`, `nimble`, `sharp`, `flexible`, `adaptable`, `alert`, `active`], constraint: (n) => !n.includes(`fast`) || n.includes(`quick`), answer: `quick / nimble / sharp / flexible / adaptable / alert` },
+                    { id: `v3`, label: `3. rivals (paragraph 2)`, keys: [`matches`, `equals`, `compares to`, `is as good as`, `competes with`, `is comparable to`], constraint: () => true, answer: `matches / equals / compares to / is as good as` },
+                    { id: `v4`, label: `4. peculiar (paragraph 3)`, keys: [`strange`, `odd`, `unusual`, `curious`, `bizarre`, `uncommon`], constraint: (n) => !n.includes(`special`), answer: `strange / odd / unusual / curious / bizarre. "Special" scores 0.` },
+                    { id: `v5`, label: `5. unsettling (paragraph 4)`, keys: [`disturbing`, `worrying`, `troubling`, `alarming`, `disconcerting`, `unnerving`], constraint: () => true, answer: `disturbing / worrying / troubling / alarming / disconcerting` },
+                    { id: `v6`, label: `6. outraged (paragraph 4)`, keys: [`furious`, `angry`, `enraged`, `incensed`, `indignant`, `livid`], constraint: () => true, answer: `furious / angry / enraged / incensed / indignant` },
+                    { id: `v7`, label: `7. flawlessly (paragraph 8)`, keys: [`perfectly`, `without mistakes`, `faultlessly`, `impeccably`, `without error`, `correctly every time`], constraint: (n) => !n.includes(`well`), answer: `perfectly / without mistakes / faultlessly / impeccably. "Well" alone scores 0.` },
+                    { id: `v8`, label: `8. exasperating (paragraph 10)`, keys: [`annoying`, `irritating`, `frustrating`, `infuriating`, `maddening`, `vexing`], constraint: () => true, answer: `annoying / irritating / frustrating / infuriating / maddening` }
+                ]
+            }
+
+,
+            {
+                id: 'adrift_zambezi',
+                type: 'long',
+                title: '20. Adrift on the Zambezi',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `Two friends set out on a calm stretch of the Zambezi River in a borrowed canoe, only to be capsized by a submerged hippo and left clinging to a rocky islet as darkness and the current close in around them.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Tendai had borrowed his uncle's canoe for the afternoon, promising to keep well clear of the rapids below the falls. His friend Farai, who had never paddled anything larger than a rubber dinghy in a swimming pool, needed no persuading to come along. "The river is like glass today," Tendai said, tying his sandals to the thwart before pushing off from the muddy bank. "We will be back before your mother even notices you are gone."` },
+                    { num: `Paragraph 2`, text: `For the first half hour, the river kept its promise. The canoe slid over water so still that the reflected clouds seemed close enough to touch, and fish eagles called from the fig trees along the bank. Farai, growing bold, leaned out to trail his fingers in the current, laughing at the coolness of it. Neither boy noticed the wide, smooth ripple that spread across the surface some fifty metres ahead, nor thought to ask what could disturb water so deep and so calm.` },
+                    { num: `Paragraph 3`, text: `The canoe struck something that was neither rock nor log. There was a tremendous upward heave, a bellow of outrage from beneath the hull, and then the world turned over. Tendai had one confused glimpse of a vast grey back breaking the surface — a hippopotamus, disturbed from its resting place and furious at the intrusion — before the cold water closed over his head. The canoe, the paddles, the cool-box of sandwiches: all of it scattered across the river in the space of two seconds.` },
+                    { num: `Paragraph 4`, text: `Tendai surfaced first, gasping, and spun around searching for his friend. Farai came up several metres downstream, choking and clutching at his forehead, where a smear of blood was already spreading and thinning in the water. "My head," he managed to say, before the current dragged him under again. Tendai swam to him, fighting the pull of the river with every stroke, and hauled his friend's arm across his own shoulders, all the while horribly aware that hippos were not the only creatures that called this stretch of river home.` },
+                    { num: `Paragraph 5`, text: `A cluster of black rocks broke the surface some twenty metres away, and Tendai aimed for them with the last of his strength, towing Farai behind him. They dragged themselves out of the water and onto the largest rock, a flat-topped islet barely the size of a dining table, and lay there coughing and shaking. Looking around, Tendai understood with a sinking heart that they were now stranded: the bank on either side lay beyond a stretch of fast, deep water that no sane person would swim, not with a wounded companion and not with the memory of that grey shape still fresh in his mind.` },
+                    { num: `Paragraph 6`, text: `The afternoon wore on, and with it came a creeping dread that had nothing to do with the temperature of the water. Farai's cut had stopped bleeding but left him pale and shivering, muttering that his head was "full of bees." Tendai kept his friend talking, kept him awake, kept him from noticing how the light was beginning to slant lower and redder across the water, or how the rock beneath them, dry when they first climbed onto it, was now lipped by water on one side as the river, somewhere upstream, rose almost imperceptibly.` },
+                    { num: `Paragraph 7`, text: `It was Farai, of all people, who first spotted the boat: a low, dark shape crawling along the far bank, trailing the thin blue thread of a small outboard motor's smoke. Tendai stood as tall as he dared on the unsteady rock and waved both arms over his head, shouting until his voice cracked, though he could not tell whether the sound carried over the noise of the current and the distance between them.` },
+                    { num: `Paragraph 8`, text: `The boat altered course. Two fishermen, weathered men who knew this stretch of river better than the shape of their own hands, cut their engine well short of the rocks and let the current carry them the rest of the way, judging the approach with the unhurried precision of people who had rescued fools from this river before. One threw a length of rope with practised accuracy; it landed across Tendai's knees on the first attempt.` },
+                    { num: `Paragraph 9`, text: `Getting Farai into the boat took the combined strength of all three of them, and no small amount of swearing, but at last he lay in the bottom of the boat with a folded jacket under his head, blinking up at the darkening sky. Tendai tumbled in after him, his legs suddenly unable to hold his own weight now that the danger had passed, and one of the fishermen pressed a thermos of over-sweet tea into his shaking hands without a word.` },
+                    { num: `Paragraph 10`, text: `Farai needed six stitches and, for several weeks afterwards, could not hear the word "hippopotamus" without turning faintly green. Tendai's uncle never did get his canoe back, though pieces of it were found wedged among reeds nearly a kilometre downstream. As for Tendai himself, he still goes out on the river most weekends — but never again without asking the fishermen, first, exactly where the hippos like to sleep.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) What does Tendai's comment "we will be back before your mother even notices" suggest about his attitude to the trip? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`confiden`) || n.includes(`casual`) || n.includes(`carefree`) || n.includes(`relaxed`) || n.includes(`not worried`) || n.includes(`overconfiden`) || n.includes(`sure of himself`) || n.includes(`unconcerned`)) ? 1 : 0; },
+                      answer: `He was confident/casual/carefree/unconcerned — he did not expect the trip to take long or to involve any danger.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Give TWO pieces of evidence from paragraph 2 that suggest the boys felt safe and relaxed on the water. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`still`) || n.includes(`calm`) || n.includes(`glass`) || n.includes(`reflect`)) s++;
+                        if (n.includes(`trail`) && n.includes(`finger`) || n.includes(`laugh`) || n.includes(`bold`) || n.includes(`cool`) && n.includes(`water`)) s++;
+                        return s; },
+                      answer: `Any two: (1) the water was still/calm enough to reflect the clouds; (2) Farai grew bold enough to trail his fingers in the water and laughed at the coolness of it.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1c`, type: `text`, label: `Q1 (c) What does the description of the ripple ahead suggest to the reader, even though the boys did not notice it? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`danger`) || n.includes(`warning`) || n.includes(`something`) && (n.includes(`wrong`) || n.includes(`beneath`) || n.includes(`under`)) || n.includes(`foreshadow`) || n.includes(`hint`) || n.includes(`hidden`) || n.includes(`hippo`) || n.includes(`threat`)) ? 1 : 0; },
+                      answer: `It hints/warns of hidden danger beneath the surface (foreshadowing the hippo) — a clue to the reader that something is wrong, even though the boys are unaware.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1d`, type: `text`, label: `Q1 (d) In your own words, explain what actually caused the canoe to capsize. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`hippo`) || n.includes(`hippopotamus`)) s++;
+                        if (n.includes(`disturb`) || n.includes(`surface`) || n.includes(`rose`) || n.includes(`heave`) || n.includes(`push`) || n.includes(`hit`) || n.includes(`struck`) || n.includes(`came up`) || n.includes(`angry`) || n.includes(`furious`)) s++;
+                        return s; },
+                      answer: `A hippopotamus, disturbed from its resting place under the water, rose up angrily/furiously beneath the canoe and overturned it.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) What TWO things was Tendai aware of as he swam to help Farai? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`current`) || n.includes(`pull`) && n.includes(`river`) || n.includes(`strong`) && n.includes(`water`) || n.includes(`fighting`) && n.includes(`current`)) s++;
+                        if (n.includes(`crocodile`) || n.includes(`other creature`) || n.includes(`danger`) && n.includes(`animal`) || n.includes(`not only`) && n.includes(`hippo`)) s++;
+                        return s; },
+                      answer: `(1) The pull/force of the current he had to fight against. (2) The awareness that crocodiles/other dangerous creatures also lived in that stretch of river.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1f`, type: `text`, label: `Q1 (f) Why did Tendai feel that swimming to the bank was not a sensible option? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`fast`) || n.includes(`deep`) || n.includes(`current`) || n.includes(`far`) || n.includes(`crocodile`) || n.includes(`wounded`) || n.includes(`injured`) || n.includes(`hippo`)) ? 1 : 0; },
+                      answer: `The water between the rock and the bank was fast and deep, Farai was injured, and there was still the danger of crocodiles/the hippo.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1g`, type: `text`, label: `Q1 (g) Identify TWO signs from paragraph 6 that the boys' situation was becoming more dangerous as time passed. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`light`) && (n.includes(`fading`) || n.includes(`slant`) || n.includes(`lower`) || n.includes(`red`)) || n.includes(`getting dark`) || n.includes(`darker`) || n.includes(`sun`) && n.includes(`going down`)) s++;
+                        if (n.includes(`water`) && (n.includes(`ris`) || n.includes(`lip`) || n.includes(`cover`)) || n.includes(`rock`) && n.includes(`wet`) || n.includes(`river`) && n.includes(`rising`)) s++;
+                        return s; },
+                      answer: `Any two: (1) the light was fading/becoming lower and redder (it was getting dark). (2) The rock was being covered by rising water on one side.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) Why was Tendai unsure whether his shouting for help had worked? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`distance`) || n.includes(`far`) || n.includes(`noise`) || n.includes(`current`) || n.includes(`could not tell`) || n.includes(`carry`)) ? 1 : 0; },
+                      answer: `He could not tell whether his voice carried over the noise of the current and the distance to the boat.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) What evidence from paragraph 8 shows that the fishermen were experienced with this stretch of river? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`cut`) && n.includes(`engine`) || n.includes(`practised`) || n.includes(`unhurried`) || n.includes(`precision`) || n.includes(`rescued`) && n.includes(`before`) || n.includes(`knew`) && n.includes(`river`) || n.includes(`accura`)) ? 1 : 0; },
+                      answer: `They cut the engine and let the current carry them with unhurried precision / had rescued people from the river before / threw the rope with practised accuracy.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) Why could Tendai not hold his own weight once he was safely in the boat? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`shock`) || n.includes(`danger`) && n.includes(`passed`) || n.includes(`relief`) || n.includes(`exhaust`) || n.includes(`tired`) || n.includes(`weak`) && n.includes(`legs`) || n.includes(`adrenalin`)) ? 1 : 0; },
+                      answer: `Now that the danger had passed, the shock/relief/exhaustion caught up with him and his legs gave way / went weak.` },
+
+                    { section: `QUESTION 2 • From Paragraph 10`, id: `q2d`, type: `text`, label: `Q2 (d) In your own words, what does the final sentence suggest Tendai learnt from the experience? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`careful`) || n.includes(`caution`) || n.includes(`check`) || n.includes(`ask`) || n.includes(`respect`) && n.includes(`river`) || n.includes(`lesson`) || n.includes(`wiser`) || n.includes(`prepare`)) ? 1 : 0; },
+                      answer: `He learnt to be more careful/cautious — to check with knowledgeable locals about hippo/danger locations before going out on the river again.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_zambezi`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 8`,
+                      label: `Q3. Summarise what happened to Tendai and Farai from the moment the canoe capsized to the moment they were rescued. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`The`, `canoe`, `struck`, `a`, `hippopotamus`, `and`, `capsized,`, `throwing`, `both`, `boys`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_zambezi`,
+                        [`The`, `canoe`, `struck`, `a`, `hippopotamus`, `and`, `capsized,`, `throwing`, `both`, `boys`],
+                        [
+                          [`hippo`, `heave`, `bellow`, `disturbed`],
+                          [`canoe`, `paddle`, `cool box`, `scattered`, `lost`],
+                          [`tendai`, `surfaced`, `searched`, `spun around`],
+                          [`farai`, `downstream`, `clutching`, `forehead`, `blood`],
+                          [`current`, `dragged`, `under`, `pulled him under`],
+                          [`swam`, `towed`, `hauled`, `fought`, `arm across`],
+                          [`crocodile`, `aware`, `other creature`, `not only hippo`],
+                          [`rock`, `island`, `twenty metres`, `black rocks`],
+                          [`dragged`, `climbed`, `coughing`, `shaking`],
+                          [`stranded`, `bank`, `too far`, `fast water`],
+                          [`farai`, `pale`, `shiver`, `bees`],
+                          [`kept`, `talking`, `awake`],
+                          [`light`, `fading`, `lower`, `redder`],
+                          [`water`, `rising`, `covered`, `lipped`],
+                          [`spotted`, `boat`, `dark shape`, `smoke`],
+                          [`stood`, `waved`, `shouted`],
+                          [`fishermen`, `cut engine`, `current carried`],
+                          [`rope`, `thrown`, `landed`, `knees`],
+                          [`pulled`, `into boat`, `strength of all three`],
+                          [`thermos`, `tea`, `jacket`, `folded`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–8 only. Opens: 'The canoe struck a hippopotamus and capsized, throwing both boys...'. Max 160 words. Cover the capsize, the swim to the rock, the wait, and the rescue.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The two fishermen approached the rock with practised (precision/presicion/precission).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `precision` ? 1 : 0,
+                      answer: `precision` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: Farai's head wound needed several (stitches/stiches/stitchs) at the clinic.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `stitches` ? 1 : 0,
+                      answer: `stitches` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: "The river is like glass today," Tendai said, sounding CONFIDENT.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `nervous` || n === `worried` || n === `anxious` || n === `unsure` || n === `doubtful`) ? 1 : 0; },
+                      answer: `nervous / worried / anxious / unsure / doubtful` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The fishermen approached the rock with an UNHURRIED precision.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `hurried` || n === `hasty` || n === `rushed`) ? 1 : 0; },
+                      answer: `hurried / hasty / rushed` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: Tendai's uncle felt great (frustrate) at losing his canoe.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `frustration` ? 1 : 0,
+                      answer: `frustration` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: With great (relieve), Tendai finally climbed into the boat.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `relief` ? 1 : 0,
+                      answer: `relief` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'because': "The boys could not swim to the bank. The water was fast and deep."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`because`) && n.includes(`could not swim`) && n.includes(`fast`) && n.includes(`deep`) ? 1 : 0; },
+                      answer: `The boys could not swim to the bank because the water was fast and deep.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'as soon as': "Tendai saw the boat. He stood up and waved."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`as soon as`) && n.includes(`saw the boat`) && (n.includes(`stood`) || n.includes(`waved`)) ? 1 : 0; },
+                      answer: `As soon as Tendai saw the boat, he stood up and waved.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "A hippopotamus capsized the canoe."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`canoe`) && n.includes(`capsized`) && n.includes(`by`) && n.includes(`hippopotamus`) ? 1 : 0; },
+                      answer: `The canoe was capsized by a hippopotamus.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "One of the fishermen threw a rope."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`rope`) && n.includes(`thrown`) && n.includes(`by`) && (n.includes(`fisherman`) || n.includes(`fishermen`) || n.includes(`fisher`)) ? 1 : 0; },
+                      answer: `A rope was thrown by one of the fishermen.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. persuading (paragraph 1)`, keys: [`convincing`, `talking into`, `urging`, `encouraging`, `coaxing`, `winning over`], constraint: () => true, answer: `convincing / talking into / urging / coaxing` },
+                    { id: `v2`, label: `2. intrusion (paragraph 3)`, keys: [`interference`, `disturbance`, `trespass`, `invasion`, `unwelcome presence`, `interruption`], constraint: () => true, answer: `interference / disturbance / invasion / unwelcome presence` },
+                    { id: `v3`, label: `3. clutching (paragraph 4)`, keys: [`gripping`, `grasping`, `holding tightly`, `clinging to`, `clasping`], constraint: (n) => !n.includes(`touching`), answer: `gripping / grasping / holding tightly / clasping. "Touching" scores 0.` },
+                    { id: `v4`, label: `4. imperceptibly (paragraph 6)`, keys: [`barely noticeably`, `slowly and slightly`, `almost unnoticeably`, `so slightly it could not be seen`, `very gradually`], constraint: () => true, answer: `barely noticeably / almost unnoticeably / very gradually` },
+                    { id: `v5`, label: `5. weathered (paragraph 8)`, keys: [`experienced`, `toughened by exposure`, `worn by the weather`, `hardened`, `seasoned`], constraint: (n) => !n.includes(`old`), answer: `experienced / toughened by exposure / hardened / seasoned. "Old" alone scores 0.` },
+                    { id: `v6`, label: `6. altered (paragraph 8)`, keys: [`changed`, `adjusted`, `shifted`, `modified`, `varied`], constraint: () => true, answer: `changed / adjusted / shifted / modified` },
+                    { id: `v7`, label: `7. tumbled (paragraph 9)`, keys: [`fell clumsily`, `stumbled`, `toppled`, `dropped awkwardly`, `fell suddenly`], constraint: (n) => !n.includes(`jumped`), answer: `fell clumsily / stumbled / toppled / dropped awkwardly. "Jumped" scores 0.` },
+                    { id: `v8`, label: `8. wedged (paragraph 10)`, keys: [`stuck firmly`, `jammed`, `lodged`, `fixed tightly`, `trapped between`], constraint: () => true, answer: `stuck firmly / jammed / lodged / fixed tightly` }
+                ]
+            }
+
+,
+            {
+                id: 'schoolboy_bus',
+                type: 'long',
+                title: '21. The Schoolboy Who Stopped a Bus',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `When the driver of a crowded school bus collapses at the wheel on a steep mountain road, thirteen-year-old Blessing Moyo must decide, in the space of a few terrifying seconds, whether he dares to grab the wheel himself.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `The bus was three kilometres from the top of Christmas Pass, grinding up the long incline in second gear, when Mr Chademana made a small, strangled sound and slumped sideways against the door. For a moment nobody on the crowded bus reacted at all; the driver had been coughing since Harare, and several of the younger children assumed he was merely clearing his throat again. It was only when the bus began to drift lazily across the white line, engine still grinding forward under its own weight, that the screaming started.` },
+                    { num: `Paragraph 2`, text: `Blessing Moyo was sitting two rows behind the driver, on his way home from an athletics meeting with his kit bag still slung over one shoulder. He was thirteen years old, had never so much as sat in a car's driving seat, and had exactly the length of time it took the bus to drift from one side of the narrow mountain road to the other before deciding what to do.` },
+                    { num: `Paragraph 3`, text: `He scrambled over the seat back, shoving aside a girl half his size who was frozen with her hands pressed to her mouth, and threw himself into the gap beside the slumped driver. The steering wheel fought him at first, heavy and unfamiliar, but he hauled it hard to the right just as the front wheels found the gravel shoulder, and felt the whole bus judder and complain as it swung back toward the centre of the road.` },
+                    { num: `Paragraph 4`, text: `The accelerator was still pressed down under Mr Chademana's collapsed weight, and the bus, rather than slowing, continued to gather speed on the downhill stretch that now opened ahead of them. Blessing had no idea, in that instant, how to find the brake with the driver's legs in the way, so he did the only thing his panicking mind could suggest: he leaned across, seized the older man under both arms, and dragged him bodily sideways into the aisle, ignoring the outraged shouts of passengers he crushed against on the way.` },
+                    { num: `Paragraph 5`, text: `With the driver clear at last, Blessing's foot found the brake pedal, and he stamped on it with his whole body weight. The bus lurched, screeched, and slowed with a violence that threw half the standing passengers to the floor, but it did not stop straight, veering instead toward the rocky embankment on the left. Somehow — he could never afterwards explain exactly how — he found enough presence of mind to ease off the brake for half a second and straighten the wheel before stamping down again, and this time the bus juddered to a halt with its front bumper resting gently, almost apologetically, against a marker post at the very edge of the drop.` },
+                    { num: `Paragraph 6`, text: `For several seconds nobody on the bus made a sound beyond ragged breathing. Then everybody seemed to speak at once. Two men near the front got the unconscious driver laid out along a row of seats and loosened his collar, while a teacher travelling with the athletics team pushed through the crowd to find out exactly what — or who — had brought the bus to a stop.` },
+                    { num: `Paragraph 7`, text: `Mr Chademana, it emerged later at the clinic in Mutare, had suffered a sudden and severe drop in blood pressure, almost certainly brought on by the medication he had been taking for a chest infection since the previous week. He would recover fully within a few days, though the doctors were in no doubt that, left at the wheel for even another ten seconds on that stretch of road, neither he nor most of his forty-one passengers would have survived the drop beyond the embankment.` },
+                    { num: `Paragraph 8`, text: `News of what Blessing had done reached the local newspaper before he had even finished his supper that evening, and by the following week he had been summoned to the Provincial Education offices to be presented with a certificate of commendation. He accepted it with the same faint embarrassment he showed whenever a teammate praised his running, and told the assembled reporters that he did not feel he deserved to be called brave. "I was not thinking about being brave," he said. "I was only thinking that somebody had to do something before we all went over the edge, and there was nobody else close enough to try."` },
+                    { num: `Paragraph 9`, text: `His mother, when asked by a journalist whether she had known her son was capable of such presence of mind, laughed and admitted that she had mostly known him to be capable of losing his school shoes and forgetting his homework. "He does not think before he acts in ordinary things," she said. "But perhaps that is exactly why he did not hesitate when it mattered — there was no time to think, only to do." Blessing, listening to this from across the room, looked as though he would have preferred the earth to swallow him whole.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Why did the passengers not react immediately when Mr Chademana slumped against the door? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`cough`) || n.includes(`clear`) && n.includes(`throat`) || n.includes(`thought`) && n.includes(`normal`) || n.includes(`assumed`) || n.includes(`used to`)) ? 1 : 0; },
+                      answer: `They assumed he was merely coughing/clearing his throat again, since he had been coughing since Harare.` },
+
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1b`, type: `text`, label: `Q1 (b) What made the passengers finally realise something was seriously wrong? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`drift`) || n.includes(`crossed`) && n.includes(`line`) || n.includes(`swerv`) || n.includes(`bus`) && n.includes(`moving`) && n.includes(`side`)) ? 1 : 0; },
+                      answer: `The bus began to drift across the white line/road on its own.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1c`, type: `text`, label: `Q1 (c) Explain in your own words why Blessing's decision had to be made so quickly. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`short time`) || n.includes(`little time`) || n.includes(`few second`) || n.includes(`quick`) || n.includes(`no time`) || n.includes(`limited time`) || n.includes(`drift`) && (n.includes(`side`) || n.includes(`road`) || n.includes(`across`))) ? 1 : 0; },
+                      answer: `He had only the short amount of time it took the bus to drift from one side of the narrow road to the other.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1d`, type: `text`, label: `Q1 (d) What TWO physical actions did Blessing take to get to the driver's seat? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`scrambled`) || n.includes(`climbed`) || n.includes(`clambered`) || n.includes(`over`) && n.includes(`seat`)) s++;
+                        if (n.includes(`shov`) || n.includes(`pushed`) && n.includes(`girl`) || n.includes(`aside`)) s++;
+                        return s; },
+                      answer: `(1) He scrambled/climbed over the seat back. (2) He shoved/pushed aside the girl who was frozen with fear.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) Why could Blessing not simply use the brake straight away? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`legs`) && (n.includes(`way`) || n.includes(`block`) || n.includes(`in the way`)) || n.includes(`driver`) && n.includes(`leg`) || n.includes(`could not find`) && n.includes(`brake`)) ? 1 : 0; },
+                      answer: `The driver's collapsed legs were in the way, blocking the brake pedal.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1f`, type: `text`, label: `Q1 (f) Describe fully what Blessing did to bring the bus safely to a stop. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`brake`) && (n.includes(`stamp`) || n.includes(`press`) || n.includes(`push`))) s++;
+                        if (n.includes(`eased off`) || n.includes(`ease off`) || n.includes(`straighten`) && n.includes(`wheel`) || n.includes(`released`) && n.includes(`brake`)) s++;
+                        return s; },
+                      answer: `(1) He stamped hard on the brake pedal. (2) He eased off the brake briefly to straighten the wheel before braking again.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1g`, type: `text`, label: `Q1 (g) What does the fact that "everybody seemed to speak at once" suggest about the mood on the bus after it stopped? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`relief`) || n.includes(`shock`) || n.includes(`panic`) || n.includes(`confus`) || n.includes(`excited`) || n.includes(`tension`) && n.includes(`release`) || n.includes(`chaotic`)) ? 1 : 0; },
+                      answer: `A mixture of relief, shock and confusion — the built-up tension of the crisis being suddenly released.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) What, according to the doctors, had caused Mr Chademana to collapse? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`blood pressure`) || n.includes(`medication`) || n.includes(`drug`) || n.includes(`chest infection`)) ? 1 : 0; },
+                      answer: `A sudden drop in blood pressure, likely caused by medication he was taking for a chest infection.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2b`, type: `text`, label: `Q2 (b) Explain in your own words how serious the doctors believed the situation could have become. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`ten second`) || n.includes(`short`) && n.includes(`time`) || n.includes(`few more second`)) s++;
+                        if (n.includes(`die`) || n.includes(`died`) || n.includes(`death`) || n.includes(`not survive`) || n.includes(`fatal`) || n.includes(`killed`)) s++;
+                        return s; },
+                      answer: `(1) Even a few more seconds/ten more seconds without action. (2) Most of the passengers would have died/not survived going over the edge.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2c`, type: `text`, label: `Q2 (c) What does Blessing's reaction to being praised suggest about his character? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`modest`) || n.includes(`humble`) || n.includes(`shy`) || n.includes(`embarrass`) || n.includes(`does not like praise`) || n.includes(`unassuming`)) ? 1 : 0; },
+                      answer: `He is modest/humble — he feels embarrassed by praise and does not think of himself as brave.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) In your own words, explain the point Blessing's mother is making about why he acted so decisively. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`no time`) || n.includes(`did not think`) || n.includes(`without thinking`) || n.includes(`instinct`) || n.includes(`reacted`) && n.includes(`quick`)) s++;
+                        if (n.includes(`normally`) || n.includes(`usually`) || n.includes(`ordinary`) || n.includes(`careless`) || n.includes(`forgetful`) || n.includes(`different`) && n.includes(`emergency`)) s++;
+                        return s; },
+                      answer: `(1) He acted purely on instinct/without stopping to think, because there was no time. (2) This is unlike his usual careless/forgetful behaviour in ordinary situations.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_bus`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 6`,
+                      label: `Q3. Summarise exactly what Blessing did, from the moment he reached the driver's seat to the moment the bus came to rest. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Having`, `reached`, `the`, `driver's`, `seat,`, `Blessing`, `grabbed`, `the`, `wheel`, `and`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_bus`,
+                        [`Having`, `reached`, `the`, `driver's`, `seat,`, `Blessing`, `grabbed`, `the`, `wheel`, `and`],
+                        [
+                          [`wheel`, `fought`, `heavy`, `unfamiliar`],
+                          [`hauled`, `right`, `pulled`, `turned`],
+                          [`gravel`, `shoulder`, `edge of road`],
+                          [`judder`, `swung`, `back`, `centre`],
+                          [`accelerator`, `pressed down`, `driver`, `weight`],
+                          [`gather speed`, `downhill`, `faster`, `speeding up`],
+                          [`no idea`, `find`, `brake`, `legs in the way`],
+                          [`seized`, `dragged`, `sideways`, `aisle`],
+                          [`crushed`, `passengers`, `shouts`, `ignoring`],
+                          [`foot found`, `brake`, `stamped`, `whole body`],
+                          [`lurched`, `screeched`, `slowed`, `violence`],
+                          [`threw`, `floor`, `standing passengers`],
+                          [`veering`, `embankment`, `rocky`],
+                          [`eased off`, `half a second`, `straighten`],
+                          [`stamped down`, `again`, `second time`],
+                          [`juddered`, `halt`, `stopped`],
+                          [`bumper`, `marker post`, `edge of the drop`],
+                          [`ragged breathing`, `silence`, `nobody`, `sound`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–6 only. Opens: 'Having reached the driver's seat, Blessing grabbed the wheel and...'. Max 160 words. Cover the steering, moving the driver, braking, and the final stop.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: Blessing received a certificate of (commendation/commendasion/comendation) from the Provincial Education offices.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `commendation` ? 1 : 0,
+                      answer: `commendation` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: The driver had suffered from a chest (infection/infecsion/infektion) for a week.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `infection` ? 1 : 0,
+                      answer: `infection` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: Blessing's mother mostly knew him to be CARELESS about his school shoes.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `careful` || n === `responsible` || n === `tidy` || n === `organised` || n === `organized`) ? 1 : 0; },
+                      answer: `careful / responsible / tidy / organised` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The girl beside him sat FROZEN with fear.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `active` || n === `moving` || n === `calm` || n === `relaxed`) ? 1 : 0; },
+                      answer: `active / moving / calm / relaxed` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The whole school was filled with (admire) for what Blessing had done.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `admiration` ? 1 : 0,
+                      answer: `admiration` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The passengers were (terrify) as the bus drifted across the road.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `terrified` ? 1 : 0,
+                      answer: `terrified` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'before': "The bus drifted across the road. Blessing grabbed the steering wheel."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`before`) && n.includes(`drifted`) && n.includes(`grabbed`) ? 1 : 0; },
+                      answer: `The bus drifted across the road before Blessing grabbed the steering wheel.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'so that': "Blessing dragged the driver into the aisle. He could reach the brake pedal."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`so that`) && n.includes(`dragged`) && n.includes(`reach`) && n.includes(`brake`) ? 1 : 0; },
+                      answer: `Blessing dragged the driver into the aisle so that he could reach the brake pedal.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "Blessing grabbed the steering wheel."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`steering wheel`) && n.includes(`grabbed`) && n.includes(`by blessing`) ? 1 : 0; },
+                      answer: `The steering wheel was grabbed by Blessing.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "The Provincial Education offices presented Blessing with a certificate."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`blessing`) && n.includes(`presented`) && n.includes(`certificate`) && n.includes(`by`) ? 1 : 0; },
+                      answer: `Blessing was presented with a certificate by the Provincial Education offices.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. strangled (paragraph 1)`, keys: [`choked`, `stifled`, `constricted`, `muffled`, `smothered`], constraint: () => true, answer: `choked / stifled / constricted / muffled` },
+                    { id: `v2`, label: `2. slumped (paragraph 1)`, keys: [`collapsed`, `fell heavily`, `sagged`, `dropped down`, `sank down`], constraint: (n) => !n.includes(`sat`), answer: `collapsed / sagged / dropped down / sank down. "Sat" scores 0.` },
+                    { id: `v3`, label: `3. hauled (paragraph 3)`, keys: [`pulled forcefully`, `dragged`, `tugged hard`, `yanked`, `heaved`], constraint: () => true, answer: `pulled forcefully / dragged / tugged hard / yanked` },
+                    { id: `v4`, label: `4. bodily (paragraph 4)`, keys: [`physically`, `using the whole body`, `forcefully with the body`, `by main force`], constraint: () => true, answer: `physically / using the whole body / forcefully with the body` },
+                    { id: `v5`, label: `5. veering (paragraph 5)`, keys: [`swerving`, `turning sharply`, `changing direction suddenly`, `swinging off course`], constraint: () => true, answer: `swerving / turning sharply / swinging off course` },
+                    { id: `v6`, label: `6. ragged (paragraph 6)`, keys: [`uneven`, `irregular`, `rough`, `broken`, `gasping`], constraint: (n) => !n.includes(`torn`), answer: `uneven / irregular / rough / gasping. "Torn" scores 0.` },
+                    { id: `v7`, label: `7. summoned (paragraph 8)`, keys: [`called for`, `sent for`, `ordered to attend`, `invited officially`, `asked to come`], constraint: () => true, answer: `called for / sent for / ordered to attend / asked to come` },
+                    { id: `v8`, label: `8. presence of mind (paragraph 9)`, keys: [`calmness under pressure`, `quick clear thinking`, `composure in a crisis`, `ability to think clearly and act fast`], constraint: () => true, answer: `calmness under pressure / quick clear thinking / composure in a crisis` }
+                ]
+            }
+
+,
+            {
+                id: 'locust_invasion',
+                type: 'long',
+                title: '22. The Locust Invasion',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `A farmer named Mai Sithole watches a solitary grasshopper multiply into a swarm of billions, and learns firsthand why the desert locust has been called humanity's oldest enemy.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Mai Sithole first noticed something was wrong when she found an unusually large number of grasshoppers clustered along the edge of her maize field, their bodies a strange, mottled yellow rather than the ordinary green she was used to seeing. A neighbour, passing on his bicycle, paused to look and shook his head grimly. "Those are not grasshoppers any more," he told her. "Watch what happens when the rains stop."` },
+                    { num: `Paragraph 2`, text: `He was right to be afraid. In most years, the desert locust lives a solitary and unremarkable life, scattered thinly across dry grassland, causing no more trouble than any other insect. But when a run of good rains is followed abruptly by drought, something changes within the insects themselves: crowded together in the shrinking patches of green vegetation, they begin to bump against one another with unusual frequency, and this simple physical contact triggers a hormonal change that alters both their colouring and their behaviour entirely.` },
+                    { num: `Paragraph 3`, text: `Within days, solitary insects that had previously avoided each other became irresistibly drawn together, forming dense marching bands of flightless young locusts that stripped every blade of vegetation from the ground as they advanced. Mai Sithole watched, helpless, as a band like this crossed the boundary of her land: a moving carpet of insects several metres wide, flowing over fences, walls and the legs of anyone foolish enough to stand in its path, leaving nothing green behind it.` },
+                    { num: `Paragraph 4`, text: `Worse was still to come. Once the young locusts matured and grew wings, the marching bands became flying swarms, and it was then that the true scale of the plague became clear. A single swarm, scientists later told her, could contain many billions of insects and cover an area larger than a large city, while consuming in a single day roughly the same amount of food as would feed several hundred thousand people for a year.` },
+                    { num: `Paragraph 5`, text: `The swarm that eventually descended on the district arrived not as a cloud but as a darkness, blotting out the afternoon sun so thoroughly that streetlights in the nearby town switched on automatically, mistaking the gloom for dusk. The roar of countless wings was, witnesses said afterwards, indistinguishable from a heavy downpour of rain, and it was only the complete absence of water striking the ground that revealed the truth of what was happening overhead.` },
+                    { num: `Paragraph 6`, text: `Mai Sithole and her neighbours fought back with whatever they had: banging pots and pans, lighting smoky fires at the edges of their fields, spraying pesticide where they could afford it, even driving vehicles up and down the access roads with headlights blazing in a desperate attempt to frighten the insects away. Against a swarm of that size, however, individual effort achieved almost nothing; what saved a portion of her maize crop, in the end, was less her own resistance than the simple fact that the swarm, hungry and restless, moved on after only two days to strip the fields of a district thirty kilometres further north.` },
+                    { num: `Paragraph 7`, text: `Government agricultural officers arrived a week later than anyone would have liked, driving trucks loaded with pesticide and portable sprayers, and began the grim work of trying to destroy the locusts before they could breed again and spawn a second, even larger generation. Aerial spraying, the officers explained, worked far better against locusts still gathered in their roosting sites at dawn, when the cold night air kept them sluggish and reluctant to fly; by mid-morning, once the sun had warmed their bodies, the insects would already be airborne and almost impossible to target effectively.` },
+                    { num: `Paragraph 8`, text: `For Mai Sithole, the greatest bitterness lay not in the loss of the crop itself but in the timing of it: the maize had been three weeks from harvest, tall and heavy-headed, representing an entire season's labour and the only real income she expected before the following year. She would, she knew, need to rely on relief supplies and whatever she could borrow from relatives to see her family through to the next planting season.` },
+                    { num: `Paragraph 9`, text: `Entomologists studying the outbreak point out, with a certain grim fascination, that the desert locust has plagued farmers for as long as agriculture itself has existed, referenced in texts thousands of years old, and that modern satellite monitoring and early-warning systems — however sophisticated — still struggle to predict exactly when a harmless scattering of solitary insects will tip over into a devastating plague. Until that prediction becomes reliable, farmers like Mai Sithole are left doing much what their ancestors did: watching the grasshoppers at the edge of the field, and hoping the rains behave themselves.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) What TWO things about the grasshoppers made Mai Sithole notice that something was wrong? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`number`) || n.includes(`many`) || n.includes(`large amount`) || n.includes(`cluster`) || n.includes(`lot of`)) s++;
+                        if (n.includes(`colour`) || n.includes(`color`) || n.includes(`yellow`) || n.includes(`mottled`) || n.includes(`not green`)) s++;
+                        return s; },
+                      answer: `(1) There was an unusually large number of them. (2) Their colour was a strange mottled yellow rather than the usual green.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) In your own words, explain fully what triggers the change in the locusts' colouring and behaviour. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`rain`) && n.includes(`drought`) || n.includes(`good rain`) && n.includes(`dry`) || n.includes(`weather`) && n.includes(`change`)) s++;
+                        if (n.includes(`crowd`) || n.includes(`bump`) || n.includes(`contact`) || n.includes(`touch`) || n.includes(`close together`) || n.includes(`packed`)) s++;
+                        return s; },
+                      answer: `(1) A period of good rain followed suddenly by drought (forcing them into shrinking green patches). (2) This crowds them together, and frequent physical contact/bumping triggers the hormonal change.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) Describe fully what happened when the marching band of young locusts crossed Mai Sithole's land. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`carpet`) || n.includes(`wide`) || n.includes(`mass`) || n.includes(`dense`) || n.includes(`cover`) && n.includes(`ground`)) && (n.includes(`flow`) || n.includes(`cross`) || n.includes(`strip`) || n.includes(`nothing green`) || n.includes(`ate everything`))) ? 1 : 0; },
+                      answer: `A dense, wide, moving carpet of insects flowed over fences, walls and legs, stripping every blade of vegetation and leaving nothing green behind.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Give evidence that shows the enormous scale of a mature locust swarm. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`billion`) || n.includes(`city`) || n.includes(`hundred thousand`) || n.includes(`large area`) || n.includes(`huge amount`)) ? 1 : 0; },
+                      answer: `A swarm can contain billions of insects, cover an area larger than a large city, and eat as much food in a day as several hundred thousand people would eat in a year.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Why did the streetlights in the nearby town switch on automatically? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`dark`) || n.includes(`gloom`) || n.includes(`blot`) && n.includes(`sun`) || n.includes(`mistook`) || n.includes(`looked like dusk`) || n.includes(`swarm`) && n.includes(`block`)) ? 1 : 0; },
+                      answer: `The swarm blotted out the sun and created such darkness/gloom that the sensors mistook it for dusk.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) Give TWO methods villagers used in their attempt to drive the swarm away. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`pot`) || n.includes(`pan`) || n.includes(`bang`) || n.includes(`noise`)) s++;
+                        if (n.includes(`fire`) || n.includes(`smoke`) || n.includes(`pesticide`) || n.includes(`spray`) || n.includes(`headlight`) || n.includes(`vehicle`)) s++;
+                        return s; },
+                      answer: `Any two: banging pots and pans; lighting smoky fires; spraying pesticide; driving vehicles with headlights on.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1g`, type: `text`, label: `Q1 (g) What, according to the passage, was the real reason part of Mai Sithole's crop survived? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`moved on`) || n.includes(`left`) || n.includes(`swarm`) && n.includes(`north`) || n.includes(`went`) && n.includes(`further`)) ? 1 : 0; },
+                      answer: `The swarm simply moved on to another district further north, not because of the villagers' own efforts.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) Explain in your own words why aerial spraying is more effective at dawn than by mid-morning. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`cold`) || n.includes(`sluggish`) || n.includes(`slow`) || n.includes(`not fly`) || n.includes(`grounded`) || n.includes(`still`)) s++;
+                        if (n.includes(`warm`) && (n.includes(`fly`) || n.includes(`airborne`)) || n.includes(`hard to target`) || n.includes(`difficult`) && n.includes(`hit`) || n.includes(`scattered`)) s++;
+                        return s; },
+                      answer: `(1) At dawn, the cold air keeps the locusts sluggish/grounded, still gathered together. (2) By mid-morning, warmed by the sun, they take to the air and become scattered and hard to target.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) Why did the timing of the swarm's arrival make things especially bitter for Mai Sithole? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`weeks from harvest`) || n.includes(`almost ready`) || n.includes(`nearly ready`) || n.includes(`close to harvest`) || n.includes(`about to be harvested`)) ? 1 : 0; },
+                      answer: `The maize was only three weeks from harvest — almost ready — representing a whole season's work lost right before it could be gathered.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) What does the writer mean by describing the entomologists' fascination as "grim"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`interest`) && (n.includes(`dark`) || n.includes(`serious`) || n.includes(`troubl`) || n.includes(`disturb`)) || n.includes(`fascinat`) && n.includes(`unpleasant`) || n.includes(`morbid`) || n.includes(`unsettl`)) ? 1 : 0; },
+                      answer: `Their interest/fascination is mixed with an awareness of how serious/troubling/destructive the subject actually is.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) In your own words, explain the main limitation of modern locust-monitoring systems described in the passage. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`cannot`) || n.includes(`can not`) || n.includes(`unable`) || n.includes(`struggle`) || n.includes(`difficult`) || n.includes(`hard`)) && n.includes(`predict`) || n.includes(`do not know when`) || n.includes(`not reliable`) || n.includes(`unpredictable`) || n.includes(`unsure when`)) ? 1 : 0; },
+                      answer: `They still cannot reliably predict exactly when harmless solitary locusts will turn into a devastating swarm.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_locust`, type: `summary_grid`, paragraphRange: `paragraphs 2 to 5`,
+                      label: `Q3. Summarise how the solitary locusts changed into a destructive swarm, and the effects this swarm had when it finally arrived. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`When`, `good`, `rains`, `were`, `followed`, `by`, `drought,`, `the`, `locusts`, `became`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_locust`,
+                        [`When`, `good`, `rains`, `were`, `followed`, `by`, `drought,`, `the`, `locusts`, `became`],
+                        [
+                          [`crowd`, `shrinking`, `vegetation`, `patches of green`],
+                          [`bump`, `contact`, `frequency`, `touch`],
+                          [`hormonal`, `change`, `colouring`, `behaviour`],
+                          [`drawn together`, `irresistibly`, `attracted`],
+                          [`marching band`, `flightless`, `young locust`],
+                          [`stripped`, `vegetation`, `advanced`],
+                          [`carpet`, `metres wide`, `moving`],
+                          [`fences`, `walls`, `legs`, `flowing over`],
+                          [`matured`, `grew wings`, `flying swarm`],
+                          [`billion`, `insects`, `large city`],
+                          [`consuming`, `food`, `hundred thousand people`],
+                          [`darkness`, `blotting out`, `sun`],
+                          [`streetlight`, `switched on`, `dusk`],
+                          [`roar`, `wings`, `downpour`, `rain`],
+                          [`absence`, `water`, `no rain falling`],
+                          [`banging`, `pots`, `pans`],
+                          [`smoky fires`, `edges of fields`],
+                          [`pesticide`, `sprayed`],
+                          [`headlights`, `vehicles`, `frighten`],
+                          [`moved on`, `two days`, `another district`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 2–5 only. Opens: 'When good rains were followed by drought, the locusts became...'. Max 160 words. Cover the change into a swarm, its arrival, and its effects.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: (Entomologists/Entomoligists/Entymologists) study insects.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `entomologists` ? 1 : 0,
+                      answer: `entomologists` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: The locusts were (irresistibly/irresistably/irrisistibly) drawn together.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `irresistibly` ? 1 : 0,
+                      answer: `irresistibly` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: In most years, the desert locust lives a SOLITARY life.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `social` || n === `communal` || n === `group` || n === `crowded`) ? 1 : 0; },
+                      answer: `social / communal / group / crowded` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: By mid-morning the insects became reluctant to stay GROUNDED.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `airborne` || n === `flying` || n === `aloft`) ? 1 : 0; },
+                      answer: `airborne / flying / aloft` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The villagers made a (desperate) attempt to frighten the swarm away.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `desperately` ? 1 : 0,
+                      answer: `desperately` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: Mai Sithole felt great (bitter) at losing her crop so close to harvest.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `bitterness` ? 1 : 0,
+                      answer: `bitterness` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'until': "The desert locust lives quietly. Drought forces it into crowded green patches."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`until`) && n.includes(`lives quietly`) && n.includes(`drought`) ? 1 : 0; },
+                      answer: `The desert locust lives quietly until drought forces it into crowded green patches.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'even though': "The villagers fought the swarm with everything they had. It caused enormous damage."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`even though`) || n.includes(`although`)) && n.includes(`fought`) && n.includes(`damage`) ? 1 : 0; },
+                      answer: `Even though the villagers fought the swarm with everything they had, it caused enormous damage.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "The swarm blotted out the afternoon sun."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`afternoon sun`) && n.includes(`blotted out`) && n.includes(`by the swarm`) ? 1 : 0; },
+                      answer: `The afternoon sun was blotted out by the swarm.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "Government officers sprayed the fields with pesticide."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`fields`) && n.includes(`sprayed`) && n.includes(`pesticide`) && n.includes(`by`) && n.includes(`government officers`) ? 1 : 0; },
+                      answer: `The fields were sprayed with pesticide by government officers.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. mottled (paragraph 1)`, keys: [`blotchy`, `patchy`, `spotted`, `marked with patches`, `speckled`], constraint: () => true, answer: `blotchy / patchy / spotted / speckled` },
+                    { id: `v2`, label: `2. abruptly (paragraph 2)`, keys: [`suddenly`, `without warning`, `unexpectedly`, `sharply`, `all at once`], constraint: () => true, answer: `suddenly / without warning / unexpectedly / sharply` },
+                    { id: `v3`, label: `3. irresistibly (paragraph 3)`, keys: [`unavoidably`, `overwhelmingly`, `impossible to resist`, `powerfully`], constraint: () => true, answer: `unavoidably / overwhelmingly / impossible to resist` },
+                    { id: `v4`, label: `4. descended (paragraph 5)`, keys: [`came down`, `arrived suddenly`, `swooped down`, `fell upon`, `landed`], constraint: (n) => !n.includes(`went down`), answer: `came down / arrived suddenly / swooped down / fell upon` },
+                    { id: `v5`, label: `5. indistinguishable (paragraph 5)`, keys: [`impossible to tell apart`, `identical seeming`, `not able to be told apart`, `the same as`], constraint: () => true, answer: `impossible to tell apart / identical seeming / not able to be told apart` },
+                    { id: `v6`, label: `6. sluggish (paragraph 7)`, keys: [`slow moving`, `lacking energy`, `lethargic`, `inactive`, `torpid`], constraint: (n) => !n.includes(`lazy`), answer: `slow moving / lacking energy / lethargic / inactive. "Lazy" scores 0.` },
+                    { id: `v7`, label: `7. reluctant (paragraph 7)`, keys: [`unwilling`, `hesitant`, `disinclined`, `not eager`, `resistant`], constraint: () => true, answer: `unwilling / hesitant / disinclined / not eager` },
+                    { id: `v8`, label: `8. plagued (paragraph 9)`, keys: [`troubled repeatedly`, `tormented`, `afflicted`, `beset`, `caused suffering to`], constraint: () => true, answer: `troubled repeatedly / tormented / afflicted / beset` }
+                ]
+            }
+
+,
+            {
+                id: 'kalahari_solo',
+                type: 'long',
+                title: '23. Solo Across the Kalahari',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `A traveller sets out alone to cross a stretch of the Kalahari Desert on foot, and discovers that the greatest danger is not the heat or the distance, but his own certainty that he knows better than the land he is walking through.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `I had planned the crossing for eleven months, poring over maps in the comfort of a rented room in Maun, and by the time I finally shouldered my pack at the edge of the pan, I believed I understood the Kalahari rather better than I did. Sixty kilometres of red sand and thorn scrub lay between myself and the borehole marked, with what I now recognise as false confidence, in thick pencil on my map.` },
+                    { num: `Paragraph 2`, text: `The first day passed pleasantly enough. I walked in the cool hours before the sun climbed high, rested through the worst of the heat beneath whatever thorn tree offered a scrap of shade, and covered perhaps eighteen kilometres before making camp. My water, carefully rationed, seemed more than sufficient for the distance remaining. I remember feeling, that first evening, rather pleased with myself, and it did not occur to me that this feeling was itself a kind of warning I ought to have heeded.` },
+                    { num: `Paragraph 3`, text: `On the second day, the ground began to change beneath my boots: the firm red sand gave way to a softer, more treacherous surface that swallowed each footstep and doubled the effort of every kilometre. I had not accounted for this in my careful calculations, and by early afternoon I understood, with the particular clarity that comes only from genuine alarm, that I would not reach the borehole with the water remaining in my two remaining bottles.` },
+                    { num: `Paragraph 4`, text: `I made the decision, then, to ration myself further: a mouthful at each hour, no more, regardless of how the heat pressed down or how my tongue began to feel thick and unfamiliar in my own mouth. The thorn scrub around me offered no landmarks I recognised from the map, and for the first time since setting out I allowed myself to consider, briefly and with a coldness that surprised me, what would happen if I had misjudged the distance as badly as I now feared.` },
+                    { num: `Paragraph 5`, text: `It was the birds that saved me, though I did not realise it at the time. Late on the third afternoon, dizzy with thirst and walking with the stumbling gait of a man far older than myself, I noticed a small flock of doves cutting low and fast across the sky ahead, all moving in the same direction with a determined purpose that no bird bothers with unless it is heading somewhere specific. An old ranger in Maun had once told me, almost as an aside, that doves in this country fly straight and low toward water in the last hours before dusk, and rarely toward anything else.` },
+                    { num: `Paragraph 6`, text: `I had nothing else to trust by then, certainly not my own sense of direction, so I turned to follow them, walking faster than I had any right to on legs gone rubbery with dehydration, watching the sky rather than my useless map. Twice I lost sight of the birds behind rises in the ground and very nearly gave up, certain I had imagined the whole thing out of desperation, before catching sight of another small group crossing the same invisible flight path a few hundred metres further on.` },
+                    { num: `Paragraph 7`, text: `The borehole, when I finally staggered to it in the failing light, was nothing like the confident pencil mark on my map: a rusted pump and a battered concrete trough, half-collapsed and green with algae, tucked into a fold of ground I would have walked straight past in daylight without the birds to guide me. I drank from my cupped hands before I had the sense to check whether the water was fit to drink, and discovered, with the sort of relief that makes a grown man's legs shake, that it was.` },
+                    { num: `Paragraph 8`, text: `I spent that night beside the borehole rather than pressing on in the dark, too exhausted to feel anything but a dull gratitude, and it was only the following morning, walking the final stretch into the small settlement where my journey was to end, that the full weight of how close the crossing had come to disaster settled properly on me. Eleven months of planning, and it had been a flock of ordinary doves, not my careful maps, that had actually kept me alive.` },
+                    { num: `Paragraph 9`, text: `I have crossed other stretches of desert since then, in Namibia and further north in Botswana's deeper interior, and I have never again set out believing that a map, however carefully drawn, could tell me more about the land than the land was prepared to tell me itself. The Kalahari taught me, at a cost I was fortunate to be able to afford, that the people and creatures who have always lived somewhere generally understand it rather better than a visitor with a compass and eleven months of careful preparation.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) What does the writer mean by admitting he had "false confidence" about the crossing? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`wrong`) || n.includes(`mistaken`) || n.includes(`overconfiden`) || n.includes(`not justified`) || n.includes(`thought he knew`) && n.includes(`did not`) || n.includes(`misplaced`)) ? 1 : 0; },
+                      answer: `He believed he understood/was prepared for the desert, but this confidence was mistaken/not actually justified.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Explain in your own words why the writer's feeling of being "pleased with himself" on the first evening was actually "a kind of warning." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`too confiden`) || n.includes(`overconfiden`) || n.includes(`complacen`) || n.includes(`careless`) || n.includes(`relaxed too much`)) s++;
+                        if (n.includes(`danger`) || n.includes(`trouble ahead`) || n.includes(`things went wrong`) || n.includes(`things got harder`) || n.includes(`did not expect`) || n.includes(`unprepared`)) s++;
+                        return s; },
+                      answer: `(1) His satisfaction made him overconfident/complacent. (2) This meant he was unprepared for the real difficulty/danger that was still ahead.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) What TWO problems did the writer face on the second day? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`softer`) || n.includes(`treacherous`) || n.includes(`sand`) && n.includes(`change`) || n.includes(`swallow`) && n.includes(`footstep`) || n.includes(`harder to walk`)) s++;
+                        if (n.includes(`water`) && (n.includes(`not enough`) || n.includes(`enough water`) || n.includes(`run out`) || n.includes(`insufficient`) || n.includes(`short`) || n.includes(`would not`) || n.includes(`not reach`) || n.includes(`not last`))) s++;
+                        return s; },
+                      answer: `(1) The ground became softer/more treacherous, making walking much harder. (2) He realised he did not have enough water left to reach the borehole.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Give ONE piece of evidence that shows the effects of thirst were beginning to affect the writer physically. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`tongue`) || n.includes(`thick`) || n.includes(`unfamiliar`)) ? 1 : 0; },
+                      answer: `His tongue began to feel thick and unfamiliar in his own mouth.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Why did the writer pay particular attention to the doves flying overhead? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`same direction`) || n.includes(`purpose`) || n.includes(`determined`) || n.includes(`fast`) && n.includes(`low`)) s++;
+                        if (n.includes(`ranger`) || n.includes(`told him`) || n.includes(`remembered`) || n.includes(`water`) && n.includes(`dusk`) || n.includes(`heading somewhere`)) s++;
+                        return s; },
+                      answer: `(1) They were all flying low and fast in the same direction, with clear purpose. (2) He remembered a ranger had told him such doves fly toward water in the hours before dusk.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) What made the writer nearly give up on following the birds? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`lost sight`) || n.includes(`could not see`) || n.includes(`disappeared`) || n.includes(`imagined`) || n.includes(`doubt`)) ? 1 : 0; },
+                      answer: `He twice lost sight of the birds behind rises in the ground and began to doubt/think he had imagined the whole thing.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) In your own words, explain why the writer's discovery of the borehole was described as different from what he expected. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`rusted`) || n.includes(`broken`) || n.includes(`collapsed`) || n.includes(`not like`) || n.includes(`different from`) || n.includes(`map`) && n.includes(`confident`) || n.includes(`worse`) && n.includes(`imagined`)) ? 1 : 0; },
+                      answer: `He had imagined a clean/reliable borehole from the confident mark on his map, but found instead a rusted pump and a collapsed, algae-covered trough.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) What does the phrase "before I had the sense to check" suggest about the writer's state of mind at that moment? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`desperate`) || n.includes(`not thinking clearly`) || n.includes(`careless`) || n.includes(`too thirsty`) || n.includes(`relief`) || n.includes(`overwhelm`)) ? 1 : 0; },
+                      answer: `He was so desperate/overwhelmed with thirst that he was not thinking clearly/carefully at that moment.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) Why did the writer choose to spend the night beside the borehole rather than continue his journey? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`exhaust`) || n.includes(`tired`) || n.includes(`too weak`) || n.includes(`could not go on`) || n.includes(`no energy`)) ? 1 : 0; },
+                      answer: `He was too exhausted to feel anything but gratitude, and had no energy to continue in the dark.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2c`, type: `text`, label: `Q2 (c) In your own words, explain the irony in the statement that "it had been a flock of ordinary doves, not my careful maps, that had actually kept me alive." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`plan`) || n.includes(`map`) || n.includes(`preparation`) && (n.includes(`useless`) || n.includes(`failed`) || n.includes(`did not help`) || n.includes(`not enough`))) s++;
+                        if (n.includes(`bird`) || n.includes(`dove`) || n.includes(`nature`) || n.includes(`animal`) && (n.includes(`saved`) || n.includes(`helped`) || n.includes(`survived`))) s++;
+                        return s; },
+                      answer: `(1) All his careful planning and mapping ultimately failed/proved useless. (2) It was instead ordinary birds/nature that actually saved his life — the opposite of what he expected.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What is the main lesson the writer says he learnt from this experience? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`local`) || n.includes(`land`) || n.includes(`people who live`) || n.includes(`lived`) || n.includes(`live there`) || n.includes(`understand it better`) || n.includes(`understand`) && n.includes(`better`) || n.includes(`know better`) || n.includes(`knows it better`) || n.includes(`respect`) || n.includes(`outsider`) || n.includes(`visitor`) || n.includes(`trust`) && n.includes(`land`)) ? 1 : 0; },
+                      answer: `That the people/creatures who have always lived in a place understand it better than a visitor with maps and preparation, however careful.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_kalahari`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 7`,
+                      label: `Q3. Summarise the writer's difficulties after his water began to run short, and how he was eventually able to find the borehole. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`As`, `the`, `ground`, `grew`, `softer`, `and`, `more`, `treacherous,`, `the`, `writer`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_kalahari`,
+                        [`As`, `the`, `ground`, `grew`, `softer`, `and`, `more`, `treacherous,`, `the`, `writer`],
+                        [
+                          [`swallowed`, `footstep`, `effort`, `doubled`],
+                          [`not reach`, `borehole`, `water remaining`],
+                          [`ration`, `mouthful`, `each hour`],
+                          [`heat`, `pressed down`, `tongue`, `thick`],
+                          [`no landmark`, `recognised`, `map`],
+                          [`consider`, `misjudged`, `distance`, `coldness`],
+                          [`doves`, `flock`, `sky`, `low and fast`],
+                          [`same direction`, `determined purpose`],
+                          [`ranger`, `told him`, `water`, `dusk`],
+                          [`followed`, `walking faster`, `legs`, `rubbery`],
+                          [`watching`, `sky`, `not map`],
+                          [`lost sight`, `rises`, `ground`],
+                          [`nearly gave up`, `imagined`],
+                          [`caught sight`, `another group`, `further on`],
+                          [`staggered`, `failing light`, `borehole`],
+                          [`rusted pump`, `concrete trough`, `collapsed`, `algae`],
+                          [`drank`, `cupped hands`],
+                          [`checked`, `fit to drink`, `relief`],
+                          [`legs shake`, `grown man`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–7 only. Opens: 'As the ground grew softer and more treacherous, the writer...'. Max 160 words. Cover the water shortage, following the doves, and finding the borehole.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The ground became (treacherous/trecherous/treacherus) underfoot.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `treacherous` ? 1 : 0,
+                      answer: `treacherous` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: He suffered badly from (dehydration/dehidration/deyhdration) by the third day.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `dehydration` ? 1 : 0,
+                      answer: `dehydration` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: I felt PLEASED with myself on the first evening.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `displeased` || n === `disappointed` || n === `unhappy` || n === `dissatisfied`) ? 1 : 0; },
+                      answer: `displeased / disappointed / unhappy / dissatisfied` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The firm sand gave way to a SOFTER surface.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `harder` || n === `firmer` || n === `tougher`) ? 1 : 0; },
+                      answer: `harder / firmer / tougher` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: He felt a sudden (desperate) as the water ran low.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `desperation` ? 1 : 0,
+                      answer: `desperation` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: With great (grateful), he drank from the borehole.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `gratitude` ? 1 : 0,
+                      answer: `gratitude` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'unless': "No bird bothers flying with such purpose. It is heading somewhere specific."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`unless`) && n.includes(`bother`) && n.includes(`heading`) ? 1 : 0; },
+                      answer: `No bird bothers flying with such purpose unless it is heading somewhere specific.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'without': "The birds guided him. He would have walked straight past the borehole."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`without`) && n.includes(`birds`) && n.includes(`walked straight past`) ? 1 : 0; },
+                      answer: `Without the birds to guide him, he would have walked straight past the borehole.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "An old ranger told him about the doves."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`doves`) && n.includes(`told`) && n.includes(`by`) && n.includes(`ranger`) ? 1 : 0; },
+                      answer: `He was told about the doves by an old ranger.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "The Kalahari taught him an important lesson."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`important lesson`) && n.includes(`taught`) && n.includes(`by the kalahari`) ? 1 : 0; },
+                      answer: `An important lesson was taught to him by the Kalahari.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. poring over (paragraph 1)`, keys: [`studying closely`, `examining carefully`, `looking at intently`, `reading intensely`, `scrutinising`], constraint: () => true, answer: `studying closely / examining carefully / scrutinising` },
+                    { id: `v2`, label: `2. heeded (paragraph 2)`, keys: [`paid attention to`, `listened to`, `taken notice of`, `followed advice`, `obeyed`], constraint: (n) => !n.includes(`heard`), answer: `paid attention to / listened to / taken notice of. "Heard" alone scores 0.` },
+                    { id: `v3`, label: `3. treacherous (paragraph 3)`, keys: [`dangerous`, `unstable`, `unreliable`, `hazardous`, `risky`, `unsafe`], constraint: () => true, answer: `dangerous / unstable / unreliable / hazardous / risky` },
+                    { id: `v4`, label: `4. gait (paragraph 5)`, keys: [`walk`, `way of walking`, `manner of moving`, `stride`, `pace`], constraint: () => true, answer: `walk / way of walking / manner of moving / stride` },
+                    { id: `v5`, label: `5. staggered (paragraph 7)`, keys: [`stumbled`, `walked unsteadily`, `lurched`, `tottered`, `swayed while walking`], constraint: (n) => !n.includes(`ran`), answer: `stumbled / walked unsteadily / lurched / tottered. "Ran" scores 0.` },
+                    { id: `v6`, label: `6. battered (paragraph 7)`, keys: [`damaged`, `worn out`, `beaten up`, `dilapidated`, `run down`], constraint: () => true, answer: `damaged / worn out / beaten up / dilapidated` },
+                    { id: `v7`, label: `7. dull (paragraph 8)`, keys: [`weak`, `faint`, `muted`, `lacking intensity`, `numbed`], constraint: (n) => !n.includes(`boring`), answer: `weak / faint / muted / numbed. "Boring" scores 0.` },
+                    { id: `v8`, label: `8. fortunate (paragraph 9)`, keys: [`lucky`, `favoured`, `blessed`, `having good luck`], constraint: () => true, answer: `lucky / favoured / blessed / having good luck` }
+                ]
+            }
+
         ];
 
         // =============================================================
