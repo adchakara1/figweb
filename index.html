@@ -5059,6 +5059,1153 @@
                 ]
             }
 
+,
+            {
+                id: 'chinhoyi_caves',
+                type: 'long',
+                title: '24. Trapped in the Chinhoyi Caves',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `A guide leading a school trip through the Sleeping Pool caves loses his footing on a slick passage, triggering a rockfall that seals the only known exit and leaves twelve students trapped in darkness far below the surface.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Panashe had led school groups through the Chinhoyi caves perhaps two hundred times, and he could, if pressed, have described every twist of the main passage with his eyes closed. It was this very familiarity, he admitted afterwards, that made him careless on the narrow ledge above the second chamber, where a patch of damp limestone had claimed the footing of more experienced guides than himself.` },
+                    { num: `Paragraph 2`, text: `His torch beam swung wildly as he fell, catching for an instant the upturned, startled faces of the twelve students strung out along the passage behind him, before he landed hard on the ledge below with a grunt that echoed through the whole system. It was not his own fall that caused the disaster, however, but the loose slab of rock he had dislodged in the process, which came down a moment later with a roar that seemed to shake the mountain itself.` },
+                    { num: `Paragraph 3`, text: `When the dust and echoes finally settled, Panashe's torch, still working by some mercy, showed him a wall of broken stone where the passage back to the entrance had been only seconds before. He tried, for form's sake, to shift the smallest of the fallen rocks, but succeeded only in confirming what he already suspected: nothing short of heavy machinery was going to clear that passage from this side.` },
+                    { num: `Paragraph 4`, text: `Above the rockfall, the students had frozen where they stood, and it took Panashe several minutes of shouting through the gap to establish that all twelve were accounted for and, remarkably, unhurt beyond scrapes and bruises. He did not tell them, in that first exchange, just how thoroughly the way out had been blocked; there would be time enough for that once he had thought of something useful to say alongside it.` },
+                    { num: `Paragraph 5`, text: `He knew, from his training, that the cave system had a second entrance, a narrow chimney shaft used mainly by researchers studying the bat colonies, and that this chimney opened onto the passage roughly four hundred metres further into the mountain — in the opposite direction from where his students now waited. The bad news was that none of them had ever been that deep into the system; the worse news was that the passage leading there crossed a stretch of flooded tunnel that came up past the chest on a tall man, and higher still on some of his younger charges.` },
+                    { num: `Paragraph 6`, text: `Panashe made the decision to lead the students toward the chimney rather than wait for rescue, reasoning that nobody outside the cave would think to look for them there for hours yet, since the school's schedule had them due back on the surface only at sunset. He organised the taller students to help carry the smaller ones through the flooded section, distributing what remained of the group's torches so that no stretch of the traverse was left in complete darkness.` },
+                    { num: `Paragraph 7`, text: `The flooded tunnel proved worse than his memory of it: chest-deep in places for even the tallest boy, and cold enough that two of the younger girls began shivering uncontrollably within minutes of entering the water. Panashe kept the line moving by refusing, absolutely, to let anyone stop to rest mid-crossing, aware that stillness in that cold water was its own particular danger.` },
+                    { num: `Paragraph 8`, text: `They reached the base of the chimney shaft with every torch battery failing and at least three students in the early stages of proper hypothermia, and Panashe's relief at finding the shaft exactly where his training had told him it would be was tempered immediately by the discovery that it was barely wide enough for a grown man's shoulders, let alone the improvised rope-and-harness rig he had hoped to build for lifting the weaker students.` },
+                    { num: `Paragraph 9`, text: `In the end, it was the smallest of the girls who climbed first, hauled upward on a rope of knotted jackets by two researchers who had, entirely by chance, been checking the bat monitoring equipment at the top of the shaft that same afternoon and had heard the shouting rising from below. Word reached the rescue services within the hour, and by nightfall all thirteen — Panashe included, climbing out last and refusing every offer of help until every student had gone before him — stood blinking in the floodlit clearing above the caves.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) In your own words, explain why Panashe's familiarity with the caves is described as having made him careless. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`familiar`) || n.includes(`knew`) && n.includes(`well`) || n.includes(`experience`) || n.includes(`used to`)) s++;
+                        if (n.includes(`careless`) || n.includes(`not careful`) || n.includes(`relax`) || n.includes(`overconfiden`) || n.includes(`took it for granted`) || n.includes(`less cautious`) || n.includes(`not paying attention`)) s++;
+                        return s; },
+                      answer: `(1) He knew the caves so well/was so used to them. (2) That this made him relax/take less care/become overconfident, which led him to slip.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) What actually caused the rockfall, according to paragraph 2? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`dislodg`) || n.includes(`knock`) && n.includes(`loose`) || n.includes(`fell`) && n.includes(`caused`) || n.includes(`his fall`) && n.includes(`rock`) || n.includes(`loose slab`)) ? 1 : 0; },
+                      answer: `Panashe's own fall dislodged/knocked loose a slab of rock, which then fell and caused the rockfall.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) Why did Panashe try to move one of the smaller rocks, even though he suspected it would achieve nothing? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`form`) || n.includes(`sake`) || n.includes(`confirm`) || n.includes(`make sure`) || n.includes(`check`) || n.includes(`prove`) && n.includes(`himself`)) ? 1 : 0; },
+                      answer: `He did it "for form's sake" — mainly to confirm/prove to himself that it truly could not be moved, not because he expected it to work.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Give TWO pieces of good news Panashe discovered about the students on the other side of the rockfall. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`all twelve`) || n.includes(`all accounted for`) || n.includes(`none missing`) || n.includes(`everyone`) && n.includes(`there`)) s++;
+                        if (n.includes(`unhurt`) || n.includes(`not injured`) || n.includes(`no serious injur`) || n.includes(`only scrape`) || n.includes(`only bruise`) || n.includes(`fine`) || n.includes(`safe`)) s++;
+                        return s; },
+                      answer: `(1) All twelve students were accounted for. (2) They were unhurt beyond minor scrapes and bruises.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) Why did Panashe choose not to tell the students immediately how badly blocked the passage was? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`plan`) || n.includes(`solution`) || n.includes(`something useful`) || n.includes(`think of`) || n.includes(`wait`) && n.includes(`say`) || n.includes(`until he had`)) ? 1 : 0; },
+                      answer: `He wanted to wait until he had thought of something useful to say alongside the bad news, rather than alarm them with no plan.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1f`, type: `text`, label: `Q1 (f) Explain fully what made the alternative route to the chimney shaft dangerous. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`never been`) || n.includes(`ever been`) || n.includes(`not been`) || n.includes(`unfamiliar`) || n.includes(`not know`) || n.includes(`had not gone`) || n.includes(`new`) && n.includes(`route`)) s++;
+                        if (n.includes(`flood`) || n.includes(`water`) && (n.includes(`deep`) || n.includes(`chest`)) || n.includes(`tunnel`) && n.includes(`water`)) s++;
+                        return s; },
+                      answer: `(1) None of the students had ever been that deep into the system before. (2) The route crossed a flooded tunnel deep enough to reach past the chest, even higher on smaller students.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1g`, type: `text`, label: `Q1 (g) Why did Panashe decide not to simply wait where they were for rescue? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`nobody`) && n.includes(`look`) || n.includes(`not expected back`) || n.includes(`schedule`) || n.includes(`sunset`) || n.includes(`not know`) && n.includes(`missing`) || n.includes(`hours`) && n.includes(`before`)) ? 1 : 0; },
+                      answer: `Nobody outside would think to look for them for hours, since the group was only due back on the surface at sunset.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) Why did Panashe refuse to let anyone stop and rest during the crossing of the flooded tunnel? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`cold`) || n.includes(`stillness`) || n.includes(`danger`) || n.includes(`hypothermia`) || n.includes(`dangerous`) && n.includes(`stop`)) ? 1 : 0; },
+                      answer: `Staying still in the cold water was itself dangerous — it risked hypothermia, so movement had to continue.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) In your own words, explain the TWO problems Panashe discovered at the base of the chimney shaft. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`torch`) || n.includes(`battery`) || n.includes(`light`) && (n.includes(`fail`) || n.includes(`dying`) || n.includes(`running out`))) s++;
+                        if (n.includes(`hypothermia`) || n.includes(`cold`) && n.includes(`student`) || n.includes(`narrow`) || n.includes(`too small`) || n.includes(`rope`) && n.includes(`could not`)) s++;
+                        return s; },
+                      answer: `Any two: (1) the torches/batteries were failing. (2) Some students were showing early signs of hypothermia. (3) The shaft was too narrow for his planned rope-and-harness rig.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) What role did chance/luck play in the eventual rescue? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`chance`) || n.includes(`happened to be`) || n.includes(`coincidence`) || n.includes(`by luck`) || n.includes(`researchers`) && n.includes(`there`)) ? 1 : 0; },
+                      answer: `Researchers happened, entirely by chance, to be checking equipment at the top of the shaft that same afternoon and heard the shouting.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What does Panashe's decision to climb out last suggest about his character? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`responsib`) || n.includes(`put`) && n.includes(`student`) && n.includes(`first`) || n.includes(`selfless`) || n.includes(`cared`) || n.includes(`leader`) || n.includes(`brave`) || n.includes(`dutiful`)) ? 1 : 0; },
+                      answer: `He is responsible/selfless — he put the safety of his students before his own, insisting they leave the danger first.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_caves`, type: `summary_grid`, paragraphRange: `paragraphs 5 to 9`,
+                      label: `Q3. Summarise how Panashe led the students to safety, from the moment he decided to head for the chimney shaft to the moment everyone was rescued. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Deciding`, `not`, `to`, `wait`, `for`, `rescue,`, `Panashe`, `led`, `the`, `students`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_caves`,
+                        [`Deciding`, `not`, `to`, `wait`, `for`, `rescue,`, `Panashe`, `led`, `the`, `students`],
+                        [
+                          [`chimney`, `shaft`, `second entrance`],
+                          [`four hundred`, `metres`, `opposite direction`],
+                          [`flooded`, `tunnel`, `chest`, `deep`],
+                          [`taller`, `carry`, `smaller`],
+                          [`distributed`, `torches`, `no darkness`],
+                          [`cold`, `shivering`, `girls`],
+                          [`refused`, `stop`, `rest`, `keep moving`],
+                          [`stillness`, `danger`, `cold water`],
+                          [`torch`, `batteries`, `failing`],
+                          [`hypothermia`, `three students`],
+                          [`shaft`, `narrow`, `barely wide`],
+                          [`rope`, `harness`, `could not build`],
+                          [`smallest girl`, `climbed first`],
+                          [`knotted`, `jackets`, `rope`],
+                          [`researchers`, `checking`, `bat`, `equipment`],
+                          [`heard`, `shouting`, `chance`],
+                          [`rescue services`, `within the hour`],
+                          [`climbed out last`, `refused`, `help`],
+                          [`floodlit clearing`, `blinking`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 5–9 only. Opens: 'Deciding not to wait for rescue, Panashe led the students...'. Max 160 words. Cover the route decision, the flooded tunnel, the chimney shaft problems, and the rescue.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The guide had led school groups through the caves on numerous (occassions/occasions/ocasions).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `occasions` ? 1 : 0,
+                      answer: `occasions` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: Two girls began (shivering/shivvering/shiverring) in the cold water.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `shivering` ? 1 : 0,
+                      answer: `shivering` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: Panashe felt CARELESS on the narrow, damp ledge.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `careful` || n === `cautious` || n === `attentive` || n === `alert`) ? 1 : 0; },
+                      answer: `careful / cautious / attentive / alert` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The rescue team's relief was TEMPERED by the discovery of the narrow shaft.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `increased` || n === `heightened` || n === `intensified` || n === `strengthened`) ? 1 : 0; },
+                      answer: `increased / heightened / intensified / strengthened` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The students' (survive) depended on reaching the chimney shaft in time.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `survival` ? 1 : 0,
+                      answer: `survival` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: Panashe felt (responsible) for every student's safety.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `responsibility` ? 1 : 0,
+                      answer: `responsibility` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'although': "The tunnel was chest deep in places. The students still had to cross it."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`although`) || n.includes(`though`)) && n.includes(`chest deep`) && n.includes(`cross`) ? 1 : 0; },
+                      answer: `Although the tunnel was chest deep in places, the students still had to cross it.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'as soon as': "The researchers heard shouting. They rushed to help."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`as soon as`) && n.includes(`heard`) && (n.includes(`rushed`) || n.includes(`help`)) ? 1 : 0; },
+                      answer: `As soon as the researchers heard shouting, they rushed to help.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "The rockfall sealed the only known exit."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`only known exit`) && n.includes(`sealed`) && n.includes(`by the rockfall`) ? 1 : 0; },
+                      answer: `The only known exit was sealed by the rockfall.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "Two researchers hauled the girl upward."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`girl`) && n.includes(`hauled`) && n.includes(`upward`) && n.includes(`by`) && n.includes(`researchers`) ? 1 : 0; },
+                      answer: `The girl was hauled upward by two researchers.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. claimed (paragraph 1)`, keys: [`caused the fall of`, `taken down`, `been responsible for the fall of`, `brought down`], constraint: () => true, answer: `caused the fall of / taken down / brought down` },
+                    { id: `v2`, label: `2. dislodged (paragraph 2)`, keys: [`knocked loose`, `moved out of place`, `shifted free`, `loosened`, `displaced`], constraint: () => true, answer: `knocked loose / moved out of place / loosened / displaced` },
+                    { id: `v3`, label: `3. established (paragraph 4)`, keys: [`confirmed`, `found out`, `determined`, `made certain`, `worked out`], constraint: (n) => !n.includes(`started`), answer: `confirmed / found out / determined / made certain. "Started" scores 0.` },
+                    { id: `v4`, label: `4. traverse (paragraph 6)`, keys: [`crossing`, `journey across`, `passage across`, `route across`], constraint: () => true, answer: `crossing / journey across / passage across` },
+                    { id: `v5`, label: `5. tempered (paragraph 8)`, keys: [`lessened`, `moderated`, `reduced`, `softened`, `held back`], constraint: (n) => !n.includes(`stopped`), answer: `lessened / moderated / reduced / softened. "Stopped" scores 0.` },
+                    { id: `v6`, label: `6. improvised (paragraph 8)`, keys: [`made quickly with what was available`, `put together on the spot`, `makeshift`, `hastily made`], constraint: () => true, answer: `made quickly with what was available / put together on the spot / makeshift` },
+                    { id: `v7`, label: `7. hauled (paragraph 9)`, keys: [`pulled forcefully`, `dragged upward`, `lifted with effort`, `tugged up`], constraint: () => true, answer: `pulled forcefully / dragged upward / lifted with effort` },
+                    { id: `v8`, label: `8. blinking (paragraph 9)`, keys: [`opening and closing eyes rapidly`, `adjusting to light`, `squinting repeatedly`], constraint: () => true, answer: `opening and closing eyes rapidly / adjusting to light / squinting repeatedly` }
+                ]
+            }
+
+,
+            {
+                id: 'termite_architects',
+                type: 'long',
+                title: '25. The Termite Architects',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `Blind, fragile and barely a centimetre long, the fungus-growing termite of the African savannah builds towering mounds that regulate their own temperature and inspired an award-winning architect to redesign an entire office building.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Seen from a distance, the mounds rising from the grasslands of southern Africa could pass for the ruins of some forgotten civilisation: pale, ribbed towers three or four metres tall, standing in loose clusters across the plain like the abandoned monuments of a people who left in a hurry. The truth is stranger than any ruin, and considerably more impressive, for these structures are neither abandoned nor ancient in the way they appear; they are living, working buildings, occupied continuously by millions of termites, and rebuilt without pause for as long as two centuries.` },
+                    { num: `Paragraph 2`, text: `The individual termite responsible for all this is an almost comically unlikely architect: blind, soft-bodied, unable to survive more than an hour or two of direct sunlight, and entirely dependent on darkness and moisture for its survival. It possesses no blueprint, no foreman, and certainly no understanding of the structure it is building; each worker simply deposits a pellet of chewed soil and saliva roughly where its neighbours have deposited theirs, following simple chemical cues left behind by others, and yet from this blind, leaderless labour emerges architecture of startling sophistication.` },
+                    { num: `Paragraph 3`, text: `Deep inside the mound, protected from the worst of the daytime heat, the colony cultivates something almost nobody expects to find inside an insect nest: a garden. The termites grow a specific fungus on chewed plant matter, tending it as carefully as any farmer tends a crop, and it is this fungus, not the plant matter itself, that the termites actually eat, having in effect domesticated an entire species long before humans thought to do the same with wheat or rice.` },
+                    { num: `Paragraph 4`, text: `This fungus garden, however, generates enormous amounts of heat as it grows, and a colony that allowed its nursery to simply overheat would kill both its fungus and, eventually, itself. It is this single engineering problem — how to keep a deep, sealed structure at a stable temperature despite an internal heat source and the savannah's brutal swings between a scorching midday and a chilly night — that the mound's entire architecture exists to solve.` },
+                    { num: `Paragraph 5`, text: `The solution, when scientists finally understood it, turned out to involve the whole structure acting as a kind of lung. Networks of narrow chimneys and larger buttresses riddle the mound's exterior, connected to a broad network of tunnels below ground; as the day warms, air within the mound's sun-facing side heats and rises, drawing cooler air in through shaded tunnels on the opposite face and pulling it down toward the fungus garden, before the whole cycle reverses itself after dark. The termites, remarkably, constantly renovate this ventilation system, opening and sealing individual tunnels with wet soil in response to changing conditions, adjusting the mound's "breathing" almost as an animal might adjust its own.` },
+                    { num: `Paragraph 6`, text: `The result is a nursery chamber that scientists have measured staying within a single degree of its ideal temperature for months at a stretch, regardless of whether the outside world is baking at forty degrees or shivering through an unusually cold night — an outcome that most human-engineered buildings, for all their electricity and machinery, still struggle to match.` },
+                    { num: `Paragraph 7`, text: `It was precisely this feat that caught the attention of an architect designing a large office and shopping complex in Harare during the 1990s, who had grown frustrated with the enormous cooling costs that conventional buildings in the region typically demanded. Rather than relying on the usual approach of powerful air-conditioning units working against the heat, he modelled the new building's ventilation directly on the termite mound: a system of chimneys and low-power fans drawing cool night air through the structure, storing it in the building's concrete mass, and releasing it gradually through the following day to offset the sun's heat.` },
+                    { num: `Paragraph 8`, text: `When the building opened, it was using roughly a tenth of the energy that conventional air-conditioning would have required for a structure of the same size, a saving that startled even the engineers who had signed off on the unconventional design, and one that has since made the building something of a pilgrimage site for architecture students eager to see a termite-inspired design working at full scale.` },
+                    { num: `Paragraph 9`, text: `None of this, of course, was of the slightest interest to the termites themselves, who continued — as they always had, and presumably always will — depositing their pellets of chewed soil roughly where their neighbours had deposited theirs, building without a single blueprint a structure so effective that human architects, with all their calculations and computer models, are still working to properly understand exactly how it is done.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Why might the mounds, seen from a distance, be mistaken for the ruins of a lost civilisation? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`tower`) || n.includes(`tall`) || n.includes(`pale`) || n.includes(`standing`) || n.includes(`ancient`) || n.includes(`monument`) || n.includes(`abandon`) || n.includes(`look like ruins`)) ? 1 : 0; },
+                      answer: `Because they are tall, pale, towering structures standing in clusters, resembling old abandoned monuments/ruins.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Give TWO reasons why the writer describes the individual termite as an "unlikely architect." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`blind`) || n.includes(`cannot see`) || n.includes(`soft`) && n.includes(`body`) || n.includes(`fragile`) || n.includes(`weak`)) s++;
+                        if (n.includes(`sunlight`) || n.includes(`sun`) && n.includes(`kill`) || n.includes(`no blueprint`) || n.includes(`no plan`) || n.includes(`does not understand`) || n.includes(`no leader`) || n.includes(`no foreman`)) s++;
+                        return s; },
+                      answer: `Any two: it is blind; it is soft-bodied/fragile; it cannot survive long in sunlight; it has no blueprint/plan/understanding of what it is building.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1c`, type: `text`, label: `Q1 (c) Explain in your own words how the termites manage to build something so sophisticated without a leader or a plan. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`follow`) && (n.includes(`clue`) || n.includes(`cue`) || n.includes(`sign`) || n.includes(`chemical`)) || n.includes(`copy`) && n.includes(`neighbour`) || n.includes(`each`) && n.includes(`place`) || n.includes(`simple`) && n.includes(`rule`)) ? 1 : 0; },
+                      answer: `Each termite simply follows simple chemical cues/signals left by its neighbours, depositing material where others have already deposited theirs.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1d`, type: `text`, label: `Q1 (d) What surprising discovery is described in paragraph 3 about what the termites actually eat? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`fungus`) || n.includes(`grow`) && n.includes(`garden`) || n.includes(`cultivate`)) s++;
+                        if (n.includes(`not`) && (n.includes(`plant matter`) || n.includes(`wood`) || n.includes(`chewed material`)) || n.includes(`fungus`) && n.includes(`eat`) || n.includes(`instead of`)) s++;
+                        return s; },
+                      answer: `(1) They grow/cultivate a fungus garden. (2) It is this fungus, not the chewed plant matter itself, that they actually eat.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) In your own words, explain the main problem that the mound's architecture exists to solve. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`heat`) && (n.includes(`fungus`) || n.includes(`garden`) || n.includes(`generate`))) || n.includes(`stable temperature`) || n.includes(`keep`) && n.includes(`temperature`) || n.includes(`overheat`)) ? 1 : 0; },
+                      answer: `The mound must keep a stable/controlled temperature, despite the heat generated by the growing fungus garden and the outside swings between hot day and cold night.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1f`, type: `text`, label: `Q1 (f) Describe fully how air moves through the mound during the day, according to paragraph 5. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`warm`) || n.includes(`heat`) && n.includes(`rise`) || n.includes(`sun`) && n.includes(`side`)) s++;
+                        if (n.includes(`draw`) && n.includes(`cool`) || n.includes(`pull`) && n.includes(`shaded`) || n.includes(`cool air`) && n.includes(`in`) || n.includes(`down`) && n.includes(`fungus`)) s++;
+                        return s; },
+                      answer: `(1) Air on the sun-facing side heats up and rises. (2) This draws/pulls in cooler air through shaded tunnels on the opposite side and down toward the fungus garden.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1g`, type: `text`, label: `Q1 (g) Give evidence that the termites actively maintain/adjust the ventilation system rather than leaving it fixed. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`renovate`) || n.includes(`open`) && n.includes(`seal`) || n.includes(`wet soil`) || n.includes(`adjust`) || n.includes(`constantly`) && n.includes(`change`)) ? 1 : 0; },
+                      answer: `They constantly renovate the system, opening and sealing individual tunnels with wet soil in response to changing conditions.` },
+
+                    { section: `QUESTION 2 • From Paragraph 6`, id: `q2a`, type: `text`, label: `Q2 (a) What does the writer mean by saying human-engineered buildings "still struggle to match" the mound's temperature control? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`less effective`) || n.includes(`worse`) || n.includes(`cannot achieve`) || n.includes(`not as good`) || n.includes(`inferior`) || n.includes(`despite`) && n.includes(`technology`)) ? 1 : 0; },
+                      answer: `That despite modern electricity and machinery, human buildings are often less effective/worse at maintaining a stable temperature than the mound.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2b`, type: `text`, label: `Q2 (b) Why had the architect grown frustrated with conventional buildings before designing the Harare complex? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`cooling cost`) || n.includes(`expensive`) && n.includes(`cool`) || n.includes(`air condition`) && n.includes(`cost`) || n.includes(`energy`) && n.includes(`high`)) ? 1 : 0; },
+                      answer: `Conventional buildings demanded enormous/expensive cooling costs (from air-conditioning).` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2c`, type: `text`, label: `Q2 (c) Describe fully how the new building's ventilation system worked. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`chimney`) || n.includes(`fan`) || n.includes(`night air`) || n.includes(`cool air`) && n.includes(`draw`)) s++;
+                        if (n.includes(`store`) || n.includes(`concrete`) || n.includes(`release`) && n.includes(`day`) || n.includes(`gradually`)) s++;
+                        return s; },
+                      answer: `(1) Chimneys and low-power fans drew in cool night air. (2) This air was stored in the concrete mass and released gradually through the day to offset the heat.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2d`, type: `text`, label: `Q2 (d) What evidence shows that the termite-inspired design was more successful than even its own engineers expected? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`tenth`) || n.includes(`10%`) || n.includes(`startled`) || n.includes(`surprised`) || n.includes(`less energy`) || n.includes(`saving`)) ? 1 : 0; },
+                      answer: `The building used only about a tenth of the expected energy, a saving that startled/surprised even the engineers who approved the design.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_termite`, type: `summary_grid`, paragraphRange: `paragraphs 4 to 8`,
+                      label: `Q3. Summarise the temperature problem the termite mound had to solve, how it solved it, and how this idea was later applied to a building in Harare. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Because`, `the`, `fungus`, `garden`, `generates`, `a`, `great`, `deal`, `of`, `heat`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_termite`,
+                        [`Because`, `the`, `fungus`, `garden`, `generates`, `a`, `great`, `deal`, `of`, `heat`],
+                        [
+                          [`stable temperature`, `keep`, `constant`],
+                          [`overheat`, `kill`, `fungus`],
+                          [`chimney`, `buttress`, `network`, `tunnel`],
+                          [`sun-facing`, `heats`, `rise`],
+                          [`draw`, `cool air`, `shaded tunnel`],
+                          [`pull down`, `fungus garden`],
+                          [`cycle reverses`, `night`, `after dark`],
+                          [`renovate`, `ventilation`, `constantly`],
+                          [`open`, `seal`, `wet soil`],
+                          [`within a degree`, `months`],
+                          [`forty degrees`, `cold night`],
+                          [`architect`, `frustrated`, `cooling cost`],
+                          [`modelled`, `ventilation`, `mound`],
+                          [`chimney`, `fan`, `cool night air`],
+                          [`stored`, `concrete mass`],
+                          [`released`, `gradually`, `day`, `offset heat`],
+                          [`tenth`, `energy`, `less`],
+                          [`startled`, `engineers`],
+                          [`pilgrimage site`, `architecture students`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 4–8 only. Opens: 'Because the fungus garden generates a great deal of heat,...'. Max 160 words. Cover the mound's ventilation system and the building's design.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The termites (cultivate/cultavate/cultivvate) a fungus garden deep inside the mound.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `cultivate` ? 1 : 0,
+                      answer: `cultivate` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: The mound's (ventilation/ventilasion/ventalation) system keeps it cool.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `ventilation` ? 1 : 0,
+                      answer: `ventilation` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: The termite is entirely DEPENDENT on darkness and moisture.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `independent` || n === `self-sufficient` || n === `free`) ? 1 : 0; },
+                      answer: `independent / self-sufficient / free` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The savannah's temperature undergoes brutal SWINGS between day and night.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `stability` || n === `consistency` || n === `steadiness`) ? 1 : 0; },
+                      answer: `stability / consistency / steadiness` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The mound's structure is remarkably (sophisticate) for something built without a plan.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `sophisticated` ? 1 : 0,
+                      answer: `sophisticated` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The engineers were (astonish) by the amount of energy the building saved.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `astonished` ? 1 : 0,
+                      answer: `astonished` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'despite': "The termite is blind. It builds structures of great sophistication."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`despite`) && n.includes(`blind`) && n.includes(`sophistication`) ? 1 : 0; },
+                      answer: `Despite being blind, the termite builds structures of great sophistication.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'so that': "The termites seal tunnels with wet soil. The mound keeps a stable temperature."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`so that`) && n.includes(`seal`) && n.includes(`stable temperature`) ? 1 : 0; },
+                      answer: `The termites seal tunnels with wet soil so that the mound keeps a stable temperature.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "The termites built the mound over two centuries."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`mound`) && n.includes(`built`) && n.includes(`two centuries`) && n.includes(`by the termites`) ? 1 : 0; },
+                      answer: `The mound was built over two centuries by the termites.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "The architect modelled the building's ventilation on the termite mound."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`ventilation`) && n.includes(`modelled`) && n.includes(`termite mound`) && n.includes(`by the architect`) ? 1 : 0; },
+                      answer: `The building's ventilation was modelled on the termite mound by the architect.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. ribbed (paragraph 1)`, keys: [`having raised ridges`, `grooved`, `lined with ridges`, `patterned with raised lines`], constraint: () => true, answer: `having raised ridges / grooved / lined with ridges` },
+                    { id: `v2`, label: `2. domesticated (paragraph 3)`, keys: [`tamed for use`, `brought under control for farming`, `adapted for cultivation`, `made to serve human needs`], constraint: () => true, answer: `tamed for use / brought under control for farming / adapted for cultivation` },
+                    { id: `v3`, label: `3. riddle (paragraph 5)`, keys: [`fill with holes`, `pierce throughout`, `run through in many places`, `honeycomb`], constraint: (n) => !n.includes(`confuse`), answer: `fill with holes / pierce throughout / run through in many places. "Confuse" scores 0.` },
+                    { id: `v4`, label: `4. buttresses (paragraph 5)`, keys: [`supporting structures`, `reinforcing ridges`, `support columns`, `structural supports`], constraint: () => true, answer: `supporting structures / reinforcing ridges / structural supports` },
+                    { id: `v5`, label: `5. offset (paragraph 7)`, keys: [`counteract`, `balance out`, `cancel out`, `make up for`, `neutralise`], constraint: () => true, answer: `counteract / balance out / cancel out / make up for` },
+                    { id: `v6`, label: `6. unconventional (paragraph 8)`, keys: [`unusual`, `not standard`, `non-traditional`, `uncommon`, `not typical`], constraint: (n) => !n.includes(`strange`), answer: `unusual / not standard / non-traditional / uncommon. "Strange" alone scores 0.` },
+                    { id: `v7`, label: `7. pilgrimage (paragraph 8)`, keys: [`a journey to a significant place`, `special visit`, `meaningful trip`, `journey undertaken out of devotion`], constraint: () => true, answer: `a journey to a significant place / special visit / meaningful trip` },
+                    { id: `v8`, label: `8. sophistication (paragraph 2)`, keys: [`complexity`, `advanced design`, `refinement`, `elaborate skill`], constraint: (n) => !n.includes(`beauty`), answer: `complexity / advanced design / refinement / elaborate skill. "Beauty" scores 0.` }
+                ]
+            }
+
+,
+            {
+                id: 'outswam_storm',
+                type: 'long',
+                title: '26. The Girl Who Outswam the Storm',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `Sixteen-year-old Rutendo is two kilometres into a lake-crossing training swim when a sudden storm turns calm water into chaos, and the safety boat that was meant to be watching her is nowhere to be found.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Rutendo had swum this stretch of Lake Kariba perhaps a dozen times in training, always with her coach's boat idling a comfortable distance off her right shoulder, and she had grown to find the crossing almost dull in its familiarity: the same reeds along the northern shore, the same distant hills, the same rhythm of stroke and breath that carried her, without much drama, from one side to the other.` },
+                    { num: `Paragraph 2`, text: `That morning offered no warning at all beyond a slight, ordinary greyness to the sky that her coach had dismissed with a shrug before sending her out. She was perhaps two kilometres into the four-kilometre crossing, comfortably on pace, when the wind arrived — not gradually, as weather is supposed to, but all at once, as though a switch somewhere had been thrown, flattening the surface into churning grey chop within the space of a few minutes.` },
+                    { num: `Paragraph 3`, text: `She lifted her head, expecting to see the boat close behind her as always, and felt her stomach drop at finding only empty, heaving water where it should have been. She would learn later that the boat's ageing engine had chosen that exact morning to fail, leaving her coach drifting and cursing a good kilometre back along her original course, entirely unable to reach her.` },
+                    { num: `Paragraph 4`, text: `Lightning walked across the hills to the south, and Rutendo made the decision, in the few seconds she allowed herself to make it, that continuing toward the far shore was less dangerous than turning back into open water she could no longer see the end of. She fixed her eyes on a landmark she had used a hundred times in training — a lone dead tree standing pale against the darkening hillside — and put her head down into a rhythm that had nothing sensible left in it beyond simple, stubborn repetition.` },
+                    { num: `Paragraph 5`, text: `The waves, when they came properly, were unlike anything the lake had shown her in training: not the gentle training-day ripples she was used to timing her breathing around, but disorganised, cresting chop that came from two directions at once and swallowed her landmark tree behind curtain after curtain of spray. She swallowed lake water twice in quick succession, choking hard enough that for one genuinely frightening moment she lost the rhythm of her stroke entirely and simply trod water, coughing, fighting the urge to panic.` },
+                    { num: `Paragraph 6`, text: `What saved her, she said afterwards, was counting: not the tree, which she could no longer reliably see, but her own strokes, in blocks of fifty, refusing to let herself wonder how many blocks of fifty might still lie ahead. She reasoned, in the strange, narrow calm that settled over her once the panic passed, that the storm would exhaust itself eventually, and that exhausting herself trying to out-think it before then would help nobody.` },
+                    { num: `Paragraph 7`, text: `Fishermen sheltering in a cove near the northern shore spotted her, quite by chance, during a lull between one squall and the next — a solitary swimmer where no sensible person would be swimming, moving with a slow, dogged rhythm that one of them said afterward looked less like swimming and more like walking underwater. They rowed out against a wind that was, by their own later account, "not something you row into for fun," reaching her within perhaps ten minutes of first sighting her.` },
+                    { num: `Paragraph 8`, text: `Rutendo would not, even then, simply be lifted into the boat; she insisted, between exhausted breaths, on being told exactly how far she still had left to the shore, and on covering the final few hundred metres by swimming rather than being carried, a piece of stubbornness the fishermen found equal parts alarming and, once safely ashore, rather admirable.` },
+                    { num: `Paragraph 9`, text: `Her coach, reunited with her an hour later once his engine had finally been coaxed back to life, tried three times to begin an apology before Rutendo, wrapped in a fisherman's spare jacket and still faintly shivering, cut him off to ask, with what he swears was genuine curiosity rather than bravado, whether her time for the two kilometres before the storm had still been on pace.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) What does the writer mean by describing the crossing as "almost dull in its familiarity"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`boring`) || n.includes(`routine`) || n.includes(`used to it`) || n.includes(`nothing exciting`) || n.includes(`same every time`) || n.includes(`repetitive`) || n.includes(`predictable`)) ? 1 : 0; },
+                      answer: `She had done the crossing so many times that it had become routine/boring/predictable, with nothing exciting happening.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Explain in your own words why the writer says the wind "arrived" rather than saying it "grew" or "built up." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`suddenly`) || n.includes(`quickly`) || n.includes(`all at once`) || n.includes(`instant`) || n.includes(`no warning`)) s++;
+                        if (n.includes(`not gradual`) || n.includes(`unlike normal weather`) || n.includes(`different from usual`) || n.includes(`switch`) || n.includes(`immediately`)) s++;
+                        return s; },
+                      answer: `(1) The wind came suddenly/all at once, not gradually. (2) This was unlike how weather is normally expected to build up — it happened almost instantly, like a switch being thrown.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) Why was the coach's boat not there when Rutendo looked for it? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`engine`) && (n.includes(`fail`) || n.includes(`broke`) || n.includes(`stopped`))) ? 1 : 0; },
+                      answer: `The boat's ageing engine had failed/broken down that morning, leaving the coach unable to reach her.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Explain fully why Rutendo decided to keep swimming forward rather than turn back. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`less dangerous`) || n.includes(`safer`) || n.includes(`better`) && n.includes(`forward`) || n.includes(`continue`) && n.includes(`safer`)) s++;
+                        if (n.includes(`could not see`) || n.includes(`open water`) || n.includes(`no end`) || n.includes(`unknown`) || n.includes(`uncertain`) && n.includes(`back`)) s++;
+                        return s; },
+                      answer: `(1) She judged continuing forward to be less dangerous than turning back. (2) Because turning back meant swimming into open water whose end she could no longer see.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1e`, type: `text`, label: `Q1 (e) What did Rutendo use to keep herself oriented as she swam through the storm? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`tree`) || n.includes(`landmark`) || n.includes(`dead tree`) || n.includes(`pale`) && n.includes(`hillside`)) ? 1 : 0; },
+                      answer: `A landmark — a lone dead tree standing pale against the darkening hillside.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1f`, type: `text`, label: `Q1 (f) Give TWO ways in which the waves during the storm differed from what Rutendo was used to in training. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`disorganis`) || n.includes(`disorganiz`) || n.includes(`not gentle`) || n.includes(`rough`) || n.includes(`cresting`)) s++;
+                        if (n.includes(`two direction`) || n.includes(`both direction`) || n.includes(`different direction`) || n.includes(`spray`) || n.includes(`blocked`) && n.includes(`view`)) s++;
+                        return s; },
+                      answer: `Any two: they were disorganised/rough (not gentle training ripples); they came from two directions at once; they created spray that blocked her view of the landmark.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1g`, type: `text`, label: `Q1 (g) In your own words, explain the mental strategy that helped Rutendo keep going. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`count`) && n.includes(`stroke`) || n.includes(`counting`) || n.includes(`block of fifty`) || n.includes(`fifty`) || n.includes(`did not worry`) || n.includes(`avoid`) && n.includes(`wonder`)) ? 1 : 0; },
+                      answer: `She counted her own strokes in blocks of fifty, refusing to let herself think about how much distance was still left.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) Explain in your own words why the fishermen's decision to row out is described as risky. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`strong wind`) || n.includes(`dangerous`) && n.includes(`row`) || n.includes(`not for fun`) || n.includes(`risk`) && n.includes(`themselves`) || n.includes(`wind`) && n.includes(`against`)) ? 1 : 0; },
+                      answer: `They had to row directly against a strong, dangerous wind, putting themselves at risk to reach her.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2b`, type: `text`, label: `Q2 (b) Why did one fisherman say Rutendo's swimming looked "less like swimming and more like walking underwater"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`slow`) || n.includes(`doggeed`) || n.includes(`dogged`) || n.includes(`tired`) || n.includes(`exhaust`) || n.includes(`steady but weak`) || n.includes(`heavy`) && n.includes(`movement`)) ? 1 : 0; },
+                      answer: `Her exhausted movements were slow and heavy/dogged, no longer smooth and fast like normal swimming.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2c`, type: `text`, label: `Q2 (c) Explain fully why the fishermen found Rutendo's insistence on swimming the final stretch "equal parts alarming and admirable." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`worried`) || n.includes(`concern`) || n.includes(`risky`) || n.includes(`dangerous`) || n.includes(`exhaust`) || n.includes(`alarm`)) s++;
+                        if (n.includes(`impress`) || n.includes(`admir`) || n.includes(`determin`) || n.includes(`strong`) && n.includes(`will`) || n.includes(`brave`) || n.includes(`stubborn`) && !n.includes(`alarm`)) s++;
+                        return s; },
+                      answer: `(1) It was alarming because she was already exhausted and it seemed risky/dangerous to refuse help. (2) It was admirable because it showed remarkable determination/strength of will.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What does Rutendo's final question to her coach reveal about her character? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`focus`) || n.includes(`dedicat`) || n.includes(`competit`) || n.includes(`serious`) && n.includes(`training`) || n.includes(`determin`) || n.includes(`priorit`)) ? 1 : 0; },
+                      answer: `She is highly focused/dedicated to her training/competitive goals, even after a near-death experience.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_storm`, type: `summary_grid`, paragraphRange: `paragraphs 4 to 8`,
+                      label: `Q3. Summarise how Rutendo coped with the storm and how she was eventually rescued. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Deciding`, `that`, `pressing`, `on`, `was`, `safer`, `than`, `turning`, `back,`, `Rutendo`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_storm`,
+                        [`Deciding`, `that`, `pressing`, `on`, `was`, `safer`, `than`, `turning`, `back,`, `Rutendo`],
+                        [
+                          [`fixed`, `eyes`, `landmark`, `dead tree`],
+                          [`head down`, `rhythm`, `stubborn`, `repetition`],
+                          [`waves`, `disorganised`, `cresting`, `two directions`],
+                          [`spray`, `swallowed`, `tree`, `curtain`],
+                          [`swallowed water`, `choking`, `lost rhythm`],
+                          [`trod water`, `coughing`, `panic`],
+                          [`counting`, `strokes`, `blocks of fifty`],
+                          [`refused`, `wonder`, `how far`],
+                          [`calm`, `settled`, `panic passed`],
+                          [`storm`, `exhaust itself`],
+                          [`fishermen`, `sheltering`, `cove`],
+                          [`spotted`, `chance`, `lull`],
+                          [`slow`, `dogged`, `rhythm`, `walking underwater`],
+                          [`rowed`, `against wind`],
+                          [`reached`, `ten minutes`],
+                          [`insisted`, `told`, `how far`],
+                          [`swimming`, `final`, `few hundred metres`],
+                          [`not being carried`],
+                          [`alarming`, `admirable`, `stubbornness`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 4–8 only. Opens: 'Deciding that pressing on was safer than turning back, Rutendo...'. Max 160 words. Cover her survival strategy and the rescue.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The fishermen showed great (determination/determinasion/determinnation) rowing against the wind.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `determination` ? 1 : 0,
+                      answer: `determination` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: Rutendo felt utterly (exhausted/exhawsted/exhostead) by the time she reached the boat.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `exhausted` ? 1 : 0,
+                      answer: `exhausted` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: The crossing had become almost DULL in its familiarity.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `exciting` || n === `thrilling` || n === `interesting`) ? 1 : 0; },
+                      answer: `exciting / thrilling / interesting` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The wind arrived SUDDENLY, all at once.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `gradually` || n === `slowly`) ? 1 : 0; },
+                      answer: `gradually / slowly` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: Rutendo's (stubborn) impressed the fishermen greatly.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `stubbornness` ? 1 : 0,
+                      answer: `stubbornness` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The coach tried three times to (apologise) to her.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `apologise` || normalize(inp) === `apologize` ? 1 : 0,
+                      answer: `apologise / apologize` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'even though': "Rutendo was exhausted. She insisted on swimming the final stretch herself."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`even though`) || n.includes(`although`)) && n.includes(`exhausted`) && n.includes(`insisted`) ? 1 : 0; },
+                      answer: `Even though Rutendo was exhausted, she insisted on swimming the final stretch herself.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'until': "Rutendo counted her strokes. The fishermen finally reached her."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`until`) && n.includes(`counted`) && n.includes(`reached`) ? 1 : 0; },
+                      answer: `Rutendo counted her strokes until the fishermen finally reached her.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "The fishermen spotted Rutendo by chance."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`rutendo`) && n.includes(`spotted`) && n.includes(`by chance`) && n.includes(`by the fishermen`) ? 1 : 0; },
+                      answer: `Rutendo was spotted by chance by the fishermen.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "The storm swallowed her landmark tree behind spray."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`landmark tree`) && n.includes(`swallowed`) && n.includes(`by the storm`) ? 1 : 0; },
+                      answer: `Her landmark tree was swallowed behind spray by the storm.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. idling (paragraph 1)`, keys: [`running slowly without moving`, `staying nearby without effort`, `moving at low speed`, `waiting with engine running`], constraint: () => true, answer: `running slowly without moving / staying nearby without effort` },
+                    { id: `v2`, label: `2. churning (paragraph 2)`, keys: [`stirring violently`, `moving turbulently`, `agitated`, `tossing about`], constraint: (n) => !n.includes(`spinning`), answer: `stirring violently / moving turbulently / agitated / tossing about. "Spinning" scores 0.` },
+                    { id: `v3`, label: `3. heaving (paragraph 3)`, keys: [`rising and falling`, `swelling`, `surging`, `rolling violently`], constraint: () => true, answer: `rising and falling / swelling / surging / rolling violently` },
+                    { id: `v4`, label: `4. dogged (paragraph 7)`, keys: [`persistent`, `determined`, `stubbornly continuing`, `tenacious`, `unyielding`], constraint: (n) => !n.includes(`slow`), answer: `persistent / determined / tenacious / unyielding. "Slow" alone scores 0.` },
+                    { id: `v5`, label: `5. lull (paragraph 7)`, keys: [`a temporary quiet period`, `a pause`, `a calm interval`, `a break in activity`], constraint: () => true, answer: `a temporary quiet period / a pause / a calm interval` },
+                    { id: `v6`, label: `6. squall (paragraph 7)`, keys: [`a sudden violent gust of wind`, `a brief storm`, `a sudden burst of bad weather`], constraint: () => true, answer: `a sudden violent gust of wind / a brief storm / a sudden burst of bad weather` },
+                    { id: `v7`, label: `7. coaxed (paragraph 9)`, keys: [`persuaded gently`, `gradually got working`, `gently urged`, `carefully encouraged`], constraint: (n) => !n.includes(`forced`), answer: `persuaded gently / gradually got working / gently urged. "Forced" scores 0.` },
+                    { id: `v8`, label: `8. bravado (paragraph 9)`, keys: [`false confidence`, `showy boldness`, `pretended courage`, `swagger`], constraint: () => true, answer: `false confidence / showy boldness / pretended courage / swagger` }
+                ]
+            }
+
+,
+            {
+                id: 'vanishing_rhinos',
+                type: 'long',
+                title: '27. The Vanishing Rhinos',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `Ranger Tapiwa Nyoni patrols a private conservancy where black rhinos, still recovering from decades of poaching, are now protected by an unlikely combination of dehorning, satellite tracking and community goodwill.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Tapiwa Nyoni has spent eleven years walking the same stretch of conservancy bushland, and in that time he has come to recognise individual rhinos the way other people recognise neighbours: by gait, by the particular notch in an ear, by the way one bad-tempered old female always turns to face an approaching vehicle rather than simply moving off as the others do. It is a peculiar kind of intimacy to have with an animal that could, without any particular effort, kill him.` },
+                    { num: `Paragraph 2`, text: `He is old enough to remember when the conservancy held perhaps four times the number of black rhinos it protects today, and old enough, too, to remember exactly why that number fell so sharply: a decade in which organised poaching gangs, backed by buyers willing to pay extraordinary sums for rhino horn in parts of Asia, moved through the region's parks and private reserves with an efficiency that outpaced almost every effort made to stop them.` },
+                    { num: `Paragraph 3`, text: `The horn itself, ground into powder, is prized in some traditional medicine markets for properties that decades of scientific testing have failed to find any evidence for whatsoever — it is, chemically, little different from the substance found in human fingernails — but demonstrating this to a market willing to pay more for rhino horn than for gold has achieved almost nothing in the way of reducing that demand.` },
+                    { num: `Paragraph 4`, text: `Faced with a threat that conventional fencing and patrols could not fully contain, the conservancy adopted a strategy that strikes most visitors, on first hearing it, as almost as strange as the crime it is meant to prevent: veterinary teams periodically dart and sedate individual rhinos, then saw off most of the horn — a procedure the animal, unlike a human losing a fingernail, does not appear to find painful, and one that leaves the rhino none the worse beyond a slightly odd silhouette and a horn that will slowly regrow over several years.` },
+                    { num: `Paragraph 5`, text: `A hornless rhino is not, of course, an entirely safe rhino; a determined poacher can still kill an animal for the small stump that remains, or simply out of anger at having wasted the risk of the attempt, and dehorning alone has never been treated by the conservancy as a complete solution rather than one layer among several.` },
+                    { num: `Paragraph 6`, text: `The second layer is technological: a number of rhinos, selected for their strategic position within various family groups, carry small tracking devices embedded discreetly within the horn stump or a fitted anklet, transmitting location data that allows Tapiwa's team to notice, within hours rather than days, when an animal's movement pattern suggests distress — moving too fast, staying too still, or straying into a part of the conservancy where poachers have previously been active.` },
+                    { num: `Paragraph 7`, text: `The third layer, and the one Tapiwa privately considers the most important, has nothing to do with fences or tracking devices at all: it is the deliberate, patient work of persuading the communities living along the conservancy's boundary that a living rhino is worth more to them than a dead one — through jobs as rangers and guides, a cut of tourism revenue, and swift, well-publicised rewards for information that leads to an arrest before any animal is harmed.` },
+                    { num: `Paragraph 8`, text: `It was exactly this third layer that broke open the conservancy's most significant case in years: a herder, grazing cattle along the boundary fence, noticed unfamiliar men camping in a dry riverbed at an hour when nobody legitimate had any business being there, and reported it not to the police directly, which might have taken days to act, but to a ranger's mobile number distributed on posters in every village bordering the conservancy.` },
+                    { num: `Paragraph 9`, text: `The arrest that followed, conducted before a single shot was fired and before the poaching party had located a single rhino, earned the herder a reward that Tapiwa still describes, with visible satisfaction, as considerably larger than anything the poachers themselves would ever have paid him for his silence — proof, he says, of the argument he has been making to sceptical village elders for a decade: that in the long run, a live rhino really is worth more than a dead one to absolutely everyone except the man holding the horn.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Explain in your own words what the writer means by describing Tapiwa's knowledge of the rhinos as a "peculiar kind of intimacy." [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`know`) && (n.includes(`well`) || n.includes(`individual`) || n.includes(`personally`)) || n.includes(`recognise`) || n.includes(`familiar`)) && (n.includes(`dangerous`) || (n.includes(`could`) && n.includes(`kill`)) || n.includes(`unusual`) || (n.includes(`could`) && n.includes(`hurt`)))) ? 1 : 0; },
+                      answer: `He knows/recognises individual rhinos as closely as one might know neighbours, even though the animal could easily kill him.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Why did the rhino population fall so sharply, according to paragraph 2? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`poach`) || n.includes(`gang`) || n.includes(`horn`) && n.includes(`sell`) || n.includes(`buyer`) && n.includes(`asia`)) ? 1 : 0; },
+                      answer: `Organised poaching gangs, backed by buyers in Asia willing to pay a lot for rhino horn, moved through the region efficiently.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) In your own words, explain why the writer finds it ironic that people are willing to pay so much for rhino horn. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`no evidence`) || n.includes(`not proven`) || n.includes(`science`) && n.includes(`fail`) || n.includes(`does not work`) || n.includes(`no medicinal`)) s++;
+                        if (n.includes(`fingernail`) || n.includes(`same`) && n.includes(`substance`) || n.includes(`worth more than gold`) || n.includes(`expensive`) && n.includes(`useless`)) s++;
+                        return s; },
+                      answer: `(1) Science has found no evidence that the horn has any real medicinal properties. (2) It is chemically almost identical to human fingernails, yet it is paid for as if it were more valuable than gold.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Describe fully the dehorning procedure used by the conservancy. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`dart`) || n.includes(`sedate`) || n.includes(`tranquilis`) || n.includes(`tranquiliz`)) s++;
+                        if (n.includes(`saw off`) || n.includes(`cut off`) || n.includes(`remove`) && n.includes(`horn`) || n.includes(`horn`) && n.includes(`grow back`)) s++;
+                        return s; },
+                      answer: `(1) The animal is darted/sedated by veterinary teams. (2) Most of the horn is then sawn/cut off, which is not painful and will slowly regrow.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Why does dehorning NOT make a rhino completely safe from poachers? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`stump`) || n.includes(`still kill`) || n.includes(`remaining horn`) || n.includes(`anger`) || n.includes(`still attack`)) ? 1 : 0; },
+                      answer: `A poacher can still kill the animal for the small remaining stump, or out of anger at a wasted attempt.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) Explain in your own words how the tracking devices help protect the rhinos. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`location`) || n.includes(`track`) || n.includes(`movement`) || n.includes(`data`)) s++;
+                        if (n.includes(`notice`) || n.includes(`quickly`) || n.includes(`within hours`) || n.includes(`distress`) || n.includes(`alert`) || n.includes(`respond`)) s++;
+                        return s; },
+                      answer: `(1) They transmit location/movement data on the rhinos. (2) This allows the team to quickly notice/respond when a rhino's movements suggest it is in distress.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) Why does Tapiwa consider the third layer of protection more important than the other two? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`community`) || n.includes(`persuad`) || n.includes(`local people`) || n.includes(`worth more alive`) || n.includes(`benefit`) && n.includes(`community`)) ? 1 : 0; },
+                      answer: `Because it persuades local communities that a living rhino benefits them more than a dead one — addressing the root cause rather than just the symptoms.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2a`, type: `text`, label: `Q2 (a) Why did the herder report the suspicious men to a ranger rather than to the police directly? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`slow`) || n.includes(`take`) && n.includes(`day`) || n.includes(`might have taken`) || n.includes(`faster`) || n.includes(`quicker`)) ? 1 : 0; },
+                      answer: `Reporting to the police might have taken days to act, whereas the ranger's number allowed a faster response.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) What made the herder suspicious of the men in the first place? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`unfamiliar`) || n.includes(`strangers`) || n.includes(`camping`) || n.includes(`wrong time`) || n.includes(`no business`) || n.includes(`odd hour`)) ? 1 : 0; },
+                      answer: `He noticed unfamiliar men camping at an unusual hour when nobody legitimate would have reason to be there.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) Explain in your own words the point Tapiwa is making when he says a live rhino is "worth more... to absolutely everyone except the man holding the horn." [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`benefit`) || n.includes(`reward`) || n.includes(`tourism`) || n.includes(`job`) || n.includes(`community`) && n.includes(`gain`)) s++;
+                        if (n.includes(`only`) && (n.includes(`poacher`) || n.includes(`horn`)) || n.includes(`except`) && n.includes(`poacher`) || n.includes(`one person`) || n.includes(`few benefit`) && n.includes(`killing`)) s++;
+                        return s; },
+                      answer: `(1) Communities benefit far more (jobs, rewards, tourism revenue) when the rhino stays alive. (2) Only the poacher himself gains anything from killing it — everyone else loses out.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What does the outcome of this case suggest about Tapiwa's long-term argument to the village elders? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`prove`) || n.includes(`correct`) || n.includes(`right`) || n.includes(`justif`) || n.includes(`support`) && n.includes(`argument`) || n.includes(`convinced`)) ? 1 : 0; },
+                      answer: `It proves/supports his long-standing argument that a live rhino is more valuable to the community than a dead one.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_rhinos`, type: `summary_grid`, paragraphRange: `paragraphs 4 to 7`,
+                      label: `Q3. Summarise the three layers of protection the conservancy uses to keep its rhinos safe from poachers. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`The`, `first`, `layer`, `of`, `protection`, `involves`, `veterinary`, `teams`, `who`, `dart`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_rhinos`,
+                        [`The`, `first`, `layer`, `of`, `protection`, `involves`, `veterinary`, `teams`, `who`, `dart`],
+                        [
+                          [`sedate`, `dart`, `rhino`],
+                          [`saw off`, `most of the horn`],
+                          [`not painful`, `does not hurt`],
+                          [`regrow`, `several years`],
+                          [`hornless`, `not entirely safe`],
+                          [`poacher`, `stump`, `still kill`],
+                          [`anger`, `wasted`, `attempt`],
+                          [`tracking device`, `embedded`, `anklet`],
+                          [`transmitting`, `location data`],
+                          [`notice`, `hours`, `distress`],
+                          [`moving too fast`, `staying too still`],
+                          [`straying`, `poachers active`],
+                          [`community`, `persuading`, `worth more alive`],
+                          [`jobs`, `rangers`, `guides`],
+                          [`cut`, `tourism revenue`],
+                          [`rewards`, `information`, `arrest`],
+                          [`before`, `animal`, `harmed`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 4–7 only. Opens: 'The first layer of protection involves veterinary teams who dart...'. Max 160 words. Cover dehorning, tracking, and community engagement.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The rangers rely on satellite (tracking/trackking/trakcing) to protect the rhinos.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `tracking` ? 1 : 0,
+                      answer: `tracking` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: Poachers were (sceptical/sceptecal/skeptecal) that the reward would ever be paid.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `sceptical` || normalize(inp) === `skeptical` ? 1 : 0,
+                      answer: `sceptical / skeptical` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: Village elders were once SCEPTICAL of Tapiwa's argument.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `convinced` || n === `certain` || n === `trusting` || n === `confident`) ? 1 : 0; },
+                      answer: `convinced / certain / trusting / confident` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The conservancy's rhino population has been RECOVERING slowly.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `declining` || n === `worsening` || n === `shrinking` || n === `deteriorating`) ? 1 : 0; },
+                      answer: `declining / worsening / shrinking / deteriorating` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The herder felt great (satisfy) after receiving the reward.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `satisfaction` ? 1 : 0,
+                      answer: `satisfaction` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The conservancy's methods have proved remarkably (effect).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `effective` ? 1 : 0,
+                      answer: `effective` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'unless': "A poacher will not stop hunting rhinos. The demand for horn falls."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`unless`) && n.includes(`will not stop`) && n.includes(`demand`) ? 1 : 0; },
+                      answer: `A poacher will not stop hunting rhinos unless the demand for horn falls.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'because': "The herder reported the men. He recognised they did not belong there."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`because`) && n.includes(`reported`) && n.includes(`recognised`) ? 1 : 0; },
+                      answer: `The herder reported the men because he recognised they did not belong there.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "Veterinary teams dart and sedate the rhinos."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`rhinos`) && n.includes(`darted`) && n.includes(`sedated`) && n.includes(`by veterinary teams`) ? 1 : 0; },
+                      answer: `The rhinos are darted and sedated by veterinary teams.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "The herder reported the suspicious men."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`suspicious men`) && n.includes(`reported`) && n.includes(`by the herder`) ? 1 : 0; },
+                      answer: `The suspicious men were reported by the herder.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. gait (paragraph 1)`, keys: [`manner of walking`, `way of moving`, `stride`, `walking style`], constraint: () => true, answer: `manner of walking / way of moving / stride` },
+                    { id: `v2`, label: `2. outpaced (paragraph 2)`, keys: [`moved faster than`, `overtook`, `exceeded the speed of`, `got ahead of`], constraint: () => true, answer: `moved faster than / overtook / exceeded the speed of` },
+                    { id: `v3`, label: `3. prized (paragraph 3)`, keys: [`highly valued`, `treasured`, `regarded as precious`, `sought after`], constraint: (n) => !n.includes(`won`), answer: `highly valued / treasured / sought after. "Won" scores 0.` },
+                    { id: `v4`, label: `4. sedate (paragraph 4)`, keys: [`calm with drugs`, `make sleepy with medicine`, `tranquillise`, `put into a calm state`], constraint: () => true, answer: `calm with drugs / tranquillise / put into a calm state` },
+                    { id: `v5`, label: `5. discreetly (paragraph 6)`, keys: [`without drawing attention`, `secretly`, `quietly and carefully`, `unobtrusively`], constraint: () => true, answer: `without drawing attention / secretly / unobtrusively` },
+                    { id: `v6`, label: `6. deliberate (paragraph 7)`, keys: [`done on purpose`, `intentional`, `carefully planned`, `purposeful`], constraint: (n) => !n.includes(`slow`), answer: `done on purpose / intentional / carefully planned. "Slow" alone scores 0.` },
+                    { id: `v7`, label: `7. legitimate (paragraph 8)`, keys: [`lawful`, `having a genuine reason`, `authorised`, `proper`], constraint: () => true, answer: `lawful / having a genuine reason / authorised / proper` },
+                    { id: `v8`, label: `8. sceptical (paragraph 9)`, keys: [`doubtful`, `unconvinced`, `not easily persuaded`, `distrustful`], constraint: () => true, answer: `doubtful / unconvinced / not easily persuaded / distrustful` }
+                ]
+            }
+
+,
+            {
+                id: 'fire_highveld',
+                type: 'long',
+                title: '28. Fire on the Highveld',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `A careless cigarette on a bone-dry August afternoon sets the Highveld grassland alight, and farmhand Costa Ndoro must choose between saving a herd of cattle and outrunning a wall of flame moving faster than he can drive.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Costa smelled the smoke before he saw it, a faint bitterness on wind that had, until that moment, carried nothing more remarkable than dust and the distant lowing of cattle. August on the Highveld was always dry, the grass standing pale and brittle after months without rain, and every farmhand on the Chivero place had spent the season half-expecting a fire, in the way that people expect a storm they cannot predict the exact timing of.` },
+                    { num: `Paragraph 2`, text: `By the time he crested the low ridge above the eastern paddock, the smell had become a wall of grey-black smoke rolling up from the grassland below, shot through at its base with a line of orange that seemed, even at this distance, to be moving with unnatural speed across ground that should have taken it hours to cross.` },
+                    { num: `Paragraph 3`, text: `Sixty head of cattle grazed in the direct path of that orange line, spread across a paddock with only one practical gate, and Costa understood, doing the arithmetic in his head as he ran for the farm truck, that he had perhaps twenty minutes before the fire reached them — considerably less time than it would take to herd sixty reluctant animals through a single gate on foot.` },
+                    { num: `Paragraph 4`, text: `He drove the truck at the fence itself rather than toward the gate, reasoning correctly that the animals, panicked by smoke and noise, would follow a moving vehicle far more readily than they would respond to shouting, and used the truck's horn and his own considerable lung capacity to drive the herd in a ragged, bellowing mass toward the gap he had opened by simply flattening a section of the old wire fence with the truck's front bumper.` },
+                    { num: `Paragraph 5`, text: `The cattle went through the gap in a stampede that nearly cost Costa his footing twice, but they went through, streaming out onto the already-burnt safety of last season's fire-break in numbers that, counted afterward, came to fifty-eight — a loss of two animals that Costa would spend the following weeks quietly blaming himself for, though everyone else on the farm considered it close to a miracle.` },
+                    { num: `Paragraph 6`, text: `Getting the cattle clear, it turned out, had been the easier half of the problem. The fire itself, driven by a wind that seemed to be strengthening rather than dying as the afternoon wore on, had by now crossed the paddock entirely and stood between Costa and the most direct route back to the farmhouse, forcing him into a wide detour along a dry riverbed that he knew, from years of walking that ground, ran close enough to open water in one stretch to offer at least a chance of escape if the fire outpaced the truck.` },
+                    { num: `Paragraph 7`, text: `It very nearly did. Costa would say afterward that the last kilometre of that drive passed in a kind of narrow tunnel of attention in which nothing existed beyond the track ahead and the rear-view mirror, which showed flame closing the gap between them with a speed that made the truck's own considerable engine feel, for the first time in Costa's experience of it, entirely inadequate.` },
+                    { num: `Paragraph 8`, text: `He reached the shallow crossing point on the river with what he estimated, guessing wildly, as perhaps thirty seconds to spare, and drove the truck directly into the water rather than risk the final stretch of dry grass on the near bank, sitting with the engine half-submerged and flames roaring past on both sides of the riverbed until the fire, denied fuel by the water and the wide gravel bar beyond it, finally burned itself out along that stretch and moved on elsewhere.` },
+                    { num: `Paragraph 9`, text: `The Chivero place lost roughly a third of its grazing land that afternoon and, as it turned out later, the cigarette responsible had been dropped by a passing motorist who never learned what his few careless seconds had set in motion; Costa, for his part, was back at work checking fences within the week, and has since become, without ever quite meaning to, the person every new farmhand on the property is told to listen to most closely during fire season.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Why had the farmhands been "half-expecting a fire" that season? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`dry`) || n.includes(`no rain`) || n.includes(`brittle`) || n.includes(`grass`) && n.includes(`pale`) || n.includes(`drought`)) ? 1 : 0; },
+                      answer: `The Highveld had been very dry, with the grass pale and brittle after months without rain.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) What made the approaching fire seem especially alarming to Costa? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`speed`) || n.includes(`fast`) || n.includes(`unnatural`) || n.includes(`moving quickly`) || n.includes(`should have taken`) && n.includes(`hours`)) ? 1 : 0; },
+                      answer: `It seemed to be moving with unnatural speed, covering ground much faster than expected.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) Explain in your own words why herding the cattle through the gate on foot was not a realistic option. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`twenty minutes`) || n.includes(`little time`) || n.includes(`short time`) || n.includes(`no time`)) s++;
+                        if (n.includes(`sixty`) || n.includes(`reluctant`) || n.includes(`single gate`) || n.includes(`too many`) && n.includes(`animal`) || n.includes(`take longer`)) s++;
+                        return s; },
+                      answer: `(1) There were only about twenty minutes before the fire arrived. (2) Moving sixty reluctant cattle through a single gate on foot would take far longer than that.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) Explain fully why Costa chose to drive at the fence rather than head for the gate. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`follow`) && n.includes(`vehicle`) || n.includes(`more readily`) || n.includes(`respond`) && n.includes(`truck`)) s++;
+                        if (n.includes(`shout`) || n.includes(`not respond`) || n.includes(`ignore`) || n.includes(`panicked`) && n.includes(`smoke`)) s++;
+                        return s; },
+                      answer: `(1) Panicked cattle would follow a moving vehicle more readily. (2) Than they would respond to shouting/being driven on foot.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Why did Costa blame himself, even though most people considered the outcome "close to a miracle"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`two`) && (n.includes(`lost`) || n.includes(`die`) || n.includes(`did not survive`) || n.includes(`cattle`))) ? 1 : 0; },
+                      answer: `Because two of the sixty cattle were lost/did not make it, even though 58 survived.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) Why did Costa choose to take the long route along the dry riverbed instead of a more direct path? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`fire`) && (n.includes(`blocked`) || n.includes(`between`) || n.includes(`crossed`) || n.includes(`in the way`))) s++;
+                        if (n.includes(`water`) || n.includes(`chance`) && n.includes(`escape`) || n.includes(`safer`) || n.includes(`hope of escape`)) s++;
+                        return s; },
+                      answer: `(1) The fire had crossed the paddock and now blocked the direct route. (2) The riverbed offered a chance of escape near open water if the fire caught up with him.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) What does the phrase "narrow tunnel of attention" suggest about Costa's state of mind during the drive? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`focus`) || n.includes(`concentrat`) || n.includes(`only think`) || n.includes(`nothing else mattered`) || n.includes(`intense`)) ? 1 : 0; },
+                      answer: `He was intensely focused/concentrated, aware of nothing except the road ahead and the fire behind him.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2a`, type: `text`, label: `Q2 (a) Describe fully how Costa finally escaped the fire. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`drove`) && n.includes(`water`) || n.includes(`river`) && n.includes(`into`)) s++;
+                        if (n.includes(`fire`) && (n.includes(`burned out`) || n.includes(`denied fuel`) || n.includes(`no fuel`) || n.includes(`moved on`))) s++;
+                        return s; },
+                      answer: `(1) He drove the truck directly into the river/shallow water. (2) The fire, unable to find fuel there, eventually burned itself out and moved on.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2b`, type: `text`, label: `Q2 (b) What caused the fire, and what does the writer suggest about the person responsible? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`cigarette`) || n.includes(`motorist`)) && (n.includes(`never knew`) || n.includes(`did not know`) || (n.includes(`never`) && n.includes(`realise`)) || n.includes(`unaware`) || n.includes(`careless`) || n.includes(`without realising`))) ? 1 : 0; },
+                      answer: `A cigarette dropped by a passing motorist caused the fire, and he was careless enough to never even realise the damage he had caused.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) In your own words, explain what Costa's new role among the farmhands suggests about how his actions were viewed afterwards. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`respect`) || n.includes(`trust`) || n.includes(`admir`) || n.includes(`look up to`) || n.includes(`experienced`) || n.includes(`reliable`)) ? 1 : 0; },
+                      answer: `He is now respected/trusted as an experienced, reliable source of advice, especially during fire season.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What proportion of the farm's grazing land was lost in the fire? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`third`) || n.includes(`1/3`) || n.includes(`33`)) ? 1 : 0; },
+                      answer: `Roughly a third of the grazing land.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_fire`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 8`,
+                      label: `Q3. Summarise how Costa saved the cattle and then saved himself from the fire. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Realising`, `he`, `had`, `only`, `twenty`, `minutes,`, `Costa`, `drove`, `the`, `truck`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_fire`,
+                        [`Realising`, `he`, `had`, `only`, `twenty`, `minutes,`, `Costa`, `drove`, `the`, `truck`],
+                        [
+                          [`fence`, `flattened`, `bumper`],
+                          [`horn`, `shouting`, `noise`],
+                          [`cattle`, `follow`, `vehicle`],
+                          [`stampede`, `ragged`, `bellowing`],
+                          [`streamed`, `gap`, `fire-break`],
+                          [`fifty-eight`, `survived`],
+                          [`two`, `lost`, `blaming himself`],
+                          [`fire`, `crossed`, `paddock`],
+                          [`blocked`, `direct route`],
+                          [`detour`, `dry riverbed`],
+                          [`chance`, `escape`, `open water`],
+                          [`flame`, `closing`, `gap`],
+                          [`engine`, `inadequate`],
+                          [`reached`, `crossing point`, `thirty seconds`],
+                          [`drove`, `into the water`],
+                          [`sat`, `submerged`, `flames roaring`],
+                          [`denied fuel`, `burned out`],
+                          [`moved on`, `elsewhere`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–8 only. Opens: 'Realising he had only twenty minutes, Costa drove the truck...'. Max 160 words. Cover the cattle rescue and his own escape.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: The grass was pale and (brittle/brittel/britle) after months without rain.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `brittle` ? 1 : 0,
+                      answer: `brittle` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: The cattle went through the gap in a (stampede/stampeed/stampeade).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `stampede` ? 1 : 0,
+                      answer: `stampede` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: The truck's engine suddenly felt entirely INADEQUATE.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `adequate` || n === `sufficient` || n === `enough` || n === `capable`) ? 1 : 0; },
+                      answer: `adequate / sufficient / enough / capable` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The wind seemed to be STRENGTHENING as the afternoon wore on.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `weakening` || n === `dying` || n === `fading` || n === `easing`) ? 1 : 0; },
+                      answer: `weakening / dying / fading / easing` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The other farmhands considered his escape almost (miracle).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `miraculous` ? 1 : 0,
+                      answer: `miraculous` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: The motorist's (careless) act set the whole grassland alight.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `carelessness` ? 1 : 0,
+                      answer: `carelessness` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'before': "The fire would reach the cattle. Costa had only twenty minutes."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`before`) && n.includes(`fire`) && n.includes(`twenty minutes`) ? 1 : 0; },
+                      answer: `Costa had only twenty minutes before the fire would reach the cattle.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'if': "The fire might catch the truck. The river offered a chance of escape."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`if`) && n.includes(`catch`) && n.includes(`river`) ? 1 : 0; },
+                      answer: `If the fire might catch the truck, the river offered a chance of escape.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "A passing motorist dropped the cigarette."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`cigarette`) && n.includes(`dropped`) && n.includes(`by a passing motorist`) ? 1 : 0; },
+                      answer: `The cigarette was dropped by a passing motorist.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "Costa flattened a section of the wire fence."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`wire fence`) && n.includes(`flattened`) && n.includes(`by costa`) ? 1 : 0; },
+                      answer: `A section of the wire fence was flattened by Costa.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. crested (paragraph 2)`, keys: [`reached the top of`, `climbed over the top of`, `topped`, `rose above`], constraint: () => true, answer: `reached the top of / climbed over the top of / topped` },
+                    { id: `v2`, label: `2. arithmetic (paragraph 3)`, keys: [`calculation`, `working out numbers`, `mental sums`, `reckoning`], constraint: () => true, answer: `calculation / working out numbers / mental sums / reckoning` },
+                    { id: `v3`, label: `3. ragged (paragraph 4)`, keys: [`disorganised`, `messy`, `uneven`, `rough and irregular`], constraint: (n) => !n.includes(`torn`), answer: `disorganised / messy / uneven / rough and irregular. "Torn" scores 0.` },
+                    { id: `v4`, label: `4. detour (paragraph 6)`, keys: [`indirect route`, `roundabout way`, `alternative path`, `diversion`], constraint: () => true, answer: `indirect route / roundabout way / alternative path / diversion` },
+                    { id: `v5`, label: `5. outpaced (paragraph 6)`, keys: [`moved faster than`, `overtook`, `got ahead of`, `exceeded the speed of`], constraint: () => true, answer: `moved faster than / overtook / got ahead of` },
+                    { id: `v6`, label: `6. submerged (paragraph 8)`, keys: [`covered by water`, `underwater`, `sunk below the surface`, `immersed`], constraint: () => true, answer: `covered by water / underwater / sunk below the surface / immersed` },
+                    { id: `v7`, label: `7. roughly (paragraph 9)`, keys: [`approximately`, `about`, `more or less`, `nearly`], constraint: (n) => !n.includes(`harshly`), answer: `approximately / about / more or less / nearly. "Harshly" scores 0.` },
+                    { id: `v8`, label: `8. set in motion (paragraph 9)`, keys: [`caused to begin`, `started off`, `triggered`, `got underway`], constraint: () => true, answer: `caused to begin / started off / triggered / got underway` }
+                ]
+            }
+
+,
+            {
+                id: 'man_sold_moon',
+                type: 'long',
+                title: '29. The Man Who Sold the Moon',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `In 1967, an American businessman named Dennis Hope decided that nobody had ever formally claimed ownership of the Moon, and set about selling it to the public — a scheme so implausible that it somehow made him, on paper, one of the largest landowners in history.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Dennis Hope was, by his own cheerful admission, in a difficult stretch of his life when the idea came to him: recently divorced, working an unremarkable job, and staring out of a car window at the Moon one evening when a single, oddly precise thought arrived and refused to leave him alone. Nobody, as far as he could tell, actually owned the Moon. Nations had signed treaties agreeing not to claim it for themselves, but no treaty, he reasoned, prevented a private individual from doing exactly that.` },
+                    { num: `Paragraph 2`, text: `He did what any determined person with an unusual idea and very little to lose might do: he looked into the relevant international law, found what he considered a genuine loophole in the wording of the 1967 Outer Space Treaty, and filed a formal declaration of ownership over the Moon, along with several other planets, at both the United Nations and the government of the United States. Neither body responded with anything more than silence, which Hope chose, not unreasonably, to interpret as a lack of objection.` },
+                    { num: `Paragraph 3`, text: `Having declared himself the owner of some 37 million square miles of lunar real estate, Hope then did the only thing that made any commercial sense of the situation: he began selling it, one acre at a time, through a company he named the Lunar Embassy, at a price of roughly twenty American dollars per acre, complete with a certificate of ownership, a small map showing the buyer's precise plot, and a document explaining, with the confident phrasing of a man who had clearly rehearsed the argument many times, exactly why the purchase was legally sound.` },
+                    { num: `Paragraph 4`, text: `Sceptics pointed out, reasonably enough, that a declaration nobody had bothered to contest was not the same thing as a declaration that was actually valid, and that the Outer Space Treaty's silence on private individuals almost certainly reflected an assumption that no reasonable person would attempt what Hope was attempting, rather than any deliberate loophole. Hope's response to this was, essentially, that until a court told him otherwise, his claim stood exactly as filed, and that a great many buyers seemed entirely willing to purchase on those terms regardless.` },
+                    { num: `Paragraph 5`, text: `And purchase they did, in numbers that would have surprised Hope himself at the outset: several million acres sold within the first decades of the business, to buyers ranging from people buying a genuinely novel birthday gift to others who seemed to take the legal argument, whatever its merits, entirely seriously. Among the buyers, according to Hope's own later claims, were several former United States presidents, a scattering of celebrities, and enough ordinary members of the public to keep the Lunar Embassy comfortably in business for decades.` },
+                    { num: `Paragraph 6`, text: `The business inevitably drew comparisons to a far older tradition of selling things nobody could reasonably claim to own — bridges, mainly, in the popular imagination — but Hope maintained, with what seemed to be genuine conviction rather than simple salesmanship, that his claim differed in one important respect: nobody, in over half a century of legal challenges from governments, universities and rival claimants, had actually succeeded in having his declaration formally overturned in any court that mattered.` },
+                    { num: `Paragraph 7`, text: `This was, legal scholars were quick to point out, less a triumph of Hope's argument than a simple accident of nobody finding it worth the enormous cost of formally challenging a claim that caused no practical harm to anyone; a certificate hanging on a buyer's wall, after all, granted no actual right to travel to the Moon, extract anything from it, or prevent a spacecraft from landing on the specific acre in question, whatever the accompanying paperwork claimed.` },
+                    { num: `Paragraph 8`, text: `Hope, for his part, appeared entirely unbothered by this distinction, expanding his declared holdings over the years to include Mars, Venus and several other bodies in the solar system, and describing himself, without any evident irony, as having "the largest real estate portfolio of any individual in the history of the human race" — a claim that was, on its own peculiar terms, almost certainly true.` },
+                    { num: `Paragraph 9`, text: `Whether any of Hope's certificates will mean anything at all once humans genuinely begin settling other worlds remains, by his own admission, entirely unknown; what is not in doubt is that for the price of a modest dinner, tens of thousands of people have spent the last half-century able to say, with a perfectly straight face and a document to prove it, that they own a piece of the Moon.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) What key legal distinction did Hope's reasoning rely on? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`nation`) && n.includes(`individual`) || n.includes(`countries`) && n.includes(`private`) || n.includes(`treaty`) && n.includes(`person`) || n.includes(`government`) && n.includes(`not`) && n.includes(`person`)) ? 1 : 0; },
+                      answer: `That although nations/countries had agreed not to claim the Moon, no treaty prevented a private individual from doing so.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) In your own words, explain why Hope interpreted the silence from the UN and the US government the way he did. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`no response`) || n.includes(`did not reply`) || n.includes(`silence`) || n.includes(`no objection`)) s++;
+                        if (n.includes(`assumed`) || n.includes(`took it`) || n.includes(`interpret`) || n.includes(`chose`) || n.includes(`no objection`) || n.includes(`meant`) && n.includes(`agree`) || n.includes(`no one objected`) || n.includes(`accepted`)) s++;
+                        return s; },
+                      answer: `(1) Neither body responded to his declaration at all. (2) He chose to interpret this silence as meaning they had no objection to his claim.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) What did buyers receive when they purchased an acre of the Moon from the Lunar Embassy? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`certificate`) || n.includes(`map`)) s++;
+                        if (n.includes(`document`) || n.includes(`explanation`) || n.includes(`legal`) && n.includes(`argument`) || n.includes(`why`) && n.includes(`sound`)) s++;
+                        return s; },
+                      answer: `Any two: a certificate of ownership; a small map showing the plot; a document explaining why the purchase was legally sound.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) In your own words, summarise the sceptics' main objection to Hope's claim. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`not contested`) || n.includes(`nobody challenged`) || n.includes(`not valid`) && n.includes(`just because`) || n.includes(`does not mean`)) s++;
+                        if (n.includes(`assumption`) || n.includes(`no reasonable person`) || n.includes(`never intended`) || n.includes(`not a real loophole`) || n.includes(`not deliberate`)) s++;
+                        return s; },
+                      answer: `(1) A claim that nobody challenged is not the same as a claim that is actually legally valid. (2) The treaty's silence on individuals was likely an oversight/assumption, not a deliberate loophole.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Give TWO different types of buyer mentioned in paragraph 5. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`gift`) || n.includes(`novel`)) && (n.includes(`serious`) || n.includes(`legal argument`) || n.includes(`president`) || n.includes(`celebrit`))) ? 1 : 0; },
+                      answer: `Any two: people buying a novelty gift; people taking the legal argument seriously; former US presidents; celebrities.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) According to paragraph 6, in what one important way did Hope believe his claim differed from selling a bridge one does not own? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`never`) || n.includes(`nobody`) || n.includes(`no one`)) && (n.includes(`overturn`) || n.includes(`challenge`) || n.includes(`court`) || n.includes(`succeeded`)) || n.includes(`not been overturned`)) ? 1 : 0; },
+                      answer: `Nobody had ever succeeded in having his declaration formally overturned in a court that mattered, despite many legal challenges.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) Explain in your own words why legal scholars said Hope's unchallenged claim was "less a triumph...than a simple accident." [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return ((n.includes(`cost`) || n.includes(`expensive`) || n.includes(`not worth`)) || (n.includes(`no harm`) || n.includes(`no practical`) || n.includes(`nobody hurt`))) ? 1 : 0; },
+                      answer: `It would be too costly to formally challenge, and the claim caused no real/practical harm to anyone, so nobody thought it worth the effort.` },
+
+                    { section: `QUESTION 2 • From Paragraph 7`, id: `q2a`, type: `text`, label: `Q2 (a) What, according to the writer, does a certificate NOT actually grant the buyer? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`travel`) || n.includes(`extract`) || n.includes(`prevent`) && n.includes(`spacecraft`) || n.includes(`real right`) || n.includes(`no actual right`)) ? 1 : 0; },
+                      answer: `Any real right — to travel to the Moon, extract anything, or prevent a spacecraft landing there.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) In your own words, describe how Hope reacted to the criticism that his certificates were legally meaningless. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`unbothered`) || n.includes(`did not care`) || n.includes(`ignored`) || n.includes(`unaffected`) || n.includes(`continued`) && n.includes(`expand`)) ? 1 : 0; },
+                      answer: `He seemed entirely unbothered/unaffected — he simply continued expanding his declared holdings.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2c`, type: `text`, label: `Q2 (c) Why does the writer say Hope's claim to owning "the largest real estate portfolio... in history" is "almost certainly true"? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`no one else`) || n.includes(`nobody else`) || n.includes(`no other`) && n.includes(`claim`) || n.includes(`only one`) && n.includes(`claim`)) s++;
+                        if (n.includes(`vast`) || n.includes(`huge`) || n.includes(`enormous`) || n.includes(`multiple planet`) || n.includes(`largest`) && n.includes(`amount`) || n.includes(`declared`) && n.includes(`size`)) s++;
+                        return s; },
+                      answer: `(1) No one else has made a similarly enormous claim of ownership. (2) His declared holdings (moon, Mars, Venus, etc.) are genuinely vast, even if not legally recognised — so on his own terms, it is technically true.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What is the writer's final point about the value of what Hope's buyers actually received? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`say`) && n.includes(`own`) || n.includes(`claim`) && n.includes(`own`) || n.includes(`bragging`) || n.includes(`novelty`) || n.includes(`fun`) || n.includes(`straight face`)) ? 1 : 0; },
+                      answer: `For a small price, buyers gained the ability to genuinely claim (with a straight face) that they own a piece of the Moon, whatever its legal worth.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_moon`, type: `summary_grid`, paragraphRange: `paragraphs 2 to 6`,
+                      label: `Q3. Summarise how Dennis Hope went about declaring ownership of the Moon and building a business from that claim. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`After`, `researching`, `the`, `relevant`, `international`, `law,`, `Hope`, `found`, `a`, `loophole`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_moon`,
+                        [`After`, `researching`, `the`, `relevant`, `international`, `law,`, `Hope`, `found`, `a`, `loophole`],
+                        [
+                          [`outer space treaty`, `1967`],
+                          [`filed`, `formal declaration`, `ownership`],
+                          [`united nations`, `united states government`],
+                          [`silence`, `no objection`, `no response`],
+                          [`37 million`, `square miles`],
+                          [`began selling`, `one acre at a time`],
+                          [`lunar embassy`, `company`],
+                          [`twenty dollars`, `per acre`],
+                          [`certificate`, `map`, `document`],
+                          [`sceptics`, `pointed out`, `not valid`],
+                          [`assumption`, `no reasonable person`],
+                          [`buyers`, `several million acres`],
+                          [`presidents`, `celebrities`],
+                          [`bridges`, `comparison`],
+                          [`no court`, `overturned`, `challenge`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 2–6 only. Opens: 'After researching the relevant international law, Hope found a loophole...'. Max 160 words. Cover the declaration, the business, and the criticism.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: Hope's claim relied on a legal (loophole/loophol/loopholl).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `loophole` ? 1 : 0,
+                      answer: `loophole` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: He declared himself the owner of lunar (real estate/reel estate/riel estate).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `real estate` ? 1 : 0,
+                      answer: `real estate` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: Hope remained entirely UNBOTHERED by the criticism.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `bothered` || n === `troubled` || n === `worried` || n === `upset`) ? 1 : 0; },
+                      answer: `bothered / troubled / worried / upset` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: A certificate GRANTS no actual right to travel to the Moon.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `denies` || n === `withholds` || n === `refuses`) ? 1 : 0; },
+                      answer: `denies / withholds / refuses` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: Hope's argument required considerable legal (justify).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `justification` ? 1 : 0,
+                      answer: `justification` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: Many buyers found the whole scheme (fascinate).`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `fascinating` ? 1 : 0,
+                      answer: `fascinating` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'even though': "Nobody had proven Hope's claim valid. Millions of people still bought acres."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`even though`) || n.includes(`although`)) && n.includes(`proven`) && n.includes(`bought`) ? 1 : 0; },
+                      answer: `Even though nobody had proven Hope's claim valid, millions of people still bought acres.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'since': "Nobody has ever challenged the claim in a court that matters. It technically still stands."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`since`) && n.includes(`challenged`) && n.includes(`stands`) ? 1 : 0; },
+                      answer: `Since nobody has ever challenged the claim in a court that matters, it technically still stands.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "Hope filed a formal declaration of ownership."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`formal declaration`) && n.includes(`filed`) && n.includes(`by hope`) ? 1 : 0; },
+                      answer: `A formal declaration of ownership was filed by Hope.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "Several million people have bought acres of the Moon."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`acres of the moon`) && n.includes(`bought`) && n.includes(`by several million people`) ? 1 : 0; },
+                      answer: `Acres of the Moon have been bought by several million people.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. implausible (paragraph description)`, keys: [`hard to believe`, `unlikely`, `not credible`, `far-fetched`], constraint: () => true, answer: `hard to believe / unlikely / not credible / far-fetched` },
+                    { id: `v2`, label: `2. loophole (paragraph 2)`, keys: [`a gap in the law`, `an unclear point that can be exploited`, `a legal weakness`, `an ambiguity in the rules`], constraint: () => true, answer: `a gap in the law / an unclear point that can be exploited / a legal weakness` },
+                    { id: `v3`, label: `3. sceptics (paragraph 4)`, keys: [`doubters`, `people who question`, `disbelievers`, `people who are unconvinced`], constraint: () => true, answer: `doubters / people who question / disbelievers` },
+                    { id: `v4`, label: `4. contest (paragraph 4)`, keys: [`challenge`, `dispute`, `oppose formally`, `argue against`], constraint: (n) => !n.includes(`compete`), answer: `challenge / dispute / oppose formally / argue against. "Compete" scores 0.` },
+                    { id: `v5`, label: `5. novel (paragraph 5)`, keys: [`new and unusual`, `original`, `not seen before`, `unconventional`], constraint: (n) => !n.includes(`book`), answer: `new and unusual / original / not seen before. "Book" scores 0.` },
+                    { id: `v6`, label: `6. conviction (paragraph 6)`, keys: [`firm belief`, `confidence in being right`, `strong certainty`, `sincere belief`], constraint: (n) => !n.includes(`crime`), answer: `firm belief / confidence in being right / strong certainty. "Crime" scores 0.` },
+                    { id: `v7`, label: `7. peculiar (paragraph 8)`, keys: [`strange`, `unusual`, `odd`, `distinctive`], constraint: (n) => !n.includes(`special`), answer: `strange / unusual / odd / distinctive. "Special" scores 0.` },
+                    { id: `v8`, label: `8. modest (paragraph 9)`, keys: [`small and reasonable`, `not excessive`, `humble`, `moderate`], constraint: (n) => !n.includes(`cheap`), answer: `small and reasonable / not excessive / humble / moderate. "Cheap" scores 0.` }
+                ]
+            }
+
+,
+            {
+                id: 'voices_deep',
+                type: 'long',
+                title: '30. Voices from the Deep',
+                tag: 'ZIMSEC 4005/2 Style',
+                totalMarks: 50,
+                compMarks: 45,
+                summaryMarks: 15,
+                langMarks: 10,
+                vocabMarks: 5,
+                description: `A marine biologist studying humpback whale song discovers that entire populations of whales, separated by thousands of kilometres of open ocean, somehow learn and sing the exact same new tune within a single season.`,
+                paragraphs: [
+                    { num: `Paragraph 1`, text: `Dr Naledi Kunene had spent six years with a hydrophone lowered into the waters off the eastern coast, recording what she still finds difficult to describe to people outside her field without sounding faintly ridiculous: the song of the humpback whale, a structured, repeating sequence of moans, cries and rising whoops that can last twenty minutes before looping back to its beginning, sung almost exclusively by males, for reasons that remain only partly understood even after decades of dedicated study.` },
+                    { num: `Paragraph 2`, text: `What first drew her into the field was not the song's strangeness but its consistency: at the start of any given breeding season, every male whale in a particular population sings, with only minor individual variation, essentially the same song, a shared cultural performance passed between individuals the way a popular tune might spread through a human community, except sung across open ocean by animals who may never physically meet.` },
+                    { num: `Paragraph 3`, text: `The song does not stay fixed, however. Across the course of a single breeding season, it changes gradually — a phrase lengthened here, a note altered there — and by the time the whales return the following year, the song has shifted again, evolving in something scientists have come to call, only half-jokingly, "whale fashion," complete with the same slow drift away from last season's popular tune that a human pop chart might show.` },
+                    { num: `Paragraph 4`, text: `What puzzled Naledi's field, for a long time, was less the change itself than its astonishing uniformity: populations separated by entire ocean basins, with no obvious opportunity for individual whales to hear one another, would nonetheless arrive at remarkably similar new songs within roughly the same season, as though some signal were passing between them that nobody had yet identified.` },
+                    { num: `Paragraph 5`, text: `The explanation, when it finally emerged from over a decade of tracking data, turned out to involve neither telepathy nor coincidence but a slow chain of contact along established migration routes: a small number of whales from one population would, in any given season, migrate along a path that briefly overlapped with a neighbouring population's territory, and it was this narrow window of overlap, sometimes lasting only days, that allowed a song to leap from one population to the next like a rumour passed along a single, very long queue of listeners.` },
+                    { num: `Paragraph 6`, text: `Naledi's own contribution to this picture came from noticing something the wider community had largely overlooked: the direction in which songs travelled was not random but consistently eastward, population after population along an entire ocean basin adopting, in turn, whatever song had most recently emerged from the whales furthest to the west — a pattern so reliable that she could, with reasonable confidence, predict which song a distant population would be singing months before her own hydrophones confirmed it.` },
+                    { num: `Paragraph 7`, text: `Why the transmission moved so consistently in one direction rather than spreading evenly in all directions remains, Naledi admits, the least satisfying part of an otherwise elegant discovery; her best working theory involves subtle differences in migration timing between populations, though she is careful, in every interview, to describe this as a hypothesis rather than a settled conclusion.` },
+                    { num: `Paragraph 8`, text: `The deeper significance of all this, for Naledi, lies less in the mechanics of song transmission than in what it demonstrates about a capacity for culture — the ability to learn, transmit and gradually modify a shared behaviour across generations and vast distances — in a species most people still picture, when they picture it at all, as a large and fundamentally simple creature drifting through an empty ocean.` },
+                    { num: `Paragraph 9`, text: `It is a picture Naledi finds herself increasingly unable to accept after six years of listening: what her hydrophones have recorded, season after season, sounds far less like the isolated cries of a lonely animal than like a conversation being carried, one population at a time, across an entire ocean, by creatures with a far richer inner life than the empty, silent sea most of us imagine lying beneath the surface.` }
+                ],
+                questions: [
+                    { section: `QUESTION 1 • From Paragraph 1`, id: `q1a`, type: `text`, label: `Q1 (a) Why does Naledi find it "difficult to describe" her work without "sounding faintly ridiculous"? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`strange`) || n.includes(`unusual`) || n.includes(`song`) && n.includes(`sound`) || n.includes(`odd`) || n.includes(`whale`) && n.includes(`sing`)) ? 1 : 0; },
+                      answer: `Because studying whale "song" for years sounds strange/unusual to people unfamiliar with the field.` },
+
+                    { section: `QUESTION 1 • From Paragraph 2`, id: `q1b`, type: `text`, label: `Q1 (b) Explain in your own words why the consistency of the song, rather than its strangeness, first attracted Naledi to the field. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`same song`) || n.includes(`all sing`) || n.includes(`every male`) || n.includes(`shared`)) s++;
+                        if (n.includes(`never meet`) || n.includes(`never`) && n.includes(`meet`) || n.includes(`separate`) || n.includes(`spread`) || n.includes(`without meeting`) || n.includes(`across ocean`)) s++;
+                        return s; },
+                      answer: `(1) Every male whale in a population sang essentially the same song. (2) Even though the whales that share it may never physically meet each other.` },
+
+                    { section: `QUESTION 1 • From Paragraph 3`, id: `q1c`, type: `text`, label: `Q1 (c) In your own words, describe how the song changes over time. [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`gradual`) || n.includes(`slowly`) || n.includes(`change`) && n.includes(`season`) || n.includes(`evolve`)) ? 1 : 0; },
+                      answer: `It changes gradually over the course of a season, and again by the following year, slowly evolving.` },
+
+                    { section: `QUESTION 1 • From Paragraph 4`, id: `q1d`, type: `text`, label: `Q1 (d) What exactly puzzled scientists about how the song changed across different populations? [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`separate`) || n.includes(`different ocean`) || n.includes(`could not hear`) || n.includes(`no contact`) || n.includes(`far apart`)) s++;
+                        if (n.includes(`similar`) || n.includes(`same time`) || n.includes(`same season`) || n.includes(`uniform`) || n.includes(`together`)) s++;
+                        return s; },
+                      answer: `(1) Populations separated by whole ocean basins had no obvious way to hear one another. (2) Yet they still arrived at remarkably similar new songs within roughly the same season.` },
+
+                    { section: `QUESTION 1 • From Paragraph 5`, id: `q1e`, type: `text`, label: `Q1 (e) Describe fully how a song actually spreads from one population to another. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`migrat`) || n.includes(`overlap`) || n.includes(`path`) && n.includes(`cross`)) s++;
+                        if (n.includes(`window`) || n.includes(`days`) || n.includes(`brief`) || n.includes(`short time`) || n.includes(`leap`) || n.includes(`pass`) && n.includes(`next`)) s++;
+                        return s; },
+                      answer: `(1) A few whales migrate along a path that briefly overlaps with a neighbouring population's territory. (2) During this short window, the song passes/leaps from one population to the next.` },
+
+                    { section: `QUESTION 1 • From Paragraph 6`, id: `q1f`, type: `text`, label: `Q1 (f) What was Naledi's own personal contribution to understanding this phenomenon? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`direction`) || n.includes(`eastward`) || n.includes(`east`) || n.includes(`one direction`) || n.includes(`pattern`) && n.includes(`travel`)) ? 1 : 0; },
+                      answer: `She noticed that songs travelled consistently eastward, not randomly, across the ocean basin.` },
+
+                    { section: `QUESTION 1 • From Paragraph 7`, id: `q1g`, type: `text`, label: `Q1 (g) Why does Naledi describe the direction of transmission as "the least satisfying part" of the discovery? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`does not know`) || n.includes(`not sure`) || n.includes(`unexplained`) || n.includes(`no confirmed reason`) || n.includes(`only`) && n.includes(`theory`) || n.includes(`hypothesis`)) ? 1 : 0; },
+                      answer: `Because she still cannot fully explain why it moves in that direction — she only has an unconfirmed theory/hypothesis, not a settled answer.` },
+
+                    { section: `QUESTION 2 • From Paragraph 6`, id: `q2a`, type: `text`, label: `Q2 (a) What does the writer mean by saying Naledi could "predict which song a distant population would be singing" before confirming it? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`pattern`) && (n.includes(`reliable`) || n.includes(`know in advance`)) || n.includes(`guess`) && n.includes(`correct`) || n.includes(`before`) && n.includes(`confirm`) || n.includes(`accurately`)) ? 1 : 0; },
+                      answer: `That the eastward pattern was so reliable she could accurately anticipate the song before her equipment actually confirmed it.` },
+
+                    { section: `QUESTION 2 • From Paragraph 8`, id: `q2b`, type: `text`, label: `Q2 (b) In your own words, explain what the song transmission demonstrates about whales, according to Naledi. [2]`, marks: 2,
+                      evaluate: (inp) => { const n = normalize(inp); let s = 0;
+                        if (n.includes(`culture`) || n.includes(`learn`) && n.includes(`pass`) || n.includes(`shared behaviour`) || n.includes(`teach`) && n.includes(`other`)) s++;
+                        if (n.includes(`generation`) || n.includes(`distance`) || n.includes(`modify`) || n.includes(`change over time`) || n.includes(`across`) && n.includes(`ocean`)) s++;
+                        return s; },
+                      answer: `(1) That whales have a genuine capacity for culture — learning and transmitting shared behaviour. (2) Which they can modify gradually across generations and vast distances.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2c`, type: `text`, label: `Q2 (c) What common misconception about whales does Naledi's research challenge? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`simple`) || n.includes(`lonely`) || n.includes(`isolated`) || n.includes(`empty`) && n.includes(`ocean`) || n.includes(`not intelligent`)) ? 1 : 0; },
+                      answer: `The idea that whales are simple, lonely creatures drifting through an empty, silent ocean.` },
+
+                    { section: `QUESTION 2 • From Paragraph 9`, id: `q2d`, type: `text`, label: `Q2 (d) What metaphor does the writer use to describe what the hydrophones have actually recorded? [1]`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`conversation`) || n.includes(`talk`) || n.includes(`communicat`)) ? 1 : 0; },
+                      answer: `A conversation being carried across the ocean, one population at a time.` },
+
+                    { section: `QUESTION 3 — Summary`, id: `q3summary_whales`, type: `summary_grid`, paragraphRange: `paragraphs 3 to 7`,
+                      label: `Q3. Summarise how the humpback whale's song changes over time and how scientists discovered it spreads between populations. [15 content points + 5 language = 20 marks]`,
+                      marks: 20,
+                      starterWords: [`Across`, `the`, `course`, `of`, `a`, `single`, `breeding`, `season,`, `the`, `song`],
+                      editableWords: 150,
+                      maxWords: 160,
+                      evaluate: () => evaluateSummaryGrid(`q3summary_whales`,
+                        [`Across`, `the`, `course`, `of`, `a`, `single`, `breeding`, `season,`, `the`, `song`],
+                        [
+                          [`gradually`, `phrase lengthened`, `note altered`],
+                          [`following year`, `shifted again`],
+                          [`whale fashion`, `evolving`],
+                          [`puzzled`, `uniformity`, `astonishing`],
+                          [`populations separated`, `ocean basin`],
+                          [`no obvious opportunity`, `hear`],
+                          [`similar`, `same season`],
+                          [`signal`, `not identified`],
+                          [`tracking data`, `over a decade`],
+                          [`migration routes`, `overlap`],
+                          [`small number`, `whales`, `migrate`],
+                          [`narrow window`, `days`],
+                          [`leap`, `rumour`, `queue`, `listener`],
+                          [`consistently eastward`, `direction`],
+                          [`population after population`, `adopting`],
+                          [`most recently emerged`, `furthest west`],
+                          [`predict`, `distant population`],
+                          [`migration timing`, `hypothesis`]
+                        ]
+                      ),
+                      answer: `Use paragraphs 3–7 only. Opens: 'Across the course of a single breeding season, the song...'. Max 160 words. Cover the changing song and how it spreads between populations.`
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq1`, type: `text`, label: `Q4(a)(i) Choose the correctly spelt word: Naledi lowered a (hydrophone/hidrophone/hydrafone) into the water to record the whales.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `hydrophone` ? 1 : 0,
+                      answer: `hydrophone` },
+
+                    { section: `Q4(a) Choose the correctly spelt word`, id: `lq2`, type: `text`, label: `Q4(a)(ii) Choose the correctly spelt word: The whales followed established (migration/migracion/migrasion) routes.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `migration` ? 1 : 0,
+                      answer: `migration` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq3`, type: `text`, label: `Q4(b)(i) Give the opposite: The song's uniformity across separate oceans was ASTONISHING.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `unsurprising` || n === `ordinary` || n === `expected` || n === `predictable`) ? 1 : 0; },
+                      answer: `unsurprising / ordinary / expected / predictable` },
+
+                    { section: `Q4(b) Give the opposite of the underlined word`, id: `lq4`, type: `text`, label: `Q4(b)(ii) Give the opposite: The song's direction of travel was CONSISTENTLY eastward.`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `inconsistently` || n === `randomly` || n === `unpredictably`) ? 1 : 0; },
+                      answer: `inconsistently / randomly / unpredictably` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq5`, type: `text`, label: `Q4(c)(i) Change to the correct form: The pattern of song transmission was remarkably (reliable) to predict.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `reliably` ? 1 : 0,
+                      answer: `reliably` },
+
+                    { section: `Q4(c) Change the word in brackets to its correct form`, id: `lq6`, type: `text`, label: `Q4(c)(ii) Change to the correct form: Naledi's discovery had a deep (significant) for our understanding of whale culture.`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `significance` ? 1 : 0,
+                      answer: `significance` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq7`, type: `text`, label: `Q4(d)(i) Join using 'although': "Naledi has a working theory. She is careful to call it only a hypothesis."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`although`) || n.includes(`though`)) && n.includes(`working theory`) && n.includes(`hypothesis`) ? 1 : 0; },
+                      answer: `Although Naledi has a working theory, she is careful to call it only a hypothesis.` },
+
+                    { section: `Q4(d) Join the sentences`, id: `lq8`, type: `text`, label: `Q4(d)(ii) Join using 'as': "The whales migrate along overlapping routes. The song passes from one population to another."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`as`) && n.includes(`migrate`) && n.includes(`passes`) ? 1 : 0; },
+                      answer: `As the whales migrate along overlapping routes, the song passes from one population to another.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq9`, type: `text`, label: `Q4(e)(i) Rewrite in the passive voice: "Naledi recorded the whale song for six years."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`whale song`) && n.includes(`recorded`) && n.includes(`six years`) && n.includes(`by naledi`) ? 1 : 0; },
+                      answer: `The whale song was recorded by Naledi for six years.` },
+
+                    { section: `Q4(e) Rewrite in the passive voice`, id: `lq10`, type: `text`, label: `Q4(e)(ii) Rewrite in the passive voice: "A small number of whales carried the song between populations."`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`song`) && n.includes(`carried`) && n.includes(`between populations`) && n.includes(`by a small number of whales`) ? 1 : 0; },
+                      answer: `The song was carried between populations by a small number of whales.` }
+                ],
+                vocabItems: [
+                    { id: `v1`, label: `1. looping (paragraph 1)`, keys: [`going back to the start`, `repeating in a circle`, `cycling round`, `returning to the beginning`], constraint: () => true, answer: `going back to the start / repeating in a circle / cycling round` },
+                    { id: `v2`, label: `2. uniformity (paragraph 4)`, keys: [`sameness`, `consistency`, `being alike`, `similarity throughout`], constraint: (n) => !n.includes(`clothes`), answer: `sameness / consistency / being alike / similarity throughout. "Clothes" scores 0.` },
+                    { id: `v3`, label: `3. overlapped (paragraph 5)`, keys: [`crossed over`, `partly covered the same area`, `coincided`, `shared common ground`], constraint: () => true, answer: `crossed over / partly covered the same area / coincided` },
+                    { id: `v4`, label: `4. elegant (paragraph 7)`, keys: [`neat and satisfying`, `simple and clever`, `well thought out`, `graceful in its logic`], constraint: (n) => !n.includes(`beautiful`), answer: `neat and satisfying / simple and clever / well thought out. "Beautiful" alone scores 0.` },
+                    { id: `v5`, label: `5. hypothesis (paragraph 7)`, keys: [`an unproven idea`, `a proposed explanation`, `an educated guess`, `a theory yet to be tested`], constraint: () => true, answer: `an unproven idea / a proposed explanation / an educated guess` },
+                    { id: `v6`, label: `6. capacity (paragraph 8)`, keys: [`ability`, `potential`, `capability`, `power to do something`], constraint: (n) => !n.includes(`size`), answer: `ability / potential / capability / power to do something. "Size" scores 0.` },
+                    { id: `v7`, label: `7. transmission (paragraph 7)`, keys: [`the passing on`, `the spreading`, `the sending`, `the act of passing something along`], constraint: () => true, answer: `the passing on / the spreading / the sending` },
+                    { id: `v8`, label: `8. drifting (paragraph 8)`, keys: [`moving slowly without direction`, `floating aimlessly`, `wandering with the current`], constraint: (n) => !n.includes(`sleeping`), answer: `moving slowly without direction / floating aimlessly / wandering with the current. "Sleeping" scores 0.` }
+                ]
+            }
+
         ];
 
         // =============================================================
