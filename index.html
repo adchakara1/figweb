@@ -1998,26 +1998,26 @@
                     { section: 'QUESTION 2 • From Paragraph 13', id: 'q2c', type: 'text', label: 'Q2 (c) What had the monkey seen when it let out a cry of alarm?', marks: 1, evaluate: (input) => { const n = normalize(input); return (n.includes('tiger') || n.includes('man eater') || n.includes('beast of kanda')) ? 1 : 0; }, answer: 'It had seen the tiger / man-eater.' },
                     { section: 'QUESTION 2 • From Paragraph 21', id: 'q2d', type: 'text', label: 'Q2 (d) Why did Corbett’s colleagues “gasp with dismay” upon seeing his blood-stained clothes at the end of the hunt?', marks: 1, evaluate: (input) => { const n = normalize(input); return (n.includes('wounded') || n.includes('injured') || n.includes('attacked') || n.includes('alive') || n.includes('badly')) ? 1 : 0; }, answer: 'They thought he had been badly wounded / attacked and were shocked he was alive.' },
                     { section: 'QUESTION 3: SUMMARY', id: 'q3summary', type: 'summary_grid', paragraphRange: 'paragraphs 14 to 20', label: 'Write a summary describing Corbett\'s actions, feelings and thoughts from the time the tiger appeared, up to the time he killed it. [15 content points + 5 language = 20 marks]', marks: 20, starterWords: ['As', 'Corbett', 'sat', 'hearing', 'the', 'buzz', 'of', 'the', 'jungle,', 'he'], editableWords: 150, maxWords: 160, evaluate: () => evaluateSummaryGrid('q3summary', ['As', 'Corbett', 'sat', 'hearing', 'the', 'buzz', 'of', 'the', 'jungle,', 'he'], [
-                        ['started'],                                  // 1. suddenly started
-                        ['alert'],                                    // 2. became alert
-                        ['pounding'],                                 // 3. heart pounding / scared / dangerous turn
-                        ['understood'],                               // 4. realised/understood why langur was worried
-                        ['unsafe'],                                   // 5. felt unsafe / could grab ankles
-                        ['shooting'],                                 // 6. remembered danger of shooting close range
-                        ['wait'],                                     // 7. could not just sit and wait
-                        ['safety'],                                   // 8. slipped the safety catch
-                        ['rifle','round'],                            // 9. brought the rifle round
-                        ['arm'],                                      // 10. pushed it between arm and side
-                        ['meet','rifle'],                             // 11. tiger would meet the rifle first
-                        ['relief'],                                   // 12. relieved / heaved a sigh of relief
-                        ['listening'],                                // 13. sat listening and waiting
-                        ['cramp'],                                    // 14. felt cramped
-                        ['dawn'],                                     // 15. watched the dawn
-                        ['caught','sight'],                           // 16. caught sight of the tiger
-                        ['sprang'],                                   // 17. sprang his limbs into action
-                        ['focus'],                                    // 18. focused eyes along the sights
-                        ['trigger'],                                  // 19. pulled the trigger / shot the tiger
-                        ['chest']                                     // 20. shot the tiger in the chest / again
+                        ['started','startled','jumped','jolted','jerked','flinched'],                                  // 1. suddenly started
+                        ['alert','aware','on guard','awake','wide awake','alertness'],                                 // 2. became alert
+                        ['pounding','racing','thumping','beating fast','heart raced','scared','frightened','fear'],    // 3. heart pounding / scared / dangerous turn
+                        ['understood','realised','realized','knew','worked out','figured out'],                       // 4. realised/understood why langur was worried
+                        ['unsafe','not safe','vulnerable','in danger','at risk','far from safe','ankles','grab his ankles','exposed'], // 5. felt unsafe / could grab ankles
+                        ['shooting','shoot','firing','fire','close range','gunshot'],                                  // 6. remembered danger of shooting close range
+                        ['wait','waiting','sit still','remain still','stay still','do nothing'],                       // 7. could not just sit and wait
+                        ['safety catch','safety','unlocked','released the safety'],                                    // 8. slipped the safety catch
+                        ['brought the rifle round','turned the rifle','rifle round','swung the rifle'],                // 9. brought the rifle round
+                        ['between his arm and his side','under his arm','tucked the rifle','wedged the rifle'],       // 10. pushed it between arm and side
+                        ['meet the rifle','rifle would meet','face the rifle','meet the gun','meet it first'],        // 11. tiger would meet the rifle first
+                        ['relief','relieved','sigh of relief','relaxed'],                                              // 12. relieved / heaved a sigh of relief
+                        ['listening','listened','sat waiting','waited'],                                               // 13. sat listening and waiting
+                        ['cramp','ache','aching','sore','stiff','pain','hurt','discomfort'],                          // 14. felt cramped / muscles ached
+                        ['dawn','twilight','daybreak','morning','night ended','night was ending','light appeared'],    // 15. watched the dawn/twilight approach
+                        ['caught sight','saw the tiger','spotted the tiger','glimpsed the tiger'],                     // 16. caught sight of the tiger
+                        ['sprang','jumped into action','sprung','leapt into action','reacted quickly'],               // 17. sprang his limbs into action
+                        ['focus','focused','aimed','sighted','lined up'],                                             // 18. focused eyes along the sights
+                        ['trigger','fired','pulled the trigger'],                                                      // 19. pulled the trigger / shot the tiger
+                        ['chest','bullet struck','wounded the tiger','struck the tiger','hit the tiger']              // 20. shot the tiger in the chest / again
                     ]), answer: 'Cover at least 15 of these points: suddenly started, became alert, heart pounding (felt danger), understood why the langur was worried, felt unsafe / tiger could grab ankles, remembered the danger of shooting at close range, decided he could not just sit and wait, slipped the safety catch, brought the rifle round, pushed it between arm and side, thought the tiger would meet the rifle first, felt relief when the tiger went to the kill, sat listening and waiting, felt cramped, watched the dawn, caught sight of the tiger, sprang his limbs into action, focused along the sights, pulled the trigger, shot the tiger in the chest. (15 content marks + 5 language marks = 20)' },
                     { section: 'SECTION B: SUPPORTING LANGUAGE STRUCTURES', id: 'q4ai', type: 'choice', label: 'Q4 (a) (i) Choose the correct word: The woman (who/whom) Corbett trained to hunt is now an expert.', marks: 1, options: ['who', 'whom'], evaluate: (input) => normalize(input) === 'whom' ? 1 : 0, answer: 'whom' },
                     { section: 'SECTION B: SUPPORTING LANGUAGE STRUCTURES', id: 'q4aii', type: 'choice', label: 'Q4 (a) (ii) Choose the correct word: (Incidence/Incidents) of human attacks by the Kanda tiger have ceased.', marks: 1, options: ['Incidence', 'Incidents'], evaluate: (input) => normalize(input) === 'incidents' ? 1 : 0, answer: 'incidents' },
@@ -2144,25 +2144,25 @@
                       evaluate: () => evaluateSummaryGrid('q12summary',
                         ['Immediately', 'we', 'set', 'foot', 'on', 'the', 'shore,', 'the', 'wind', 'sent'],
                         [
-                          ['sand', 'face'],
-                          ['balance', 'sand'],
-                          ['branches', 'flying'],
-                          ['danger', 'tree'],
+                          ['sand', 'face', 'stung', 'stinging', 'blew', 'dust', 'grains'],
+                          ['balance', 'stumbl', 'unsteady', 'wobbl', 'difficult to walk', 'hard to stand'],
+                          ['branches', 'flying', 'missile', 'debris', 'projectile', 'hurled', 'whipped', 'clawed'],
+                          ['danger', 'deadly', 'peril', 'risk', 'life threatening'],
                           ['coconut'],
-                          ['motor', 'stagger'],
-                          ['leg'],
-                          ['knock', 'sand'],
-                          ['limp'],
-                          ['wind', 'increas'],
-                          ['falling tree', 'path'],
-                          ['ankle', 'trip'],
-                          ['shook', 'body'],
-                          ['drag', 'feet'],
-                          ['thud', 'crash'],
-                          ['coconut', 'temple'],
-                          ['unprepared', 'wind'],
-                          ['hurled', 'forward'],
-                          ['rolled', 'slope']
+                          ['motor', 'stagger', 'stumbl', 'shoulder', 'weight', 'carrying'],
+                          ['leg', 'shin', 'calf', 'lower leg'],
+                          ['knock', 'sand', 'rolled', 'fell', 'fall', 'floor', 'ground'],
+                          ['limp', 'hobbl', 'uneven', 'awkward'],
+                          ['wind', 'increas', 'stronger', 'louder', 'fiercer', 'powerful', 'intensif'],
+                          ['falling tree', 'path', 'in front', 'running towards', 'heading towards', 'collision', 'directly in'],
+                          ['ankle', 'trip', 'stumbl', 'tap on', 'foot', 'fell over'],
+                          ['shook', 'shaking', 'shaken', 'trembl', 'vibrat', 'jolt', 'rattled', 'impact', 'force'],
+                          ['drag', 'feet', 'pulled', 'hauled', 'lifted up', 'helped him up'],
+                          ['thud', 'crash', 'noise of falling', 'sound of trees', 'crashing'],
+                          ['coconut', 'temple', 'head', 'struck', 'glancing blow'],
+                          ['unprepared', 'caught off guard', 'not ready', 'off guard', 'sudden force'],
+                          ['hurled', 'forward', 'thrown', 'flung', 'pushed forward', 'knocked'],
+                          ['rolled', 'slope', 'tumbl', 'fell down', 'rolling down']
                         ]
                       ),
                       answer: `Use paragraphs 6–11 only. Opens: 'Immediately we set foot on the shore, the wind sent...'. Max 160 words.`
@@ -2285,12 +2285,12 @@
                           ['train'],
                           ['downstairs', 'household'],
                           ['salesman', 'knife'],
-                          ['street', 'left', 'slipped'],
+                          ['street', 'left', 'slipped', 'wandered', 'wander off', 'went outside', 'exited', 'ran off', 'sneaked out'],
                           ['musician'],
                           ['beggar'],
                           ['cook', 'stall'],
                           ['cloth', 'fabric'],
-                          ['lost', 'cry'],
+                          ['lost', 'cry', 'panic', 'crying', 'tears', 'frightened', 'scared', 'couldnt find', 'searching for her', 'could not find'],
                           ['mother', 'search', 'clothes'],
                           ['changing', 'office', 'assistant'],
                           ['manager', 'staff', 'street'],
@@ -2417,27 +2417,27 @@
                       evaluate: () => evaluateSummaryGrid(`q3summary_weaver`,
                         [`In`, `the`, `process`, `of`, `nest-weaving,`, `the`, `brightly`, `coated`, `male`, `weavers`],
                         [
-                          [`hollow`, `globe`],
-                          [`plaited`, `tube`],
-                          [`thin branch`],
-                          [`enclosed`],
-                          [`sew`, `weave`],
+                          [`hollow`, `globe`, `nest`, `sphere`, `round nest`],
+                          [`plaited`, `tube`, `woven tube`, `tunnel`],
+                          [`thin branch`, `narrow branch`, `cannot climb`, `cannot reach`],
+                          [`enclosed`, `closed`, `covered`, `sealed`, `safe from predators`, `protected on all sides`],
+                          [`sew`, `weave`, `weaving`, `stitch`],
                           [`palm`, `bamboo`],
                           [`strip`, `ribbon`],
                           [`ring`, `branch`],
-                          [`weave`, `ball`],
-                          [`strengthen`],
-                          [`fly`, `long way`],
-                          [`lazy`, `sit`],
-                          [`snatch`, `strip`],
-                          [`female`, `hop`],
-                          [`look over`, `interior`],
-                          [`marry`, `beautiful`],
+                          [`weave`, `ball`, `sphere`],
+                          [`strengthen`, `reinforce`, `stronger`, `added more strips`, `keep adding`],
+                          [`fly`, `long way`, `far`, `long distance`],
+                          [`lazy`, `sit`, `idle`, `did not bother`, `no effort`, `avoided work`, `waited for`],
+                          [`snatch`, `strip`, `steal`, `stolen`, `pulled it away`, `took the strip`],
+                          [`female`, `hop`, `watch`, `observe`],
+                          [`look over`, `interior`, `inspect`, `examine`, `go inside`, `check`],
+                          [`marry`, `beautiful`, `choose`, `select`, `villa`],
                           [`ten`, `eleven`, `nests`],
-                          [`rebuild`, `tear`],
-                          [`female`, `material`, `upholster`],
+                          [`rebuild`, `tear`, `rebuilding`, `build new`],
+                          [`female`, `material`, `upholster`, `feathers`, `lining`, `furnish`],
                           [`male`, `sing`, `dance`],
-                          [`drive`, `rival`]
+                          [`drive`, `rival`, `chase away`, `keep away`]
                         ]
                       ),
                       answer: `Use paragraphs 9–16 only. Opens: 'In the process of nest-weaving, the brightly coated male weavers...'. Max 160 words. Cover both male building process AND female actions.`
@@ -2636,7 +2636,7 @@
                           [`ran into`, `burning building`],
                           [`hallway`, `ran through`],
                           [`peered`, `rooms`],
-                          [`searched`],
+                          [`searched`, `checked`, `looked around`, `searching`],
                           [`staircase`, `looked up`],
                           [`yelled`, `fire`, `house`],
                           [`hurried`, `girls`],
@@ -2837,10 +2837,10 @@
                         [`After`, `laying`, `about`, `a`, `hundred`, `eggs,`, `the`, `female`, `python`, `then`],
                         [
                           [`coils`, `round`],
-                          [`shiver`],
+                          [`shiver`, `tremble`, `shudder`, `trembl`],
                           [`rhythmic`, `contraction`, `muscle`],
                           [`body temperature`, `seven degrees`, `raises temperature`],
-                          [`shuttles`, `sun`],
+                          [`shuttles`, `sun`, `moves`, `back and forth`],
                           [`grass snake`, `rotting vegetable`],
                           [`chemical breakdown`, `heat generated`],
                           [`tough`, `leathery`, `shell`],
@@ -2852,7 +2852,7 @@
                           [`male`, `sit`, `night`],
                           [`major hen`, `day`],
                           [`nest is full`, `no longer`],
-                          [`pushes out`, `discarded`],
+                          [`pushes out`, `discarded`, `removes`, `gets rid of`, `throws out`],
                           [`circle`, `round`, `nest`],
                           [`predator`, `first`, `find`],
                           [`divert`, `attention`, `major hen`]
@@ -3063,7 +3063,7 @@
                           [`resistance`, `immediately killed`],
                           [`littered`, `dead`],
                           [`gathered`, `eggs`],
-                          [`journey back`, `fortress`]
+                          [`journey back`, `fortress`, `returned`, `back to their nest`, `back to the hill`]
                         ]
                       ),
                       answer: `Use paragraph 6 to end of paragraph 9 only. Opens: 'After having carefully investigated the area, the red ants' scouts...'. Max 160 words. Agent must be specific — refer clearly to slave-makers/red ants. Sequence is not an issue.`
@@ -3501,27 +3501,27 @@
                       evaluate: () => evaluateSummaryGrid(`q3summary_dargans`,
                         [`Calling`, `out`, `to`, `Mr`, `Dargan,`, `Dewey`, `came`, `to`, `the`, `trees`],
                         [
-                          [`began to run`, `more slowly`],
-                          [`then he walked`],
-                          [`stood perfectly still`],
-                          [`feeling`, `something`, `terribly wrong`, `raft`],
+                          [`began to run`, `more slowly`, `slowed down`],
+                          [`then he walked`, `slowed to a walk`, `started walking`, `walked instead`],
+                          [`stood perfectly still`, `stood still`, `froze`, `stopped moving`, `motionless`, `did not move`],
+                          [`feeling`, `something`, `terribly wrong`, `raft`, `wanted to turn back`, `wanted to run back`],
                           [`smell`, `smoke`],
                           [`slowly`, `walked`, `trees`],
-                          [`throat`, `dry`, `swallow`],
-                          [`pushed`, `low branch`],
+                          [`throat`, `dry`, `swallow`, `could not swallow`],
+                          [`pushed`, `low branch`, `through the bushes`, `low branches`],
                           [`close`, `eyes`],
-                          [`walked forward`],
+                          [`walked forward`, `moved forward`, `stepped forward`, `went forward`],
                           [`stepped`, `entrance`],
-                          [`knelt`],
-                          [`felt`, `log`],
-                          [`turned`, `gingerly`],
-                          [`felt it again`],
-                          [`faint warmth`],
-                          [`suddenly felt cold`, `fear`],
-                          [`rose slowly`],
-                          [`surveyed`, `ruins`],
+                          [`knelt`, `kneeled`, `went down on his knees`, `got down`],
+                          [`felt`, `log`, `touched`],
+                          [`turned`, `gingerly`, `carefully`, `cautiously`],
+                          [`felt it again`, `touched it again`, `felt once more`, `checked again`],
+                          [`faint warmth`, `still warm`, `slightly warm`, `warmth remained`],
+                          [`suddenly felt cold`, `fear`, `afraid`, `frightened`],
+                          [`rose slowly`, `stood up slowly`, `got up slowly`, `stood again`],
+                          [`surveyed`, `ruins`, `looked at`, `looked over`, `examined`],
                           [`looked`, `dread`, `parents`],
-                          [`shoulders`, `heavy`, `tired`]
+                          [`shoulders`, `heavy`, `tired`, `burden`]
                         ]
                       ),
                       answer: `Use paragraph 47 to end. Opens: 'Calling out to Mr Dargan, Dewey came to the trees and...'. Max 160 words. Both limbs needed for point 4 (feeling + wanting to return). Both limbs for point 21 (shoulders heavy AND tired).`
@@ -4197,26 +4197,26 @@
               ['paid', 'compensation'],
               ['stole', 'cakes', 'helping herself'],
               ['annoyed', 'stall owners'],
-              ['limping'],
-              ['ulcer'],
+              ['limping', 'limped', 'limp'],
+              ['ulcer', 'sore', 'wound'],
               ['leg chain', 'spikes'],
               ['spent time', 'dressings', 'hot water', 'salt'],
-              ['leg still troubling', 'still sore'],
-              ['serious infection'],
+              ['leg still troubling', 'still sore', 'still hurting', 'not healed', 'still in pain', 'leg not better', 'leg was still'],
+              ['serious infection', 'bad infection', 'infected badly', 'had an infection'],
               ['injections', 'antibiotics'],
-              ['writer gave injections', 'I had to give'],
-              ['first injection failed'],
-              ['second injection successful'],
+              ['writer gave injections', 'i had to give', 'had to inject', 'gave the injection', 'writer had to'],
+              ['first injection failed', 'first attempt failed', 'needle broke', 'first try failed', 'unsuccessful attempt', 'went wrong'],
+              ['second injection successful', 'second attempt succeeded', 'second try worked', 'succeeded this time', 'was successful', 'worked this time'],
               ['heavy box', 'needles', 'antibiotics'],
-              ['wild elephants close'],
+              ['wild elephants close', 'wild elephants nearby', 'sensed wild elephants', 'close by'],
               ['three female elephants', 'appeared'],
               ['might attack', 'afraid'],
               ['male elephant', 'appeared'],
-              ['difficult to hold Queen steady'],
+              ['difficult to hold Queen steady', 'hard to control queen', 'queen was trembling', 'could not keep her still', 'trembling violently'],
               ['male elephant bellowed', 'angry'],
-              ['first bomb failed to explode'],
-              ['second bomb exploded', 'Salim made it explode'],
-              ['elephants ran off', 'scared away']
+              ['first bomb failed to explode', 'bomb did not explode', 'first bomb did not work', 'nothing happened'],
+              ['second bomb exploded', 'salim made it explode', 'salim threw the second bomb', 'exploded successfully'],
+              ['elephants ran off', 'scared away', 'fled', 'ran away', 'disappeared']
             ]
           ),
           answer: '25 content points (see marking scheme).' }
