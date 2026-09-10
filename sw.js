@@ -10,7 +10,9 @@ const OFFLINE_PAGE = '/index.html';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png'
 ];
 
 // External CDN resources to cache on first fetch
