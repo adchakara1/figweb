@@ -2319,8 +2319,8 @@
                 type: 'long',
                 title: '8. Birds That Weave Baskets',
                 tag: 'ZIMSEC 4005/2 June 2024',
-                totalMarks: 40,
-                compMarks: 10,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -2441,43 +2441,41 @@
                         ]
                       ),
                       answer: `Use paragraphs 9–16 only. Opens: 'In the process of nest-weaving, the brightly coated male weavers...'. Max 160 words. Cover both male building process AND female actions.`
-                    }
-                ],
-                // Language structures — Q4
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Identify/Replace`, label: `Q4(a)(i) Write the unnecessary word from: "The passage discusses about the behaviour of weaver birds."`, type: `lang_text`, marks: 1,
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Identify/Replace`, label: `Q4(a)(i) Write the unnecessary word from: "The passage discusses about the behaviour of weaver birds."`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `about` ? 1 : 0,
                       answer: `about` },
 
-                    { id: `lq2`, section: `Q4(a) Identify/Replace`, label: `Q4(a)(ii) Write one specific word to replace 'creatures' in: "Sparrows, weavers, parrots and flamingos are all beautiful creatures."`, type: `lang_text`, marks: 1,
+                    { id: `lq2`, section: `Q4(a) Identify/Replace`, label: `Q4(a)(ii) Write one specific word to replace 'creatures' in: "Sparrows, weavers, parrots and flamingos are all beautiful creatures."`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `birds` ? 1 : 0,
                       answer: `birds` },
 
-                    { id: `lq3`, section: `Q4(b) Choose correct word`, label: `Q4(b)(i) Animals fall in love just as human beings. However, the (latter/later/letter/let) ceases to reason when he does so.`, type: `lang_text`, marks: 1,
+                    { id: `lq3`, section: `Q4(b) Choose correct word`, label: `Q4(b)(i) Animals fall in love just as human beings. However, the (latter/later/letter/let) ceases to reason when he does so.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `latter` ? 1 : 0,
                       answer: `latter (wrong spelling denies the mark)` },
 
-                    { id: `lq4`, section: `Q4(b) Choose correct word`, label: `Q4(b)(ii) The whole exercise of weaver courtship is (temporarily/frequently/eventually/regularly) completed after many seasons.`, type: `lang_text`, marks: 1,
+                    { id: `lq4`, section: `Q4(b) Choose correct word`, label: `Q4(b)(ii) The whole exercise of weaver courtship is (temporarily/frequently/eventually/regularly) completed after many seasons.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `eventually` ? 1 : 0,
                       answer: `eventually (wrong spelling denies the mark)` },
 
-                    { id: `lq5`, section: `Q4(c) Choose grammatically correct sentence`, label: `Q4(c)(i) Write 1 or 2 for the grammatically correct sentence:\n1. Female weaver birds do not love neither lazy nor unhealthy males.\n2. Female weaver birds love neither lazy nor unhealthy males.`, type: `lang_text`, marks: 1,
+                    { id: `lq5`, section: `Q4(c) Choose grammatically correct sentence`, label: `Q4(c)(i) Write 1 or 2 for the grammatically correct sentence:\n1. Female weaver birds do not love neither lazy nor unhealthy males.\n2. Female weaver birds love neither lazy nor unhealthy males.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `2` ? 1 : 0,
                       answer: `2 — Sentence 1 has a double negative (do not... neither).` },
 
-                    { id: `lq6`, section: `Q4(c) Choose grammatically correct sentence`, label: `Q4(c)(ii) Write 1 or 2 for the grammatically correct sentence:\n1. No sooner had the industrious birds arrived at the nests than the lazy ones snatched the strips from them.\n2. No sooner than the industrious birds arrived at the nests did the lazy ones snatch the strips from them.`, type: `lang_text`, marks: 1,
+                    { id: `lq6`, section: `Q4(c) Choose grammatically correct sentence`, label: `Q4(c)(ii) Write 1 or 2 for the grammatically correct sentence:\n1. No sooner had the industrious birds arrived at the nests than the lazy ones snatched the strips from them.\n2. No sooner than the industrious birds arrived at the nests did the lazy ones snatch the strips from them.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `1` ? 1 : 0,
                       answer: `1 — "No sooner...had...than" is the correct inversion structure.` },
 
-                    { id: `lq7`, section: `Q4(d) Direct to Reported Speech / Response`, label: `Q4(d)(i) It is Monday. The author says "I'm going to take pictures of weaver birds today." Report this to someone a month later.`, type: `lang_text`, marks: 1,
+                    { id: `lq7`, section: `Q4(d) Direct to Reported Speech / Response`, label: `Q4(d)(i) It is Monday. The author says "I'm going to take pictures of weaver birds today." Report this to someone a month later.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes('said') || n.includes('told')) && (n.includes('going to') || n.includes('was going') || n.includes('would')) && (n.includes('picture') || n.includes('photo')) && (n.includes('that day') || n.includes('that monday') || n.includes('monday') || n.includes('on that day')) ? 1 : 0; },
                       answer: `The author said (that) he was going to take pictures of weaver birds that Monday/that day.` },
 
-                    { id: `lq8`, section: `Q4(d) Direct to Reported Speech / Response`, label: `Q4(d)(ii) Respond to show willingness: "Would you mind setting your camera next to mine?"`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`no`) || n.includes(`not at all`) || n.includes(`don't mind`) || n.includes(`do not mind`) || n.includes(`wouldn't mind`) || n.includes(`would not mind`)) ? 1 : 0; },
+                    { id: `lq8`, section: `Q4(d) Direct to Reported Speech / Response`, label: `Q4(d)(ii) Respond to show willingness: "Would you mind setting your camera next to mine?"`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`no`) || n.includes(`not at all`) || n.includes(`dont mind`) || n.includes(`do not mind`) || n.includes(`wouldnt mind`) || n.includes(`would not mind`)) ? 1 : 0; },
                       answer: `No, I don't mind. / No, I wouldn't mind. / Not at all. / No, I don't mind doing so.` },
 
-                    { id: `lq9`, section: `Q4(e) Two meanings`, label: `Q4(e) Write TWO sentences showing the two different meanings of: "Look at that weaver bird with one eye."`, type: `lang_textarea`, marks: 2,
+                    { id: `lq9`, section: `Q4(e) Two meanings`, label: `Q4(e) Write TWO sentences showing the two different meanings of: "Look at that weaver bird with one eye."`, type: `text`, marks: 2,
                       evaluate: (inp) => { const n = normalize(inp); let s = 0;
                         if (n.includes('one eye') && (n.includes('look') || n.includes('using') || n.includes('with one eye') || n.includes('close one'))) s++;
                         if (n.includes('one eye') && (n.includes('bird') && (n.includes('one-eyed') || n.includes('only one eye') || n.includes('has one eye') || n.includes('single eye')))) s++;
@@ -2501,8 +2499,8 @@
                 id: 'pizza_man',
                 title: '9. The Pizza Man',
                 tag: 'Buhera District O-Level 2023',
-                totalMarks: 40,
-                compMarks: 15,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -2653,42 +2651,41 @@
                         ]
                       ),
                       answer: `Use paragraphs 7–14 only. Opens: 'As the flames continued to climb up the walls, Bostic...'. Max 160 words. Trace all Bostic's actions from entering the building to lifting Kaylan.`
-                    }
-                ],
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Choose correct word`, label: `Q4(a)(i) Choose: A gust of glorious fresh air filled the room as he smashed through the window and (cut / cutted) his arm.`, type: `lang_text`, marks: 1,
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Choose correct word`, label: `Q4(a)(i) Choose: A gust of glorious fresh air filled the room as he smashed through the window and (cut / cutted) his arm.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `cut` ? 1 : 0,
                       answer: `cut` },
 
-                    { id: `lq2`, section: `Q4(a) Choose correct word`, label: `Q4(a)(ii) Choose: The fire fighters called out as they (put / putted) on their firefighting equipment.`, type: `lang_text`, marks: 1,
+                    { id: `lq2`, section: `Q4(a) Choose correct word`, label: `Q4(a)(ii) Choose: The fire fighters called out as they (put / putted) on their firefighting equipment.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `put` ? 1 : 0,
                       answer: `put` },
 
-                    { id: `lq3`, section: `Q4(b) Choose from: torn, written, wrote`, label: `Q4(b)(i) Four faces emerged from a room and peered down, fear _______ all over their faces.`, type: `lang_text`, marks: 1,
+                    { id: `lq3`, section: `Q4(b) Choose from: torn, written, wrote`, label: `Q4(b)(i) Four faces emerged from a room and peered down, fear _______ all over their faces.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `written` ? 1 : 0,
                       answer: `written` },
 
-                    { id: `lq4`, section: `Q4(b) Choose from: torn, written, wrote`, label: `Q4(b)(ii) He had made it to the room and had _______ the curtains.`, type: `lang_text`, marks: 1,
+                    { id: `lq4`, section: `Q4(b) Choose from: torn, written, wrote`, label: `Q4(b)(ii) He had made it to the room and had _______ the curtains.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `torn` ? 1 : 0,
                       answer: `torn` },
 
-                    { id: `lq5`, section: `Q4(c) Give the opposite of the underlined word`, label: `Q4(c)(i) Bostic, never LOOSENED his grip on the little girl, kept his hold.`, type: `lang_text`, marks: 1,
+                    { id: `lq5`, section: `Q4(c) Give the opposite of the underlined word`, label: `Q4(c)(i) Bostic, never LOOSENED his grip on the little girl, kept his hold.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n === `tightened` || n === `tightening`) ? 1 : 0; },
                       answer: `tightened` },
 
-                    { id: `lq6`, section: `Q4(c) Give the opposite of the underlined word`, label: `Q4(c)(ii) He stumbled through the burning house trying to find the EXIT.`, type: `lang_text`, marks: 1,
+                    { id: `lq6`, section: `Q4(c) Give the opposite of the underlined word`, label: `Q4(c)(ii) He stumbled through the burning house trying to find the EXIT.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n === `entrance` || n === `entry` || n === `entry point`) ? 1 : 0; },
                       answer: `entrance / entry` },
 
-                    { id: `lq7`, section: `Q4(d) Complete with a preposition`, label: `Q4(d)(i) Bostic jumped _______ the window when the fire became too much.`, type: `lang_text`, marks: 1,
+                    { id: `lq7`, section: `Q4(d) Complete with a preposition`, label: `Q4(d)(i) Bostic jumped _______ the window when the fire became too much.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `out of` || normalize(inp) === `out` ? 1 : 0,
                       answer: `out of` },
 
-                    { id: `lq8`, section: `Q4(d) Complete with a preposition`, label: `Q4(d)(ii) Bostic landed _______ both feet after escaping from the dangerous fire.`, type: `lang_text`, marks: 1,
+                    { id: `lq8`, section: `Q4(d) Complete with a preposition`, label: `Q4(d)(ii) Bostic landed _______ both feet after escaping from the dangerous fire.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `on` || normalize(inp) === `through` ? 1 : 0,
                       answer: `on / through` },
 
-                    { id: `lq9`, section: `Q4(e) Choose the correct word`, label: `Q4(e) Rewrite: He had quit drugs although his friends did not understand why he had gone (quite/quiet) and developed (quite/quiet) a better life than before.`, type: `lang_textarea`, marks: 2,
+                    { id: `lq9`, section: `Q4(e) Choose the correct word`, label: `Q4(e) Rewrite: He had quit drugs although his friends did not understand why he had gone (quite/quiet) and developed (quite/quiet) a better life than before.`, type: `text`, marks: 2,
                       evaluate: (inp) => { const n = normalize(inp);
                         const firstOk  = n.includes(`gone quiet`) || (n.indexOf(`quiet`) < n.indexOf(`quite`) + 40 && n.includes(`quiet`));
                         const secondOk = n.includes(`developed quite`) || (n.includes(`quite`) && n.includes(`better`));
@@ -2713,8 +2710,8 @@
                 type: 'long',
                 title: '10. Keeping Eggs Warm',
                 tag: 'ZIMSEC 4005/2 June 2023',
-                totalMarks: 40,
-                compMarks: 20,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -2859,46 +2856,45 @@
                         ]
                       ),
                       answer: `Use paragraph 9 to end of paragraph 16. Opens: 'After laying about a hundred eggs, the female python then...'. Max 160 words. Sequence is not an issue.`
-                    }
-                ],
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Correct spelling`, label: `Q4(a)(i) Select the correctly spelt word: Only the major hen has the (privilege/priviledge/previledge) to incubate the eggs.`, type: `lang_text`, marks: 1,
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Correct spelling`, label: `Q4(a)(i) Select the correctly spelt word: Only the major hen has the (privilege/priviledge/previledge) to incubate the eggs.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `privilege` ? 1 : 0,
                       answer: `privilege` },
 
-                    { id: `lq2`, section: `Q4(a) Correct spelling`, label: `Q4(a)(ii) Select the correctly spelt word: (Occassionally/Occasionally/Ocasionally), lions love to eat ostrich eggs.`, type: `lang_text`, marks: 1,
+                    { id: `lq2`, section: `Q4(a) Correct spelling`, label: `Q4(a)(ii) Select the correctly spelt word: (Occassionally/Occasionally/Ocasionally), lions love to eat ostrich eggs.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `occasionally` ? 1 : 0,
                       answer: `Occasionally` },
 
-                    { id: `lq3`, section: `Q4(b) Join using which/who/whose/whom`, label: `Q4(b)(i) Join: "For reptiles, the ideal environment is a warm climate. Even temperatures permit eggs to hatch unaided."`, type: `lang_text`, marks: 1,
+                    { id: `lq3`, section: `Q4(b) Join using which/who/whose/whom`, label: `Q4(b)(i) Join: "For reptiles, the ideal environment is a warm climate. Even temperatures permit eggs to hatch unaided."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return n.includes(`whose`) && n.includes(`warm climate`) && n.includes(`even temperatures`) ? 1 : 0; },
                       answer: `For reptiles, the ideal environment is a warm climate whose even temperatures permit eggs to hatch unaided.` },
 
-                    { id: `lq4`, section: `Q4(b) Join using which/who/whose/whom`, label: `Q4(b)(ii) Join: "The female python makes rhythmic contractions of her muscles. The rhythmic contractions raise her body temperature."`, type: `lang_text`, marks: 1,
+                    { id: `lq4`, section: `Q4(b) Join using which/who/whose/whom`, label: `Q4(b)(ii) Join: "The female python makes rhythmic contractions of her muscles. The rhythmic contractions raise her body temperature."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return n.includes(`which`) && n.includes(`contractions`) && n.includes(`temperature`) ? 1 : 0; },
                       answer: `The female python makes rhythmic contractions of her muscles which raise her body temperature.` },
 
-                    { id: `lq5`, section: `Q4(c) Choose correct word`, label: `Q4(c)(i) If other snakes had massive muscle power, they (would/will) be able to incubate their eggs.`, type: `lang_text`, marks: 1,
+                    { id: `lq5`, section: `Q4(c) Choose correct word`, label: `Q4(c)(i) If other snakes had massive muscle power, they (would/will) be able to incubate their eggs.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `would` ? 1 : 0,
                       answer: `would` },
 
-                    { id: `lq6`, section: `Q4(c) Choose correct word`, label: `Q4(c)(ii) If reptiles (are/were) warm blooded, they would easily incubate their eggs.`, type: `lang_text`, marks: 1,
+                    { id: `lq6`, section: `Q4(c) Choose correct word`, label: `Q4(c)(ii) If reptiles (are/were) warm blooded, they would easily incubate their eggs.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `were` ? 1 : 0,
                       answer: `were` },
 
-                    { id: `lq7`, section: `Q4(d) Rewrite avoiding repetition`, label: `Q4(d)(i) Rewrite avoiding unnecessary repetition: "This task is the job for the male to share with his major hen."`, type: `lang_text`, marks: 1,
+                    { id: `lq7`, section: `Q4(d) Rewrite avoiding repetition`, label: `Q4(d)(i) Rewrite avoiding unnecessary repetition: "This task is the job for the male to share with his major hen."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`this task is for the male`) || n.includes(`this is the male`) || n.includes(`this job is for`) || n.includes(`this task`)) && n.includes(`share`) && n.includes(`major hen`) && !n.includes(`task is the job`) ? 1 : 0; },
                       answer: `This task is for the male to share with his major hen. / This is the job for the male to share with his major hen.` },
 
-                    { id: `lq8`, section: `Q4(d) Rewrite avoiding repetition`, label: `Q4(d)(ii) Rewrite avoiding unnecessary repetition: "When the nest is full, and cannot take anymore, the ostrich major hen pushes some of the eggs out."`, type: `lang_text`, marks: 1,
+                    { id: `lq8`, section: `Q4(d) Rewrite avoiding repetition`, label: `Q4(d)(ii) Rewrite avoiding unnecessary repetition: "When the nest is full, and cannot take anymore, the ostrich major hen pushes some of the eggs out."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`when the nest is full`) || n.includes(`when it is full`) || n.includes(`when the nest can not`) || n.includes(`when the nest cannot`)) && n.includes(`pushes`) && n.includes(`eggs`) && !n.includes(`full, and cannot take anymore`) ? 1 : 0; },
                       answer: `When the nest is full, the ostrich major hen pushes some of the eggs out. / When the nest can not take anymore, the ostrich major hen pushes some of the eggs out.` },
 
-                    { id: `lq9`, section: `Q4(e) Rewrite in positive form`, label: `Q4(e)(i) Rewrite in positive form retaining the same meaning: "The major hen is not selfish."`, type: `lang_text`, marks: 1,
+                    { id: `lq9`, section: `Q4(e) Rewrite in positive form`, label: `Q4(e)(i) Rewrite in positive form retaining the same meaning: "The major hen is not selfish."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`unselfish`) || n.includes(`generous`) || n.includes(`selfless`) || n.includes(`altruistic`)) && n.includes(`major hen`) ? 1 : 0; },
                       answer: `The major hen is unselfish/generous/selfless.` },
 
-                    { id: `lq10`, section: `Q4(e) Rewrite in positive form`, label: `Q4(e)(ii) Rewrite in positive form retaining the same meaning: "The ostrich's deliberate exposure of some of its eggs to predators is not responsible behaviour."`, type: `lang_textarea`, marks: 1,
+                    { id: `lq10`, section: `Q4(e) Rewrite in positive form`, label: `Q4(e)(ii) Rewrite in positive form retaining the same meaning: "The ostrich's deliberate exposure of some of its eggs to predators is not responsible behaviour."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`irresponsible`) || n.includes(`reckless`) || n.includes(`careless`) || n.includes(`deliberate`)) && n.includes(`ostrich`) ? 1 : 0; },
                       answer: `The ostrich's deliberate exposure of some of its eggs to predators is irresponsible behaviour.` }
                 ],
@@ -2920,8 +2916,8 @@
                 type: 'long',
                 title: '11. Ants at War',
                 tag: 'ZIMSEC 4005/2 November 2025',
-                totalMarks: 40,
-                compMarks: 10,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -3067,47 +3063,46 @@
                         ]
                       ),
                       answer: `Use paragraph 6 to end of paragraph 9 only. Opens: 'After having carefully investigated the area, the red ants' scouts...'. Max 160 words. Agent must be specific — refer clearly to slave-makers/red ants. Sequence is not an issue.`
-                    }
-                ],
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Correct the misspelt word`, label: `Q4(a)(i) Identify and correct the misspelt word: "The fully equipped red ants were the favourates to take over the accommodation of the black ants."`, type: `lang_text`, marks: 1,
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Correct the misspelt word`, label: `Q4(a)(i) Identify and correct the misspelt word: "The fully equipped red ants were the favourates to take over the accommodation of the black ants."`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `favourites` || normalize(inp) === `favorites` ? 1 : 0,
                       answer: `favourites / favorites` },
 
-                    { id: `lq2`, section: `Q4(a) Correct the misspelt word`, label: `Q4(a)(ii) Identify and correct the misspelt word: "The writer's complection was bleached by the sun."`, type: `lang_text`, marks: 1,
+                    { id: `lq2`, section: `Q4(a) Correct the misspelt word`, label: `Q4(a)(ii) Identify and correct the misspelt word: "The writer's complection was bleached by the sun."`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `complexion` ? 1 : 0,
                       answer: `complexion` },
 
-                    { id: `lq3`, section: `Q4(b) Correct word form`, label: `Q4(b)(i) Insert correct form of word in brackets: One unfortunate black ant was savagely ________ to death by a mob of red ants. (bite)`, type: `lang_text`, marks: 1,
+                    { id: `lq3`, section: `Q4(b) Correct word form`, label: `Q4(b)(i) Insert correct form of word in brackets: One unfortunate black ant was savagely ________ to death by a mob of red ants. (bite)`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `bitten` ? 1 : 0,
                       answer: `bitten` },
 
-                    { id: `lq4`, section: `Q4(b) Correct word form`, label: `Q4(b)(ii) Insert correct form of word in brackets: With amazing ________, one of the red ants killed a black ant. (rapid)`, type: `lang_text`, marks: 1,
+                    { id: `lq4`, section: `Q4(b) Correct word form`, label: `Q4(b)(ii) Insert correct form of word in brackets: With amazing ________, one of the red ants killed a black ant. (rapid)`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n === `rapidity` || n === `rapidness`) ? 1 : 0; },
                       answer: `rapidity / rapidness. Wrong spelling denies the mark.` },
 
-                    { id: `lq5`, section: `Q4(c) Choose correct word`, label: `Q4(c)(i) Choose: The defeated army of the black ants (was/were) captured.`, type: `lang_text`, marks: 1,
+                    { id: `lq5`, section: `Q4(c) Choose correct word`, label: `Q4(c)(i) Choose: The defeated army of the black ants (was/were) captured.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `was` ? 1 : 0,
                       answer: `was` },
 
-                    { id: `lq6`, section: `Q4(c) Choose correct word`, label: `Q4(c)(ii) Choose: Up to now, the writer (have/has) a guilty conscience for throwing one of the black ants among its enemies.`, type: `lang_text`, marks: 1,
+                    { id: `lq6`, section: `Q4(c) Choose correct word`, label: `Q4(c)(ii) Choose: Up to now, the writer (have/has) a guilty conscience for throwing one of the black ants among its enemies.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `has` ? 1 : 0,
                       answer: `has` },
 
-                    { id: `lq7`, section: `Q4(d) Choose correct pronoun`, label: `Q4(d)(i) Complete: The writer and _______ are going to watch the battle of ants. (me / I)`, type: `lang_text`, marks: 1,
+                    { id: `lq7`, section: `Q4(d) Choose correct pronoun`, label: `Q4(d)(i) Complete: The writer and _______ are going to watch the battle of ants. (me / I)`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `i` ? 1 : 0,
                       answer: `I. Zero for "me" or "with a small i".` },
 
-                    { id: `lq8`, section: `Q4(d) Choose correct pronoun`, label: `Q4(d)(ii) Complete: The location of the black ants' nest is a secret between Gerald and _______ . (me / I)`, type: `lang_text`, marks: 1,
+                    { id: `lq8`, section: `Q4(d) Choose correct pronoun`, label: `Q4(d)(ii) Complete: The location of the black ants' nest is a secret between Gerald and _______ . (me / I)`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `me` ? 1 : 0,
                       answer: `me` },
 
-                    { id: `lq9`, section: `Q4(e) Direct to Indirect Speech`, label: `Q4(e)(i) Change to indirect speech: "Why did you keep a cautious eye on this nest over a period of time?" Gerald was asked.`, type: `lang_text`, marks: 1,
+                    { id: `lq9`, section: `Q4(e) Direct to Indirect Speech`, label: `Q4(e)(i) Change to indirect speech: "Why did you keep a cautious eye on this nest over a period of time?" Gerald was asked.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp);
                         return n.includes(`gerald`) && (n.includes(`was asked`) || n.includes(`asked`)) && (n.includes(`cautious eye`) || n.includes(`why he had kept`) || n.includes(`why he kept`)) && (n.includes(`period of time`) || n.includes(`period`)) ? 1 : 0; },
                       answer: `Gerald was asked why he had kept a cautious eye on that nest over a period of time.` },
 
-                    { id: `lq10`, section: `Q4(e) Direct to Indirect Speech`, label: `Q4(e)(ii) Change to indirect speech: Gerald said, "I will come back tomorrow."`, type: `lang_text`, marks: 1,
+                    { id: `lq10`, section: `Q4(e) Direct to Indirect Speech`, label: `Q4(e)(ii) Change to indirect speech: Gerald said, "I will come back tomorrow."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp);
                         return n.includes(`gerald`) && (n.includes(`said`) || n.includes(`stated`)) && (n.includes(`would`) || n.includes(`come back`) || n.includes(`go back`) || n.includes(`return`)) && (n.includes(`following day`) || n.includes(`next day`) || n.includes(`the next`) || n.includes(`the following`)) ? 1 : 0; },
                       answer: `Gerald said (that) he would come back the following/next day.` }
@@ -3130,8 +3125,8 @@
                 type: 'long',
                 title: '12. The Eagle and the Kitten',
                 tag: 'ZIMSEC 1122/2 November 2017',
-                totalMarks: 40,
-                compMarks: 20,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -3286,48 +3281,47 @@
                         ]
                       ),
                       answer: `Use paragraphs 9–22 only. Opens: 'When the eagle swooped and then picked up the kitten,...'. Max 160 words. Focus on kitten's actions only.`
-                    }
-                ],
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Prepositions`, label: `Q4(a)(i) Fill in the blank: I go along _______ the Minister on the issue of making Zimbabwe a nation of thinkers and doers.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => normalize(inp) === `with` ? 1 : 0,
-                      answer: `with` },
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Choose the correctly spelt word`, label: `Q4(a)(i) Choose the correctly spelt word: The eagle, ruffled in misery, was brooding in (ferocity/ferocitty/ferocitey).`, type: `text`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `ferocity` ? 1 : 0,
+                      answer: `ferocity` },
 
-                    { id: `lq2`, section: `Q4(a) Prepositions`, label: `Q4(a)(ii) Fill in the blank: It is important for learners to go _______ the experiences of industry and commerce before making a decision to specialize.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return (n === `through` || n === `into`) ? 1 : 0; },
-                      answer: `through / into` },
+                    { id: `lq2`, section: `Q4(a) Choose the correctly spelt word`, label: `Q4(a)(ii) Choose the correctly spelt word: The kitten clung (tenaciously/tenaceously/tennaciously) onto the eagle's breast.`, type: `text`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `tenaciously` ? 1 : 0,
+                      answer: `tenaciously` },
 
-                    { id: `lq3`, section: `Q4(b) Choose correct word`, label: `Q4(b)(i) She is a highly (intellect/intellectual) learner.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => normalize(inp) === `intellectual` ? 1 : 0,
-                      answer: `intellectual` },
+                    { id: `lq3`, section: `Q4(b) Give the opposite of the underlined word`, label: `Q4(b)(i) Give the opposite: "DESPERATE and weak, the eagle perched on a tall tree and glared around."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `confident` || n === `calm` || n === `carefree` || n === `composed` || n === `satisfied`) ? 1 : 0; },
+                      answer: `confident / calm / carefree / composed / satisfied` },
 
-                    { id: `lq4`, section: `Q4(b) Choose correct word`, label: `Q4(b)(ii) The country has a large (number/quantity) of skilled personnel.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => normalize(inp) === `number` ? 1 : 0,
-                      answer: `number` },
+                    { id: `lq4`, section: `Q4(b) Give the opposite of the underlined word`, label: `Q4(b)(ii) Give the opposite: "The kitten froze, UNAWARE of the danger, startled by this new and untried sport."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n === `aware` || n === `conscious` || n === `alert`) ? 1 : 0; },
+                      answer: `aware / conscious / alert` },
 
-                    { id: `lq5`, section: `Q4(c) Rewrite the sentence`, label: `Q4(c)(i) Rewrite starting with "The government's...": The learners were motivated by the government's new educational policy.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`government`) && n.includes(`policy`) && n.includes(`motivat`) && (n.includes(`learner`) || n.includes(`student`)) ? 1 : 0; },
-                      answer: `The government's new educational policy motivated the learners.` },
+                    { id: `lq5`, section: `Q4(c) Change to the correct word form`, label: `Q4(c)(i) Change the word in brackets to its correct form: With amazing (tenacious), the kitten refused to let go of the eagle's breast.`, type: `text`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `tenacity` ? 1 : 0,
+                      answer: `tenacity` },
 
-                    { id: `lq6`, section: `Q4(c) Rewrite the sentence`, label: `Q4(c)(ii) Rewrite starting with "There is a possibility...": It is possible for us to achieve our national goals.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`there is a possibility`) && (n.includes(`we`) || n.includes(`us`)) && n.includes(`achiev`) && n.includes(`national goal`) ? 1 : 0; },
-                      answer: `There is a possibility that we can achieve our national goals.` },
+                    { id: `lq6`, section: `Q4(c) Change to the correct word form`, label: `Q4(c)(ii) Change the word in brackets to its correct form: A sudden spasm of (weak) spread through the eagle's wings.`, type: `text`, marks: 1,
+                      evaluate: (inp) => normalize(inp) === `weakness` ? 1 : 0,
+                      answer: `weakness` },
 
-                    { id: `lq7`, section: `Q4(d) Has or Have`, label: `Q4(d)(i) The learner and the teacher _______ to exercise self-discipline. (Has/Have)`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => normalize(inp) === `have` ? 1 : 0,
-                      answer: `have` },
+                    { id: `lq7`, section: `Q4(d) Join the sentences`, label: `Q4(d)(i) Join using 'although': "The eagle started to climb again. It could not ascend because the weight was too much."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return (n.includes(`although`) || n.includes(`though`)) && n.includes(`climb`) && n.includes(`could not ascend`) && n.includes(`weight`) ? 1 : 0; },
+                      answer: `Although the eagle started to climb again, it could not ascend because the weight was too much.` },
 
-                    { id: `lq8`, section: `Q4(d) Has or Have`, label: `Q4(d)(ii) My teacher and mentor, Mr Moyo, _______ arrived. (Has/Have)`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => normalize(inp) === `has` ? 1 : 0,
-                      answer: `has` },
+                    { id: `lq8`, section: `Q4(d) Join the sentences`, label: `Q4(d)(ii) Join using 'as': "The kitten clung to the eagle's breast. It stared down at the winding earth below."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`as`) && n.includes(`clung`) && n.includes(`breast`) && n.includes(`stared`) && n.includes(`winding earth`) ? 1 : 0; },
+                      answer: `As the kitten clung to the eagle's breast, it stared down at the winding earth below.` },
 
-                    { id: `lq9`, section: `Q4(e) Direct to Reported Speech`, label: `Q4(e)(i) Change to reported speech: 'There is a serious situation now, where the youths focus on seeking employment abroad,' the speaker lamented.`, type: `lang_text`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`lament`) && (n.includes(`serious situation`) || n.includes(`serious`) && n.includes(`situation`)) && (n.includes(`then`) || n.includes(`at that time`) || n.includes(`was`) || n.includes(`were`)) ? 1 : 0; },
-                      answer: `The speaker lamented that there was a serious situation then, where the youths were focusing on seeking employment abroad.` },
+                    { id: `lq9`, section: `Q4(e) Rewrite in the passive voice`, label: `Q4(e)(i) Rewrite in the passive voice: "The eagle fastened its talons in the fur of the kitten."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`talons`) && n.includes(`fastened`) && n.includes(`fur`) && n.includes(`by the eagle`) ? 1 : 0; },
+                      answer: `Its talons were fastened in the fur of the kitten by the eagle.` },
 
-                    { id: `lq10`, section: `Q4(e) Direct to Reported Speech`, label: `Q4(e)(ii) Change to reported speech: 'For the past ten years, we have witnessed a massive expansion in education,' said the Minister.`, type: `lang_textarea`, marks: 1,
-                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`minister`) && (n.includes(`said`) || n.includes(`stated`)) && (n.includes(`had witnessed`) || n.includes(`witnessed`) || n.includes(`expansion`)) && (n.includes(`ten year`) || n.includes(`10 year`) || n.includes(`preceding ten`)) ? 1 : 0; },
-                      answer: `The Minister said that for the past ten years, they had witnessed a massive expansion in education.` }
+                    { id: `lq10`, section: `Q4(e) Rewrite in the passive voice`, label: `Q4(e)(ii) Rewrite in the passive voice: "The kitten slashed the eagle's legs."`, type: `text`, marks: 1,
+                      evaluate: (inp) => { const n = normalize(inp); return n.includes(`eagle`) && n.includes(`legs`) && n.includes(`slashed`) && n.includes(`by the kitten`) ? 1 : 0; },
+                      answer: `The eagle's legs were slashed by the kitten.` }
                 ],
                 vocabItems: [
                     { id: `v1`, label: `1. torrential (paragraph 1)`, keys: [`heavy`, `downpour`, `pouring`, `deluge`, `plenty`, `pelting`, `excessive`], constraint: () => true, answer: `heavy / downpour / pouring / deluge` },
@@ -3346,8 +3340,8 @@
                 type: 'long',
                 title: '13. Tragedy at the Dargans\' Place',
                 tag: 'ZIMSEC 4005/2 November 2022',
-                totalMarks: 40,
-                compMarks: 20,
+                totalMarks: 50,
+                compMarks: 45,
                 summaryMarks: 15,
                 langMarks: 10,
                 vocabMarks: 5,
@@ -3525,42 +3519,41 @@
                         ]
                       ),
                       answer: `Use paragraph 47 to end. Opens: 'Calling out to Mr Dargan, Dewey came to the trees and...'. Max 160 words. Both limbs needed for point 4 (feeling + wanting to return). Both limbs for point 21 (shoulders heavy AND tired).`
-                    }
-                ],
-                langQuestions: [
-                    { id: `lq1`, section: `Q4(a) Choose correct word`, label: `Q4(a)(i) Choose: One of Dewey's admirable qualities was his (patients/patience) with his grandmother.`, type: `lang_text`, marks: 1,
+                    },
+                    // Language structures — Q4 [10 marks]
+                    { id: `lq1`, section: `Q4(a) Choose correct word`, label: `Q4(a)(i) Choose: One of Dewey's admirable qualities was his (patients/patience) with his grandmother.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `patience` ? 1 : 0,
                       answer: `patience` },
 
-                    { id: `lq2`, section: `Q4(a) Choose correct word`, label: `Q4(a)(ii) Choose: On their way to the Dargans' place, Dewey (relived/relieved) how the Dargans had always warmly welcomed them.`, type: `lang_text`, marks: 1,
+                    { id: `lq2`, section: `Q4(a) Choose correct word`, label: `Q4(a)(ii) Choose: On their way to the Dargans' place, Dewey (relived/relieved) how the Dargans had always warmly welcomed them.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `relived` ? 1 : 0,
                       answer: `relived` },
 
-                    { id: `lq3`, section: `Q4(b) Replace underlined with opposite`, label: `Q4(b)(i) Replace the underlined word with its opposite: Dewey's grandmother CAREFULLY threw her spectacles into her satchel.`, type: `lang_text`, marks: 1,
+                    { id: `lq3`, section: `Q4(b) Replace underlined with opposite`, label: `Q4(b)(i) Replace the underlined word with its opposite: Dewey's grandmother CAREFULLY threw her spectacles into her satchel.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n === `carelessly` || n === `recklessly`) ? 1 : 0; },
                       answer: `carelessly / recklessly` },
 
-                    { id: `lq4`, section: `Q4(b) Replace underlined with opposite`, label: `Q4(b)(ii) Replace the underlined word with its opposite: Dewey stepped close to where the ENTRANCE of the cabin had been.`, type: `lang_text`, marks: 1,
+                    { id: `lq4`, section: `Q4(b) Replace underlined with opposite`, label: `Q4(b)(ii) Replace the underlined word with its opposite: Dewey stepped close to where the ENTRANCE of the cabin had been.`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n === `exit` || n === `way out`) ? 1 : 0; },
                       answer: `exit / way out` },
 
-                    { id: `lq5`, section: `Q4(c) Change to correct form`, label: `Q4(c)(i) Change word in brackets to correct form: On seeing the burnt Dargans' homestead, Dewey felt (heartbreak).`, type: `lang_text`, marks: 1,
+                    { id: `lq5`, section: `Q4(c) Change to correct form`, label: `Q4(c)(i) Change word in brackets to correct form: On seeing the burnt Dargans' homestead, Dewey felt (heartbreak).`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `heartbroken` ? 1 : 0,
                       answer: `heartbroken — accept correct spellings only.` },
 
-                    { id: `lq6`, section: `Q4(c) Change to correct form`, label: `Q4(c)(ii) Change word in brackets to correct form: The silence around the Dargans' place was so (threat) that Dewey almost ran away.`, type: `lang_text`, marks: 1,
+                    { id: `lq6`, section: `Q4(c) Change to correct form`, label: `Q4(c)(ii) Change word in brackets to correct form: The silence around the Dargans' place was so (threat) that Dewey almost ran away.`, type: `text`, marks: 1,
                       evaluate: (inp) => normalize(inp) === `threatening` ? 1 : 0,
                       answer: `threatening` },
 
-                    { id: `lq7`, section: `Q4(d) Explain word usage`, label: `Q4(d)(i) Explain how 'hinges' is used in: "The hinges that Mr Dargan had brought from their old home were still hanging on the burnt wooden frame."`, type: `lang_text`, marks: 1,
+                    { id: `lq7`, section: `Q4(d) Explain word usage`, label: `Q4(d)(i) Explain how 'hinges' is used in: "The hinges that Mr Dargan had brought from their old home were still hanging on the burnt wooden frame."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`noun`) || n.includes(`subject`) || n.includes(`name`) || n.includes(`metal piece`) || n.includes(`door`) || n.includes(`flat metal`) || n.includes(`object`)) ? 1 : 0; },
                       answer: `Used as a noun (subject/name) — refers to flat metal pieces that hang the door to the door frame.` },
 
-                    { id: `lq8`, section: `Q4(d) Explain word usage`, label: `Q4(d)(ii) Explain how 'hinges' is used in: "Reaching our destination safely hinges on the direction and force of the wind."`, type: `lang_text`, marks: 1,
+                    { id: `lq8`, section: `Q4(d) Explain word usage`, label: `Q4(d)(ii) Explain how 'hinges' is used in: "Reaching our destination safely hinges on the direction and force of the wind."`, type: `text`, marks: 1,
                       evaluate: (inp) => { const n = normalize(inp); return (n.includes(`verb`) || n.includes(`action`) || n.includes(`doing word`) || n.includes(`depends`) || n.includes(`relies on`) || n.includes(`rests on`)) ? 1 : 0; },
                       answer: `Used as a verb (action/doing word) — to mean depends on.` },
 
-                    { id: `lq9`, section: `Q4(e) Dialogue meaning`, label: `Q4(e)(i) What is the difference in meaning between Dewey: "What a lovely house!" and Grandma: "What a lovely house?"`, type: `lang_textarea`, marks: 2,
+                    { id: `lq9`, section: `Q4(e) Dialogue meaning`, label: `Q4(e)(i) What is the difference in meaning between Dewey: "What a lovely house!" and Grandma: "What a lovely house?"`, type: `text`, marks: 2,
                       evaluate: (inp) => { const n = normalize(inp); let s = 0;
                         if (n.includes(`compliment`) || n.includes(`admire`) || n.includes(`appreciat`) || n.includes(`genuine`) || n.includes(`sincere`) || n.includes(`dewey`) && n.includes(`lovely`) || n.includes(`exclamation`) || n.includes(`beautiful`)) s++;
                         if (n.includes(`question`) || n.includes(`doubt`) || n.includes(`disbelief`) || n.includes(`grandma`) && n.includes(`lovely`) || n.includes(`reservation`) || n.includes(`skeptic`) || n.includes(`disagree`) || n.includes(`does not`) && n.includes(`agree`) || n.includes(`sarcasm`)) s++;
